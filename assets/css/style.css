@@ -1,0 +1,25 @@
+/* GENERAL */
+html {
+	font-size: 62.5%;
+}
+
+/* SVG LOGO */
+svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0 auto;
+  width: 20rem;
+}
+
+.up {
+  opacity: 1;
+  animation: fade 2s infinite;
+}
+
+@keyframes fade {
+  0%,100% { opacity: 0 }
+  50% { opacity: 1 }
+}
