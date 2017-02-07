@@ -14,7 +14,7 @@ svg {
   width: 20rem;
 }
 
-.up {
+#up {
   opacity: 1;
   animation: fade 2s infinite;
 }
