@@ -1,6 +1,72 @@
 /* GENERAL */
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,700');
+
 html {
 	font-size: 62.5%;
+}
+
+/* GRID */
+.container {
+	width: 100%;
+	max-width: 900px;
+	box-sizing: border-box;
+}
+
+@media screen and (min-width: 750px) {
+	.one.column {
+		flex: 0 0 8.33333333%;
+		max-width: 8.33333333%;
+	}
+
+	.two.columns {
+		flex: 0 0 16.66666667%;
+		max-width: 16.66666667%;
+	}
+
+	.four.columns {
+		flex: 0 0 25%;
+		max-width: 25%;
+	}
+
+	.five.columns {
+		flex: 0 0 41.66666667%;
+		max-width: 41.66666667%;
+	}
+
+	.six.columns {
+		flex: 0 0 50%;
+		max-width: 50%;
+	}
+
+	.seven.columns {
+		flex: 0 0 58.33333333%;
+		max-width: 58.33333333%;
+	}
+
+	.eight.columns {
+		flex: 0 0 66.66666667%;
+		max-width: 66.66666667%;
+	}
+
+	.five.columns {
+		flex: 0 0 75%;
+		max-width: 75%;
+	}
+
+	.ten.columns {
+		flex: 0 0 83.33333333%;
+		max-width: 83.33333333%;
+	}
+
+	.eleven.columns {
+		flex: 0 0 91.66666667%;
+		max-width: 91.66666667%;
+	}
+
+	.twelve.columns {
+		flex: 0 0 100%;
+		max-width: 100%;
+	}
 }
 
 /* HEADER */
@@ -13,18 +79,60 @@ html {
 	bottom: 0;
 	left: 0;
 	margin: 0 auto;
+	width: 100%;
+}
+
+.top-content {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin-top: -5rem;
+}
+
+/* MENU */
+
+.nav.menu {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	text-align: center;
+	padding-left: 2rem;
+    margin-top: 6.5rem;
+}
+
+.nav.link {
+	display: inline-block;
+	color: #076233;
+	text-decoration: none;
+	padding: 2.5rem;
+	padding-left: 0;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+	font-size: 2rem;
+	text-transform: uppercase;
+}
+
+.nav.link:visited {
+	color: #0a6d37;
 }
 
 /* SVG LOGO */
+
 svg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: 0 auto;
-  width: 20rem;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: 0 auto;
+	width: 20rem;
 }
+
+
 
 #up {
   opacity: 1;
