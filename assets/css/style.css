@@ -83,29 +83,34 @@ strong {
 
 h1,
 #home h1,
-#about h1 {
+#about h1,
+#contact h1 {
 	font-size: 2.8rem;
 	color: #333;
 }
 
 h2,
 #home h2,
-#about h2 {
+#about h2,
+#contact h2 {
 	font-size: 2.4rem;
 	font-weight: 300;
 }
 
 h3,
 #home h3,
-#about h3 {
+#about h3,
+#contact h3 {
 	font-size: 2.2rem;
 	font-weight: 100;
 	text-transform: uppercase;
 	line-height: 3rem;
 }
 
-h4 {
+h4,
+#contact h4 {
 	font-size: 2rem;
+	font-weight: 100;
 }
 
 h5 {
@@ -193,17 +198,10 @@ svg {
   50% { opacity: 1 }
 }
 
-/* HOME */
-.container.home {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
-	margin: auto;
-}
-
-/* ABOUT */
-.container.about {
+/* CONTAINERS: HOME, ABOUT AND CONTACT */
+.container.home,
+.container.about,
+.container.contact {
 	display: flex;
 	justify-content: center;
 	align-items: center;
