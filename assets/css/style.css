@@ -12,7 +12,7 @@ html {
 	box-sizing: border-box;
 }
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 320px) {
 	.one.column {
 		flex: 0 0 8.33333333%;
 		max-width: 8.33333333%;
@@ -82,18 +82,21 @@ strong {
 }
 
 h1,
-#home h1 {
+#home h1,
+#about h1 {
 	font-size: 2.8rem;
 }
 
 h2,
-#home h2 {
+#home h2,
+#about h2 {
 	font-size: 2.4rem;
 	font-weight: 300;
 }
 
 h3,
-#home h3 {
+#home h3,
+#about h3 {
 	font-size: 2.2rem;
 	font-weight: 100;
 	text-transform: uppercase;
@@ -191,6 +194,16 @@ svg {
 
 /* HOME */
 .container.home {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	margin: auto;
+	padding-top: 20rem;
+}
+
+/* ABOUT */
+.container.about {
 	display: flex;
 	justify-content: center;
 	align-items: center;
