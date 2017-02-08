@@ -209,10 +209,20 @@ svg {
 	margin: auto;
 }
 
+/* FOOTER */
+footer {
+	height: 6rem;
+	background-color: #076233;
+}
 /* PADDINGS */
 .padding-top-20 {
 	padding-top: 20rem;
 }
+
 .padding-bottom-3 {
 	padding-bottom: 3rem;
+}
+
+.padding-bottom-5 {
+	padding-bottom: 5rem;
 }
