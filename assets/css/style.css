@@ -69,6 +69,53 @@ html {
 	}
 }
 
+/* FONT */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong {
+	color: #333;
+	font-weight: 400;
+}
+
+h1,
+#home h1 {
+	font-size: 2.8rem;
+}
+
+h2,
+#home h2 {
+	font-size: 2.4rem;
+	font-weight: 300;
+}
+
+h3,
+#home h3 {
+	font-size: 2.2rem;
+	font-weight: 100;
+	text-transform: uppercase;
+	line-height: 3rem;
+}
+
+h4 {
+	font-size: 2rem;
+}
+
+h5 {
+	font-size: 1.6rem;
+}
+
+h6 {
+	font-size: 1.4rem;
+}
+
+p {
+	color: #555;
+}
+
 /* HEADER */
 #line-top {
 	height: 1rem;
@@ -100,7 +147,7 @@ html {
 	bottom: 0;
 	right: 0;
 	text-align: center;
-	padding-left: 2rem;
+	padding-left: 2.5rem;
     margin-top: 6.5rem;
 }
 
@@ -132,8 +179,6 @@ svg {
 	width: 20rem;
 }
 
-
-
 #up {
   opacity: 1;
   animation: fade 2s infinite;
@@ -142,4 +187,19 @@ svg {
 @keyframes fade {
   0%,100% { opacity: 0 }
   50% { opacity: 1 }
+}
+
+/* HOME */
+.container.home {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	margin: auto;
+	padding-top: 20rem;
+}
+
+/* PADDINGS */
+.padding-bottom-3 {
+	padding-bottom: 3rem;
 }
