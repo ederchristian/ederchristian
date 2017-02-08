@@ -126,10 +126,11 @@ p {
 }
 
 /* HEADER */
+
 #line-top {
 	height: 1rem;
 	background-color: #076233;
-	position: absolute;
+	position: fixed;
 	top: 0;
 	right: 0;
 	bottom: 0;
@@ -139,18 +140,20 @@ p {
 }
 
 .top-content {
-	position: absolute;
+	position: fixed;
 	top: 0;
 	right: 0;
 	bottom: 0;
 	left: 0;
 	margin-top: -5rem;
+	background-color: #fff;
+	height: 17rem;
 }
 
 /* MENU */
 
 .nav.menu {
-	position: absolute;
+	position: fixed;
 	top: 0;
 	left: 0;
 	bottom: 0;
