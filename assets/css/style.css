@@ -181,7 +181,7 @@ p {
 
 /* SVG LOGO */
 
-svg {
+#logo {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -220,6 +220,10 @@ footer {
 /* PADDINGS */
 .padding-top-20 {
 	padding-top: 20rem;
+}
+
+.padding-top-1 {
+	padding-top: 1rem;
 }
 
 .padding-bottom-3 {
