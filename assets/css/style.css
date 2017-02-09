@@ -170,14 +170,14 @@ p {
 /* MENU */
 
 .nav.menu {
-	position: fixed;
+	position: relative;
 	top: 0;
 	left: 0;
 	bottom: 0;
 	right: 0;
 	text-align: center;
 	padding-left: 2.5rem;
-    margin-top: 6.5rem;
+    margin-top: 10rem;
 }
 
 .nav.link {
