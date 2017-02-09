@@ -5,6 +5,14 @@ html {
 	font-size: 62.5%;
 }
 
+body {
+	font-size: 1.6rem;
+	line-height: 1.6;
+	font-weight: 400;
+	font-family: "Roboto", Helvetica, Arial, sans-serif;
+	color: #555;
+}
+
 /* GRID */
 .container {
 	width: 100%;
@@ -82,35 +90,44 @@ strong {
 }
 
 h1,
-#home h1,
-#about h1,
-#contact h1 {
-	font-size: 2.8rem;
+.home h1,
+.about h1,
+.contact h1 {
+	font-size: 2.4rem;
 	color: #333;
 }
 
 h2,
-#home h2,
-#about h2,
-#contact h2 {
-	font-size: 2.4rem;
+.home h2,
+.about h2,
+.contact h2 {
+	font-size: 2.2rem;
 	font-weight: 300;
 }
 
 h3,
-#home h3,
-#about h3,
-#contact h3 {
-	font-size: 2.2rem;
+.home h3,
+.about h3,
+.contact h3 {
+	font-size: 2rem;
 	font-weight: 100;
 	text-transform: uppercase;
 	line-height: 3rem;
 }
 
 h4,
-#contact h4 {
-	font-size: 2rem;
+.contact h4 {
+	font-size: 1.8rem;
 	font-weight: 100;
+}
+
+a h4 {
+	color: #076233;
+	text-decoration: underline;
+}
+
+a h4:hover {
+	text-decoration: none;
 }
 
 h5 {
@@ -189,6 +206,10 @@ p {
 	bottom: 0;
 	margin: 0 auto;
 	width: 20rem;
+	fill: #076233;
+	stroke: #076233; 
+	stroke-width: 2;
+	stroke-miterlimit: 10;
 }
 
 #up {
@@ -212,11 +233,38 @@ p {
 	margin: auto;
 }
 
+/* SVG LOGOS */
+#github,
+#codepen {
+	fill: #076233;
+	width: 10rem;
+	height: 10rem; 
+}
+
+#behance {
+	fill: #076233;
+	width: 7rem;
+	height: 7rem; 
+}
+
+object {
+	width: 2rem;
+	height: 2rem;
+	padding-left: 1rem;
+	text-decoration: underline;	
+}
+
 /* FOOTER */
 footer {
 	height: 6rem;
 	background-color: #076233;
 }
+
+/* MARGINS */
+.margin-bottom-portfolio-3 {
+	margin-bottom: -3rem;
+}
+
 /* PADDINGS */
 .padding-top-20 {
 	padding-top: 20rem;
@@ -230,6 +278,7 @@ footer {
 	padding-bottom: 3rem;
 }
 
-.padding-bottom-5 {
-	padding-bottom: 5rem;
+.padding-bottom-15 {
+	padding-bottom: 15rem;
 }
+
