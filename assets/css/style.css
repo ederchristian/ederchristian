@@ -273,6 +273,26 @@ footer {
 	background-color: #076233;
 }
 
+.footer-logos {
+	position: relative;
+	display: flex;
+  	align-items: center;
+  	justify-content: center;
+}
+
+.footer-logo-svg {
+	fill: #fff;
+	width: 5rem;
+	height: 5rem;
+}
+
+.linkedin,
+.twitter,
+.instagram,
+.facebook {
+	padding: 0.5rem 2rem 0 2rem;
+}
+
 /* SELECTIONS */
 ::-moz-selection {
     color: #fff;
