@@ -286,6 +286,12 @@ footer {
 	height: 5rem;
 }
 
+.footer-logo-svg:hover {
+	fill: #076233;
+	background-color: #fff;
+	border-radius: 50%;
+}
+
 .linkedin,
 .twitter,
 .instagram,
