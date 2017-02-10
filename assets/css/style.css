@@ -122,11 +122,16 @@ h4,
 }
 
 a h4 {
+	font-weight: 400;
+	color: #076233;
+}
+
+a {
 	color: #076233;
 	text-decoration: underline;
 }
 
-a h4:hover {
+a:hover {
 	text-decoration: none;
 }
 
@@ -165,6 +170,15 @@ p {
 	margin-top: -5rem;
 	background-color: #fff;
 	height: 17rem;
+}
+
+#line-header {
+	position:relative;
+	border-width: .1rem;
+	background-color: green;
+	margin-top: -1.3rem;
+	padding-bottom: .2rem;
+	opacity: .2;
 }
 
 /* MENU */
@@ -251,7 +265,6 @@ object {
 	width: 2rem;
 	height: 2rem;
 	padding-left: 1rem;
-	text-decoration: underline;	
 }
 
 /* FOOTER */
