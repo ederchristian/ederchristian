@@ -247,6 +247,12 @@ p {
 	margin: auto;
 }
 
+/* IMAGES */
+#profile-picture {
+	width: 20rem;
+	height: 20rem;
+}
+
 /* SVG LOGOS */
 #github,
 #codepen {
