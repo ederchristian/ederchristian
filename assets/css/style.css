@@ -249,8 +249,10 @@ p {
 
 /* IMAGES */
 #profile-picture {
-	width: 20rem;
-	height: 20rem;
+	width: 18rem;
+	height: 18rem;
+	border-radius: .2rem;
+	box-shadow: .4rem .5rem .6rem .2rem rgba(0,0,0,0.2);  
 }
 
 /* SVG LOGOS */
@@ -321,8 +323,8 @@ footer {
 }
 
 /* PADDINGS */
-.padding-top-12 {
-	padding-top: 12rem;
+.padding-top-14 {
+	padding-top: 14rem;
 }
 
 .padding-top-18 {
