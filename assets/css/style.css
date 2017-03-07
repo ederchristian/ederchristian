@@ -348,7 +348,8 @@ footer {
 }
 
 /* ARTICLE */
-article {
+article,
+.disqus {
 	margin: 0 4rem 0 4rem;
 }
 
