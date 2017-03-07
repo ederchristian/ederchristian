@@ -347,3 +347,11 @@ footer {
 	padding-bottom: 10rem;
 }
 
+/* ARTICLE */
+article {
+	margin: 0 4rem 0 4rem;
+}
+
+article h1 {
+	text-align: center;
+}
