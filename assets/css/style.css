@@ -123,11 +123,11 @@ h4,
 
 a h4 {
 	font-weight: 400;
-	color: #2e6a60;
+	color: #285e4e;
 }
 
 a {
-	color: #2e6a60;
+	color: #285e4e;
 	text-decoration: underline;
 }
 
@@ -151,7 +151,7 @@ p {
 
 #line-top {
 	height: 1rem;
-	background-color: #2e6a60;
+	background-color: #285e4e;
 	position: fixed;
 	top: 0;
 	right: 0;
@@ -196,7 +196,7 @@ p {
 
 .nav.link {
 	display: inline-block;
-	color: #2e6a60;
+	color: #285e4e;
 	text-decoration: none;
 	padding: 2.5rem;
 	padding-left: 0;
@@ -220,8 +220,8 @@ p {
 	bottom: 0;
 	margin: 0 auto;
 	width: 20rem;
-	fill: #2e6a60;
-	stroke: #2e6a60; 
+	fill: #285e4e;
+	stroke: #285e4e; 
 	stroke-width: 2;
 	stroke-miterlimit: 10;
 }
@@ -258,13 +258,13 @@ p {
 /* SVG LOGOS */
 #github,
 #codepen {
-	fill: #2e6a60;
+	fill: #285e4e;
 	width: 10rem;
 	height: 10rem; 
 }
 
 #behance {
-	fill: #2e6a60;
+	fill: #285e4e;
 	width: 7rem;
 	height: 7rem; 
 }
@@ -278,7 +278,7 @@ object {
 /* FOOTER */
 footer {
 	height: 6rem;
-	background-color: #2e6a60;
+	background-color: #285e4e;
 }
 
 .footer-logos {
@@ -295,7 +295,7 @@ footer {
 }
 
 .footer-logo-svg:hover {
-	fill: #2e6a60;
+	fill: #285e4e;
 	background-color: #fff;
 }
 
@@ -309,12 +309,12 @@ footer {
 /* SELECTIONS */
 ::-moz-selection {
     color: #fff;
-    background: #2e6a60;
+    background: #285e4e;
 }
 
 ::selection {
     color: #fff; 
-    background: #2e6a60;
+    background: #285e4e;
 }
 
 /* MARGINS */
