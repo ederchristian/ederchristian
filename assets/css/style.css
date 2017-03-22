@@ -254,6 +254,13 @@ p {
 	margin: auto;
 }
 
+.message {
+	background-color: #fdfffa;
+	widht: 100%;
+	text-align: center;
+	padding: 1rem 1rem;
+}
+
 /* IMAGES */
 #profile-picture {
 	width: 18rem;
