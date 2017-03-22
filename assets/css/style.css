@@ -20,7 +20,14 @@ body {
 	box-sizing: border-box;
 }
 
-@media screen and (min-width: 320px) {
+@media screen and (max-width: 450px) {
+	.about {
+		margin-left: 3rem;
+		margin-right: 3rem;
+	}
+}
+
+@media screen and (min-width: 500px) {
 	.one.column {
 		flex: 0 0 8.33333333%;
 		max-width: 8.33333333%;
@@ -301,7 +308,7 @@ footer {
 .twitter,
 .instagram,
 .facebook {
-	padding: 0.5rem 1.5rem 0 1.5rem;
+	padding: 0.5rem 1.5rem 0 1.3rem;
 }
 
 /* SELECTIONS */
