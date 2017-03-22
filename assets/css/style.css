@@ -123,11 +123,11 @@ h4,
 
 a h4 {
 	font-weight: 400;
-	color: #076233;
+	color: #2e6a60;
 }
 
 a {
-	color: #076233;
+	color: #2e6a60;
 	text-decoration: underline;
 }
 
@@ -151,7 +151,7 @@ p {
 
 #line-top {
 	height: 1rem;
-	background-color: #076233;
+	background-color: #2e6a60;
 	position: fixed;
 	top: 0;
 	right: 0;
@@ -196,7 +196,7 @@ p {
 
 .nav.link {
 	display: inline-block;
-	color: #076233;
+	color: #2e6a60;
 	text-decoration: none;
 	padding: 2.5rem;
 	padding-left: 0;
@@ -207,7 +207,7 @@ p {
 }
 
 .nav.link:visited {
-	color: #0a6d37;
+	color: #3e7c6f;
 }
 
 /* SVG LOGO */
@@ -220,8 +220,8 @@ p {
 	bottom: 0;
 	margin: 0 auto;
 	width: 20rem;
-	fill: #076233;
-	stroke: #076233; 
+	fill: #2e6a60;
+	stroke: #2e6a60; 
 	stroke-width: 2;
 	stroke-miterlimit: 10;
 }
@@ -258,13 +258,13 @@ p {
 /* SVG LOGOS */
 #github,
 #codepen {
-	fill: #076233;
+	fill: #2e6a60;
 	width: 10rem;
 	height: 10rem; 
 }
 
 #behance {
-	fill: #076233;
+	fill: #2e6a60;
 	width: 7rem;
 	height: 7rem; 
 }
@@ -278,7 +278,7 @@ object {
 /* FOOTER */
 footer {
 	height: 6rem;
-	background-color: #076233;
+	background-color: #2e6a60;
 }
 
 .footer-logos {
@@ -295,7 +295,7 @@ footer {
 }
 
 .footer-logo-svg:hover {
-	fill: #076233;
+	fill: #2e6a60;
 	background-color: #fff;
 }
 
@@ -309,12 +309,12 @@ footer {
 /* SELECTIONS */
 ::-moz-selection {
     color: #fff;
-    background: #076233;
+    background: #2e6a60;
 }
 
 ::selection {
     color: #fff; 
-    background: #076233;
+    background: #2e6a60;
 }
 
 /* MARGINS */
