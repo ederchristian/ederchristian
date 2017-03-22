@@ -282,10 +282,8 @@ footer {
 }
 
 .footer-logos {
-	position: relative;
-	display: flex;
-  	align-items: center;
-  	justify-content: center;
+	text-align: center;
+	padding-top: .3rem;
 }
 
 .footer-logo-svg {
