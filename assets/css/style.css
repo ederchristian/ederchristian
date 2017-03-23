@@ -155,11 +155,15 @@ p {
 
 /* MENU */
 nav {
+	position: fixed;
 	background-color: #fff;
+	height: 8rem;
+	width: 100%;
+	box-shadow: .5rem .5rem 1rem #c9c9c9;
 }
 
 .nav.hamburguer {
-	position: fixed;
+	position: absolute;
 	top: 2.2rem;
 	right: 1rem;
 	padding: 1rem;
@@ -171,7 +175,6 @@ nav {
 }
 
 .nav.logo {
-	position: fixed;
 	display: inline-block;
 	padding: 0 0 0 2rem;
 	margin-top: -5rem;
@@ -183,42 +186,43 @@ nav {
     justify-content: flex-start;
 	flex-flow: wrap;
 	max-height: 0rem;
-	top: 7rem;
 	overflow: hidden;
-	transition: all ease-in-out .2s;
-	margin-left: 2.3rem;
+	transition: all ease-in-out .3s;
+	margin-left: 1rem;
+	top: 2.4rem;
 }
 
 .nav.link {
 	display: inline-block;
 	color: #285e4e;
 	text-decoration: none;
-	padding: 2.5rem;
-	padding-left: 0;
+	padding: 1rem 1.7rem;
 	font-family: 'Roboto', sans-serif;
 	font-weight: 300;
-	font-size: 2rem;
-	text-transform: uppercase;
+	font-size: 1.5rem;
+	text-transform: uppercase;	
 }
 
 .nav.link:visited {
 	color: #3e7c6f;
 }
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 800px) {
 	.nav.logo {
-		left: 20rem;
+		padding: 0 0 0 20rem;
 	}
 
 	.nav.link {
-		padding-left: 2.5rem;
+		padding-left: 3rem;
+		font-size: 2rem;
 	}
 
 	.nav.menu {
+		position: fixed;
 		justify-content: flex-end;
 		flex-flow: row wrap;
 		max-height: 20rem;
-		top: .5rem;
+		top: 2rem;
 		right: 20rem;
 	}
 
@@ -234,17 +238,9 @@ nav {
 	width: 100%;
 }
 
-#line-header {
-	position: fixed;
-	border-width: .1rem;
-	background-color: green;
-	margin-top: -1.3rem;
-	padding-bottom: .2rem;
-	opacity: .2;
-}
-
 .nav.menu.opened {
-	max-height: 30rem;
+	max-height: 20rem;
+	background-color: #fff;
 }
 
 /* SVG LOGO */
