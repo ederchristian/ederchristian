@@ -16,7 +16,6 @@ body {
 /* GRID */
 .container {
 	width: 100%;
-	max-width: 900px;
 	box-sizing: border-box;
 }
 
@@ -160,27 +159,11 @@ p {
 	height: 1rem;
 	background-color: #285e4e;
 	position: fixed;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	margin: 0 auto;
 	width: 100%;
 }
 
-.top-content {
-	position: fixed;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	margin-top: -5rem;
-	background-color: #fff;
-	height: 17rem;
-}
-
 #line-header {
-	position:relative;
+	position: fixed;
 	border-width: .1rem;
 	background-color: green;
 	margin-top: -1.3rem;
@@ -189,14 +172,31 @@ p {
 }
 
 /* MENU */
+nav {
+	position: relative;
+	height: 5rem;
+}
+
+.nav.hamburguer {
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+	padding: 1rem;
+	cursor: pointer;
+}
+
+#nav-hamburguer {
+	height: 4rem;
+}
+
+.nav.logo {
+	display: inline-block;
+	padding: 0 0 0 2rem;
+}
 
 .nav.menu {
 	position: relative;
-	top: 0;
-	left: 0;
-	bottom: 0;
-	right: 0;
-	text-align: center;
+	display: block;
 	padding-left: 2.5rem;
     margin-top: 10rem;
 }
@@ -220,12 +220,7 @@ p {
 /* SVG LOGO */
 
 #logo {
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	margin: 0 auto;
+	position: relative;
 	width: 20rem;
 	fill: #285e4e;
 	stroke: #285e4e; 
