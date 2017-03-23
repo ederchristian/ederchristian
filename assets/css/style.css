@@ -181,10 +181,12 @@ nav {
 	position: fixed;
 	display: flex;
     justify-content: flex-start;
-	flex-flow: column nowrap;
-	max-height: 0;
+	flex-flow: wrap;
+	max-height: 0rem;
+	top: 7rem;
 	overflow: hidden;
 	transition: all ease-in-out .2s;
+	margin-left: 2.3rem;
 }
 
 .nav.link {
@@ -204,6 +206,10 @@ nav {
 }
 
 @media screen and (min-width: 750px) {
+	.nav.logo {
+		left: 20rem;
+	}
+
 	.nav.link {
 		padding-left: 2.5rem;
 	}
@@ -212,6 +218,8 @@ nav {
 		justify-content: flex-end;
 		flex-flow: row wrap;
 		max-height: 20rem;
+		top: .5rem;
+		right: 20rem;
 	}
 
 	.nav.hamburguer {
