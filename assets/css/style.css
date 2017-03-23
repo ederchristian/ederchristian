@@ -273,6 +273,27 @@ p {
 }
 
 /* SVG LOGOS */
+.svg {
+	text-align: center;
+}
+
+.svg-link {
+	display: inline-block;
+	margin-right: 5rem;
+	margin-left: 5rem;
+}
+
+@media screen and (max-width: 500px) {
+	.svg-link {
+		display: block;
+		margin-top: 1rem;
+	}
+
+	#behance {
+		padding-bottom: 3rem;
+	}
+}
+
 #github,
 #codepen {
 	fill: #285e4e;
@@ -283,7 +304,8 @@ p {
 #behance {
 	fill: #285e4e;
 	width: 7rem;
-	height: 7rem; 
+	height: 7rem;
+	margin-bottom: 1.5rem;
 }
 
 object {
