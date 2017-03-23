@@ -261,6 +261,9 @@ p {
 	padding: 1rem 1rem;
 }
 
+.contact {
+	background-color: #fdfffa;
+}
 /* IMAGES */
 #profile-picture {
 	width: 18rem;
@@ -335,6 +338,14 @@ footer {
 }
 
 /* PADDINGS */
+.padding-top-5 {
+	padding-top: 5rem;
+}
+
+.padding-top-10 {
+	padding-top: 10rem;
+}
+
 .padding-top-14 {
 	padding-top: 14rem;
 }
