@@ -8,3 +8,11 @@ $('a[href^="#"]').on('click', function(event) {
 		}, 800);
 	}
 });
+
+/* NAV HAMBURGUER */
+window.addEventListener('DOMContentLoaded', function(e) {
+	document.querySelector('.nav.hamburguer')
+		.addEventListener('click', function (e) {
+			document.querySelector('.nav.menu').classList.toggle('opened')
+		}, false);
+}, false);
