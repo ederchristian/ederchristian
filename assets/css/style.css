@@ -203,6 +203,17 @@ nav {
 	text-transform: uppercase;	
 }
 
+.homepage-link {
+	display: inline-block;
+	color: #285e4e;
+	text-decoration: none;
+	padding: .3rem 1.7rem;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+	font-size: 2.5rem;
+	text-transform: uppercase;
+}
+
 .nav.link:visited {
 	color: #3e7c6f;
 }
