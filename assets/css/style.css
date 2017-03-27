@@ -312,6 +312,11 @@ nav {
 	display: inline-block;
 	margin-right: 5rem;
 	margin-left: 5rem;
+	transition: transform .3s ease-out;
+}
+
+.svg-link:hover {
+	transform: scale(1.2);
 }
 
 @media screen and (max-width: 500px) {
