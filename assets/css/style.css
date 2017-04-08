@@ -246,7 +246,7 @@ nav {
 	height: 1rem;
 	background-color: #285e4e;
 	position: fixed;
-	width: 100%;
+	width: 0%;
 }
 
 .nav.menu.opened {
