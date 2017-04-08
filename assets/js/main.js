@@ -9,6 +9,14 @@ $('a[href^="#"]').on('click', function(event) {
 	}
 });
 
+/* LINE SCROLL */
+var line = document.querySelector("#line-top");
+addEventListener("scroll", function() {
+	var max = document.body.scrollHeight - innerHeight;
+	var percent = (pageYOffset / max) * 100;
+	line.style.width = percent + "%";
+});
+
 /* NAV HAMBURGUER */
 window.addEventListener('DOMContentLoaded', function(e) {
 	document.querySelector('.nav.hamburguer')
