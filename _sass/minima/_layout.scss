@@ -1,8 +1,21 @@
 /**
+ * Home
+ */
+.home {
+  background-image: url('../../assets/img/home/home-eder-christian.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  height: 100vh;
+  padding: $spacing-unit 0;
+}
+
+/**
  * Site header
  */
 .site-header {
-  border-top: 5px solid $grey-color-dark;
+  border-top: 5px solid $brand-color;
   border-bottom: 1px solid $grey-color-light;
   min-height: $spacing-unit * 1.865;
 
