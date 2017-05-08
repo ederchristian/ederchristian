@@ -1,16 +1,6 @@
 /**
- * Home
+ * SVG Logo
  */
-.page-content .home {
-  background-image: url('../../assets/img/home/home-eder-christian.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  height: 100vh;
-  padding: $spacing-unit 0;
-}
-
 #logo-eder-christian {
   position: relative;
   width: 200px;
@@ -21,6 +11,7 @@
 #up {
   fill: $brand-color;
 }
+
 /**
  * Site header
  */
@@ -72,7 +63,6 @@
       margin-right: 20px;
     }
   }
-
 
   @include media-query($on-palm) {
     position: absolute;
@@ -220,8 +210,6 @@
   }
 }
 
-
-
 /**
  * Page content
  */
@@ -303,3 +291,41 @@
     }
   }
 }
+
+/**
+ * Contact
+ */
+
+.btn-linkedin {
+  background-color: #0075bb;
+  width: 145px;
+  height: 28px;
+  border: none;
+  border-radius: 4px;
+}
+
+.btn-linkedin:hover {
+  background-color: #0168a5;
+}
+
+.btn-linkedin a:hover {
+  text-decoration: none;
+  color: $white-color;
+}
+
+.btn-linkedin span {
+  position: relative;
+  left: -4px;
+  bottom: 8px;
+  font-size: 16px;
+  letter-spacing: 1.1px;
+  color: $white-color;
+}
+
+ #logo-linkedin {
+  position: relative;
+  height: 27px;
+  fill: $white-color;
+  left: -5px;
+  bottom: 1px;
+ }
