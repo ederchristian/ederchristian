@@ -14,7 +14,7 @@ I love to make things for the web and to put my endeavor on it. In this path, ea
 
 ---
 
-#### I'm good at
+### I'm good at
 
 * HTML5
 
@@ -30,7 +30,7 @@ I love to make things for the web and to put my endeavor on it. In this path, ea
 
 &nbsp;
 
-#### I know
+### I know
 
 * Ruby
 
@@ -40,7 +40,7 @@ I love to make things for the web and to put my endeavor on it. In this path, ea
 
 &nbsp;
 
-#### Currently studying
+### Currently studying
 
 * Python
 
@@ -52,7 +52,7 @@ I love to make things for the web and to put my endeavor on it. In this path, ea
 
 &nbsp;
 
-#### I also wanna learn
+### I also wanna learn
 
 * Angular
 
@@ -60,7 +60,7 @@ I love to make things for the web and to put my endeavor on it. In this path, ea
 
 &nbsp;
 
-#### I also do
+### I also do
 
 * Design at Photoshop and Illustrator
 
@@ -68,7 +68,7 @@ I love to make things for the web and to put my endeavor on it. In this path, ea
 
 &nbsp;
 
-#### Idioms
+### Idioms
 
 * Portuguese - Native
 
@@ -78,7 +78,7 @@ I love to make things for the web and to put my endeavor on it. In this path, ea
 
 &nbsp;
 
-#### Hobbies
+### Hobbies
 
 * Football (or soccer, if you prefer)
 
@@ -90,6 +90,6 @@ I love to make things for the web and to put my endeavor on it. In this path, ea
 
 * Books
 
-* Music (Nowadays I just listen to)
+* Music (nowadays I just listen to)
 
 * Travel
