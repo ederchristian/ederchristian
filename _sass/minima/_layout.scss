@@ -52,7 +52,7 @@
   line-height: $base-line-height;
 
   .nav-trigger {
-      display: none;
+    display: none;
   }
 
   .menu-icon {
@@ -72,6 +72,7 @@
       margin-right: 20px;
     }
   }
+
 
   @include media-query($on-palm) {
     position: absolute;
@@ -181,7 +182,6 @@
 
 .footer-col a:hover {
   color: $brand-color;
-  text-decoration: none;
 }
 
 .footer-col-1 {
@@ -227,6 +227,7 @@
  */
 .page-content {
   padding: $spacing-unit 0;
+  margin-bottom: 70px;
 }
 
 .page-heading {
@@ -256,7 +257,6 @@
 
 .post-link:hover {
   color: $brand-color;
-  text-decoration: none;
 }
 
 /**
