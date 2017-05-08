@@ -28,6 +28,8 @@ I love to make things for the web and to put my endeavor on it. In this path, ea
 
 * Git
 
+&nbsp;
+
 #### I know
 
 * Ruby
@@ -35,6 +37,8 @@ I love to make things for the web and to put my endeavor on it. In this path, ea
 * Jekyll
 
 * Scrum / Kanban
+
+&nbsp;
 
 #### Currently studying
 
@@ -46,17 +50,23 @@ I love to make things for the web and to put my endeavor on it. In this path, ea
 
 * ES6
 
+&nbsp;
+
 #### I also wanna learn
 
 * Angular
 
 * React
 
+&nbsp;
+
 #### I also do
 
 * Design at Photoshop and Illustrator
 
 * Video editing at iMovie
+
+&nbsp;
 
 #### Idioms
 
@@ -65,6 +75,8 @@ I love to make things for the web and to put my endeavor on it. In this path, ea
 * English - Professional working proficiency
 
 * Spanish - If you're patient, we can understand each other
+
+&nbsp;
 
 #### Hobbies
 
