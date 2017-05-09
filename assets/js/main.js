@@ -24,3 +24,11 @@ window.twttr = (function(d, s, id) {
   js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.9";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
+
+// Animate.css
+$('.home').addClass('animated fadeInUp');
+$('.post-header').addClass('animated fadeIn');
+$('.post-content').addClass('animated fadeIn');
+$('.blog').addClass('animated fadeIn');
+$('.email').addClass('animated fadeIn');
+$('.social-media').addClass('animated zoomIn');
