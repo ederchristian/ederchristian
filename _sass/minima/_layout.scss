@@ -19,7 +19,6 @@
   border-top: 5px solid $brand-color;
   border-bottom: 1px solid $grey-color-light;
   height: $spacing-unit * 1.865;
-
   // Positioning context for the mobile navigation icon
   position: relative;
 }
@@ -41,6 +40,7 @@
 .site-nav {
   float: right;
   line-height: $base-line-height;
+  z-index: 2;
 
   .nav-trigger {
     display: none;
@@ -295,7 +295,6 @@
 /**
  * Contact
  */
-
 .btn-linkedin {
   background-color: #0075bb;
   width: 145px;
