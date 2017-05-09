@@ -8,7 +8,7 @@ layout: default
 <div class="blog">
 	{{ content }}
 	{% if site.posts.size == 0 %}
-		<h2>No posts found.</h2>
+		<h2 class="message">No posts found.</h2>
 	{% else %}
   		<ul class="post-list">
   		{% for post in site.posts %}
