@@ -56,7 +56,11 @@ I love to make things for the web and to put my endeavor on it. In this path, ea
 
 * Angular
 
+* Ionic
+
 * React
+
+* Swift
 
 &nbsp;
 
