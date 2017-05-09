@@ -12,6 +12,8 @@ Hi everyone! I'm Eder Christian, a web developer, currently living in Sao Paulo 
 
 I love to make things for the web and to put my endeavor on it. In this path, each passing day I wanna get more envolved with the open source community.
 
+<a target="_blank" href="http://smallactsmanifesto.org" title="Small Acts Manifesto"><img src="http://smallactsmanifesto.org/static/images/smallacts-badge-80x15.png" style="border: none;" alt="Small Acts Manifesto" /></a>
+
 ---
 
 ### I'm good at
