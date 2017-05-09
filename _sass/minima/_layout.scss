@@ -207,7 +207,7 @@
 .post-link {
   display: block;
   @include relative-font-size(1.5);
-  margin-top: -15px;
+  margin-bottom: -7px;
 }
 
 .post-link:hover {
@@ -217,6 +217,10 @@
 /**
  * Posts
  */
+.blog {
+  margin-top: -40px;
+}
+
 .post-header {
   margin-bottom: $spacing-unit;
 }
