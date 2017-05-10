@@ -137,11 +137,6 @@
   margin-bottom: $spacing-unit / 2;
 }
 
-.contact-list,
-.social-media-list {
-  list-style: none;
-  margin-left: 0;
-}
 
 .footer-col-wrapper {
   @include relative-font-size(0.9375);
@@ -294,7 +289,6 @@
   left: -4px;
   bottom: 8px;
   font-size: 16px;
-  font-weight: 700;
   letter-spacing: 1.1px;
   color: $white-color;
 }
