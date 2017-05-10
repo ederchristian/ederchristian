@@ -1,7 +1,5 @@
 # Eder Christian
 
----
-
 Personal website/blog.
 
 Made and powered by [Jekyll][jekyll].
