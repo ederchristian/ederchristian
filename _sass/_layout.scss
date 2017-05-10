@@ -210,6 +210,16 @@
 }
 
 /**
+ * Home
+ */
+.home h2 {
+  color: $grey-color;
+  font-weight: 300;
+  font-size: 22px;
+  text-transform: uppercase;
+}
+
+/**
  * Posts
  */
 .blog {
