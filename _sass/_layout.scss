@@ -212,11 +212,28 @@
 /**
  * Home
  */
+.home {
+  margin-top: 6rem;
+}
+
 .home h2 {
   color: $grey-color;
-  font-weight: 300;
+  font-weight: 100;
   font-size: 22px;
   text-transform: uppercase;
+}
+
+.home img {
+  width: 100%;
+  height: 100%;
+  box-shadow: 10px 10px 5px $grey-color-light;
+}
+
+@media screen and (min-width: 900px) {
+  .home img {
+    width: 470px;
+    height: 320px;
+  }
 }
 
 /**
