@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "It is Just the Beginning"
-date: 2017-05-11 08:39:47
+date: 2017-05-11 05:10:00
 category: english
 permalink: /blog/en/:title/
 description: "This is my first public post - following this style as a blog - on the internet, and writen in English, which is not my mother tongue."
