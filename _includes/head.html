@@ -34,7 +34,8 @@
   <meta property="twitter:image" content="{{ site.url }}/assets/img/card-image.jpg" />
   {% endif %}
   <!-- Open Graph Facebook-->
-  <meta property="og:url" content="{{ site.url }}" />
+  <meta property="fb:app_id" content="163668550832334" />
+  <meta property="og:url" content="{{ page.url }}" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="{% if page.title %}{{ site.title | escape }} - {{ page.title | escape }}{% else %}{{ page.title | escape }}{{ site.title | escape }}{% endif %}" />
   <meta property="og:description" content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}" />
