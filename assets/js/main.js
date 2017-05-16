@@ -31,4 +31,4 @@ $('.post-header').addClass('animated fadeIn');
 $('.post-content').addClass('animated fadeIn');
 $('.blog').addClass('animated fadeIn');
 $('.email').addClass('animated fadeIn');
-$('.social-media').addClass('animated zoomIn');
+$('.social-media').addClass('animated fadeIn');
