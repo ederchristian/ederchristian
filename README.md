@@ -18,19 +18,15 @@ View the [doc][doc].
 
 ## To run
 
-1. Clone repository:
+1. Clone repository and open the project:
 	```
-	$ git clone https://github.com/ederchristian/ederchristian.github.io.git
-	```
-1. Open project:
-	```
-	$ cd ederchristian.github.io
+	$ git clone https://github.com/ederchristian/ederchristian.github.io.git && cd ederchristian.github.io
 	```
 1. Run server:
 	```
 	$ jekyll serve
 	```
-4. Open the web browser to `http://localhost:4000/`
+1. Open the web browser to `http://localhost:4000/`
 
 ## License
 
