@@ -302,6 +302,18 @@
   padding: 20px 0 20px 0;
 }
 
+.fb-post {
+  margin: 0 auto !important;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+@media screen and (min-width: 320px) and (max-width: 900px) {
+  .fb-post {
+    width: 100%;
+  }
+}
+
 /**
  * Contact
  */
