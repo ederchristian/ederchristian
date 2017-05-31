@@ -4,6 +4,8 @@ Personal website/blog.
 
 Made and powered by [Jekyll][jekyll].
 
+[![Code Climate](https://codeclimate.com/github/ederchristian/ederchristian.github.io/badges/gpa.svg)](https://codeclimate.com/github/ederchristian/ederchristian.github.io) [![Issue Count](https://codeclimate.com/github/ederchristian/ederchristian.github.io/badges/issue_count.svg)](https://codeclimate.com/github/ederchristian/ederchristian.github.io)
+
 ## Installation
 
 1. Install [Ruby][ruby]
