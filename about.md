@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-Hi everyone! I'm Eder Christian, a web developer, currently living in Sao Paulo - Brazil. I'm a passionate about technology and entrepreneurship, always looking for new opportunities and new connections with other people. I've got an entrepreneur mindset.
+Hi everyone! I'm Eder Christian, a web developer, currently living in Sao Paulo - Brazil and working at <a href="http://startse.com.br" target="_blank">StartSe</a>. I'm a passionate about technology and entrepreneurship, always looking for new opportunities and new connections with other people. I've got an entrepreneur mindset.
 
 
 > I truly believe that life really begins when we leave our comfort zone.
@@ -20,7 +20,7 @@ I love to make things for the web and to put my endeavor on it. In this path, ea
 
 * HTML5
 
-* CSS
+* CSS3
 
 * JavaScript
 
@@ -44,23 +44,19 @@ I love to make things for the web and to put my endeavor on it. In this path, ea
 
 ### Currently studying
 
-* Python
-
-* Django
+* ES6
 
 * TDD
 
-* ES6
+* Python
+
+* Django
 
 &nbsp;
 
 ### I also wanna learn
 
-* Angular
-
-* Ionic
-
-* React
+* At least one framework JavaScript
 
 * Swift
 
@@ -86,7 +82,7 @@ I love to make things for the web and to put my endeavor on it. In this path, ea
 
 ### Hobbies
 
-* Football (or soccer, if you prefer)
+* Soccer (or football, if you prefer)
 
 * Video-games
 
@@ -96,6 +92,6 @@ I love to make things for the web and to put my endeavor on it. In this path, ea
 
 * Books
 
-* Music (nowadays I just listen to)
+* Music
 
 * Travel
