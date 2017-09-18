@@ -44,19 +44,19 @@ I love to make things for the web and to put my endeavor on it. In this path, ea
 
 ### Currently studying
 
-* ES6
+* JavaScript (ES6)
 
 * TDD
 
 * Python
 
-* Django
-
 &nbsp;
 
 ### I also wanna learn
 
-* At least one framework JavaScript
+* Vue.js
+
+* Angular
 
 * Swift
 
@@ -84,11 +84,11 @@ I love to make things for the web and to put my endeavor on it. In this path, ea
 
 * Soccer (or football, if you prefer)
 
-* Video-games
-
 * Gym
 
 * Programming
+
+* Video-games
 
 * Books
 
