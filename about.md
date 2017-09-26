@@ -16,7 +16,7 @@ I love to make things for the web and to put my endeavor on it. In this path, ea
 
 ---
 
-### I'm good at
+### Skills
 
 * HTML5
 
@@ -30,12 +30,6 @@ I love to make things for the web and to put my endeavor on it. In this path, ea
 
 * Git
 
-&nbsp;
-
-### I know
-
-* Ruby
-
 * Jekyll
 
 * Scrum / Kanban
@@ -44,19 +38,19 @@ I love to make things for the web and to put my endeavor on it. In this path, ea
 
 ### Currently studying
 
-* JavaScript (ES6)
-
-* TDD
+* JavaScript
 
 * Python
 
 &nbsp;
 
-### I also wanna learn
-
-* Vue.js
+### I wanna learn
 
 * Angular
+
+* React and React Native
+
+* Vue.js
 
 * Swift
 
