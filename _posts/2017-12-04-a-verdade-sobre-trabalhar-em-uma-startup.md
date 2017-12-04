@@ -4,7 +4,7 @@ title: "A verdade sobre trabalhar em uma startup"
 date: 2017-12-04 17:20:12
 category: portuguese
 permalink: /blog/pt/:title/
-description: "Vocês costumam ficar desconfortáveis ao conversarem sobre dinheiro? Por muito tempo fiquei assim. Ainda bem que há um tempo mudei meu mindset e minha relação sobre o assunto."
+description: "Faz quase 5 meses que não posto nada por aqui, mas quero e irei voltar. Pelo menos 2 posts por mês eu pretendo compartilhar. Não somente sobre tecnologia, mas sobre o que estou curtindo no momento, sempre pensando em gerar valor pra quem lê ou até mesmo como uma maneira de compartilhar o que estou vivendo pro mundo."
 tags:
  - startup
  - mindset
@@ -93,4 +93,3 @@ Tudo pode mudar. Aliás, tudo muda. Mas espero que consiga sempre trabalhar com 
 ![Foto de duas pessoas trabalhando em uma startup](/assets/img/posts/a-verdade-sobre-trabalhar-em-uma-startup/startse.jpg)
 
 Você também trabalha numa startup? Se quiser, compartilha aqui suas experiências pra gente trocar algumas ideias.
-
