@@ -20,9 +20,9 @@ This is my first public post - following this style as a blog - on the internet,
 
 For the past months I've been wondering about my purpose in life and about my happiness. Truth be told, I started to live the way I want since last year. I'm 24 now and I think there is always time to change something, to improve, to grow up in life.
 
-I do love tecnology and I've realized I want to work with programming for the rest of my life. That makes me feel very happy. Practicing sports, learning something new, traveling, playing video-games and other amazing things make me feel happy too.
+I do love technology and I've realized I want to work with programming for the rest of my life. That makes me feel very happy. Practicing sports, learning something new, traveling, playing video-games and other amazing things make me feel happy too.
 
-I intend with this blog to expose some thoghts and what I think can help other people.
+I intend with this blog to expose some thoughts and what I think can help other people.
 
 Living life, talking to great people, studying a lot, reading great books, all these things, I really appreciate all of it! Each day I've got the possibility to grow up. That's my mindset.
 
