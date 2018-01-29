@@ -10,7 +10,7 @@ tags:
  - meetups
  - programação
  - web app
-image: "/assets/img/posts/tchau-poupanca-oi-warren/warren.jpg"
+image: "/assets/img/posts/28-eventos-em-1-ano-pelo-menos/eventos.jpg"
 ---
 
 ![Galera no final do CodePen Meetup Brasil, no Google Brasil ](/assets/img/posts/28-eventos-em-1-ano-pelo-menos/eventos.jpg)
