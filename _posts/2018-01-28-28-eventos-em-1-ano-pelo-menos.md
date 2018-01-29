@@ -57,6 +57,8 @@ Pra esse ano de 2018, pretendo pelo menos dobrar o número de eventos/meetups (c
 
 E já comprei o ingresso no preço promocional pro <a href="http://www.frontinsampa.com.br/" target="_blank">Front in Sampa</a> desse ano.
 
-Parece que realmente descobri um mundo totalmente novo e que estou feliz demais por estar fazendo parte disso tudo. A gente aprende demais não só com os conteúdos, mas também com as trocas de ideias e interações com a galera. É como dizem: pessoas > tecnologia.
+Parece que realmente descobri um mundo totalmente novo e que estou feliz demais por estar fazendo parte disso tudo. A gente aprende demais não só com os conteúdos, mas também com as trocas de ideias e interações com a galera.
+
+> É como dizem: pessoas > tecnologia.
 
 Ainda bem que é só o começo!
