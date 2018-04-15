@@ -323,7 +323,7 @@
  */
 .btn-linkedin {
   background-color: #0075bb;
-  width: 145px;
+  width: 155px;
   height: 28px;
   border: none;
   border-radius: 4px;
@@ -340,19 +340,52 @@
 
 .btn-linkedin span {
   position: relative;
-  left: -4px;
-  bottom: 8px;
-  font-size: 16px;
+  left: -5px;
+  bottom: 9px;
+  font-size: 14px;
   letter-spacing: 1.1px;
   color: $white-color;
 }
 
 #logo-linkedin {
   position: relative;
-  height: 27px;
+  height: 26.5px;
   fill: $white-color;
   left: -5px;
   bottom: 1px;
+}
+
+.btn-telegram {
+  background-color: #00ade8;
+  width: 188px;
+  height: 28px;
+  border: none;
+  border-radius: 4px;
+}
+
+.btn-telegram:hover {
+  background-color: #0092da;
+}
+
+.btn-telegram a:hover {
+  text-decoration: none;
+  color: $white-color;
+}
+
+.btn-telegram span {
+  position: relative;
+  left: 11px;
+  bottom: 24px;
+  font-size: 14px;
+  letter-spacing: 1.1px;
+  color: $white-color;
+}
+
+#logo-telegram {
+  position: relative;
+  height: 20px;
+  left: -245px;
+  bottom: -2px;
 }
 
 /**
