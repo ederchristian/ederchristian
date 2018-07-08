@@ -18,7 +18,7 @@ I love to make things for the web and to put my endeavor on it. In this path, ea
 
 ---
 
-### Skills
+## Skills
 
 * HTML5
 
@@ -38,7 +38,9 @@ I love to make things for the web and to put my endeavor on it. In this path, ea
 
 &nbsp;
 
-### Currently studying
+## Currently studying
+
+* SASS
 
 * JavaScript
 
@@ -46,7 +48,7 @@ I love to make things for the web and to put my endeavor on it. In this path, ea
 
 &nbsp;
 
-### I wanna learn
+## I wanna learn
 
 * React and React Native
 
@@ -56,7 +58,7 @@ I love to make things for the web and to put my endeavor on it. In this path, ea
 
 &nbsp;
 
-### I also do
+## I also do
 
 * Design in Photoshop and Illustrator
 
@@ -64,7 +66,7 @@ I love to make things for the web and to put my endeavor on it. In this path, ea
 
 &nbsp;
 
-### Idioms
+## Idioms
 
 * Portuguese - Native
 
@@ -74,7 +76,7 @@ I love to make things for the web and to put my endeavor on it. In this path, ea
 
 &nbsp;
 
-### Hobbies
+## Hobbies
 
 * Soccer (or football, if you prefer)
 
