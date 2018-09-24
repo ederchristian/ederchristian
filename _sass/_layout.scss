@@ -197,6 +197,15 @@
   }
 }
 
+.talk-list {
+  margin-left: 0;
+  list-style: none;
+
+  > li {
+    margin-bottom: $spacing-unit;
+  }
+}
+
 .post-meta {
   font-size: $small-font-size;
   color: $grey-color;
@@ -231,7 +240,8 @@
 .home img {
   width: 100%;
   height: 100%;
-  box-shadow: 10px 10px 5px $grey-color-light;
+  margin-bottom: 40px;
+  box-shadow: 5px 5px 10px $grey-color-light;
 }
 
 @media screen and (min-width: 900px) {
