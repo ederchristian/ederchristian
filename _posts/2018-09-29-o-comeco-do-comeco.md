@@ -42,7 +42,7 @@ Como sempre falo, é quase um dever moral de compartilhar o que estou aprendendo
 
 Depois de por muito tempo ficar triste pelas coisas ruins que aconteciam e pelo que não acontecia, aos poucos fui mudando. Quero fazer todo o esforço pra me respeitar mais, respeitar minha história, ter mais amor próprio.
 
-Não precisava ter me sentido a pior das pessoas que estava cursando a pós, nem preciso me sentir o mais júnior de todos os desenvolvedores fodas que conheço e convivo durante os eventos. Mas só precisava sentir privilegiado de estar cercado de pessoas melhores que eu, que puxam meu nível sempre pra cima.
+Não precisava ter me sentido a pior das pessoas que estava cursando a pós, nem preciso me sentir o mais júnior de todos os desenvolvedores fodas que conheço e convivo durante os eventos e meetups que sempre frequento. Mas só precisava/preciso sentir privilegiado/grato de estar cercado de pessoas melhores que eu, que puxam meu nível sempre pra cima.
 
 É só uma questão de tempo e ficar mais tranquilo. Aproveitar o processo de aprendizagem de um jeito divertido é importante demais pra evolução. A gente aprende na prática, assim como entende que é sempre só o começo. Além de perceber que não tem nada garantido.
 
