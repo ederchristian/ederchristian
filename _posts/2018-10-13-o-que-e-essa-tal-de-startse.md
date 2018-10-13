@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "O que é essa tal de StartSe?"
-date: 2018-10-13 15:40:11
+date: 2018-10-13 16:25:11
 category: portuguese
 permalink: /blog/pt/:title/
 description: "Há muito ouço uma galera falar mal de pessoas e empresas quando o assunto é startups - pelo menos no Brasil. A minha experiência trabalhando em uma é excelente e sinto que preciso contar como é sempre que eu tiver a chance, justamente pra desmistificar a realidade."
