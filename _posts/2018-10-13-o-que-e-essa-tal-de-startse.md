@@ -183,7 +183,7 @@ Aqui na firma eu uso, hoje, um MacBook Air 11-inch 2013 de 4GB de RAM, 128GB de 
 * Python;
 * Django;
 * Machine Learning;
-* Inteligência Artificial
+* Inteligência Artificial;
 * Continuous Integration;
 * Design System;
 * Sketch.
