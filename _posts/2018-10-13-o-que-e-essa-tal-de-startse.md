@@ -171,7 +171,9 @@ Aqui na firma eu uso, hoje, um MacBook Air 11-inch 2013 de 4GB de RAM, 128GB de 
 * Um pouquinho de PHP;
 * Gulp;
 * Docker;
-* Git na veia.
+* Git na veia;
+* Photoshop;
+* Illustrator.
 
 ## O que sonho em usar e quero me preparar pra isso?
 
