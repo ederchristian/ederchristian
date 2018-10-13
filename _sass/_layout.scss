@@ -327,9 +327,19 @@
   padding-bottom: 3rem;
 }
 
+#video-youtube {
+  width: 100%;
+  height: 32rem;
+}
+
 @media screen and (min-width: 320px) and (max-width: 900px) {
   .fb-post {
     width: 100%;
+  }
+
+  #video-youtube {
+    width: 100%;
+    height: 17rem;
   }
 }
 
