@@ -100,7 +100,7 @@ Se não fossem as pessoas, provavelmente a StartSe teria morrido ou estaria lá 
 * Marcelo Maisonnave: fundador da XP Investimentos e sócio da StartSe. Um dos caras mais conectados com fintechs em todo o mundo. Ele não fica muito na empresa, mas quando vem é sempre muito relevante. Uma das pessoas mais inteligentes que já conheci na vida;
 * Leal: o gremista mais fanático da firma. Toca a área de Corporate da StartSe e faz essa conexão com grande empresas e startups;
 * Lamounier: toca a operação da StartSe em San Francisco e é um cara extremamente prático. Talvez seja o maior fã do Victor, goleiro do Galo, em todo o mundo. E o agradeço pela Alexa, quando estive no Vale;
-* Giannetti: outro cara bem gente boa que ajuda o Lamounier a tocas as operações no Vale;
+* Giannetti: outro cara bem gente boa que ajuda o Lamounier a tocar as operações no Vale;
 * Ricardo Geromel: o craque da empresa. O cara que joga machucado, na chuva, no sol, onde for e quando precisar. A pessoa mais alto astral da história, com empate técnico junto com Mauricio Benvenutti - com margem de erro de 2 pontos percentuais pra mais ou pra menos. Ele também toca a StartSe na China (desafio gigante, como é o país);
 * Barbara Trein: a americana da StartSe. Morou muitos anos em Virginia - EUA, e trabalhava na área de marketing da empresa. Hoje toca a vida em outros projetos fora da empresa;
 * Amandinha: essa menina é um raio. Se precisa vender alguma coisa, é com ela mesmo. Com experiência de vendas em um banco gigante no Brasil e mundo, ela se adaptou muito bem aqui e provou que consegue vender em qualquer lugar. Provavelmente, se você ligou pro atendimento da StartSe, já trocou algumas ideias com ela. Talvez por horas, caso você a deixou falar;
