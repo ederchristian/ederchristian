@@ -222,6 +222,20 @@
   color: $brand-color;
 }
 
+ul li,
+ol li {
+  font-size: $base-font-size;
+}
+
+.post-content blockquote {
+  padding: .5rem 0 .5rem 2rem;
+}
+
+.post-content blockquote p {
+  font-size: 2rem;
+  padding: 1rem 0;
+}
+
 /**
  * Home
  */
