@@ -131,6 +131,7 @@ Se não fossem as pessoas, provavelmente a StartSe teria morrido ou estaria lá 
 * Bira: dono dos bordões "senta-lhe a bota" e "isso é pior que parto de jibóia na transversal", é um dos caras mais engraçados que conheci na vida. Toca a área de Eventos e Cursos Online e é extremamente profissional;
 * Carlotinha: braço direito do Bira e ajuda a gente com a parte estratégica de criação de novos produtos;
 * Paulinho da Força: trabalha diretamente comigo, já que ele cria todos os layouts da páginas novas (e tem muita página pra lançar e arrumar) de eventos, cursos e tudo mais. Basicamente ele toca e eu preciso chutar pro gol, colocando as páginas na rua;
+* Barcelos: entrou há uns dias pra ser o CTO e parece ser bem legal;
 * Evelise: tocava a parte de Corporate com o Lobel e Leal e agora também tá junto na parte de vendas. Pessoa extremamente simpática;
 * Bella Pugliesi: mais uma da área de vendas da empresa. Há boatos que ela fala igualzinho a Ju;
 * João Loyola: mais um do Sul que veio pra São Paulo. Outro pra reforçar o time de vendas da empresa;
