@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Por que participei de 50 eventos em 1 ano e meio?"
+title: "Por que participei de 50 eventos de tecnologia em 1 ano e meio?"
 date: 2019-03-05 14:51:15
 category: portuguese
 permalink: /blog/pt/:title/
