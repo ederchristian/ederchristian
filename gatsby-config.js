@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Eder Christian`,
+    position: `Partner and Front-end Developer`,
     description: `A blog about front-end development and other cool stuff`,
     author: `@ederchristian`,
   },
@@ -26,6 +27,14 @@ module.exports = {
         display: `minimal-ui`,
         icon: `src/images/gatsby-icon.png`,
       },
+    },
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /assets/
+        }
+      }
     },
   ],
 }
