@@ -60,6 +60,9 @@ const GlobalStyles = createGlobalStyle`
     width: 100%;
     height: auto;
   }
+  h1, h2 {
+    font-family: 'Inter', sans-serif;
+  }
 `
 
 export default GlobalStyles
