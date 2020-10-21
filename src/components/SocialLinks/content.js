@@ -2,11 +2,11 @@ const handle = 'ederchristian92'
 
 const links = [
   {
-    label: 'GitHub',
+    label: 'Github',
     url: 'https://github.com/ederchristian'
   },
   {
-    label: 'LinkedIn',
+    label: 'Linkedin',
     url: `https://linkedin.com/in/${handle}`
   },
   {
