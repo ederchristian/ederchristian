@@ -1,13 +1,33 @@
-import { Github } from "@styled-icons/boxicons-logos/Github"
-import { Linkedin } from "@styled-icons/boxicons-logos/LinkedinSquare"
-import { Twitter } from "@styled-icons/boxicons-logos/Twitter"
-import { Instagram } from "@styled-icons/boxicons-logos/Instagram"
+import React from 'react'
 
-const Icons = {
-  Github,
-  Linkedin,
-  Twitter,
-  Instagram
-}
+import Icons from './Icons'
+import links from './content'
 
-export default Icons
+import * as S from './styled'
+
+const SocialLinks = () => (
+  <S.SocialLinksWrapper>
+    <S.SocialLinksList>
+      {links.map((link, i) => {
+        const Icon = Icons[link.label]
+
+        return (
+          <S.SocialLinksItem key={i}>
+            <S.SocialLinksLink
+              href={link.url}
+              title={link.label}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <S.IconWrapper>
+                <Icon />
+              </S.IconWrapper>
+            </S.SocialLinksLink>
+          </S.SocialLinksItem>
+        )
+      })}
+    </S.SocialLinksList>
+  </S.SocialLinksWrapper>
+)
+
+export default SocialLinks
