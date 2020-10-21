@@ -13,7 +13,7 @@ export const ProfileLink = styled(Link)`
   transition: color 0.5s;
 
   &:hover {
-    color: green;
+    cursor: pointer;
   }
 `
 
