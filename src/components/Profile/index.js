@@ -23,7 +23,7 @@ const Profile = () => {
 
   return (
     <S.ProfileWrapper>
-      <S.ProfileLink>
+      <S.ProfileLink to="/">
         <Logo style={{ width: 250 }} />
         <S.ProfileAuthor>
           {title}
