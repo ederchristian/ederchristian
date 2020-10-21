@@ -23,7 +23,8 @@
   },
   "devDependencies": {
     "gatsby-plugin-react-svg": "^3.0.0",
-    "prettier": "2.1.0"
+    "prettier": "2.1.0",
+    "styled-icons": "^10.22.0"
   },
   "keywords": [
     "gatsby"
