@@ -50,7 +50,7 @@ const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
   }
   body {
-    background: #30284f;
+    background: #16212c;
     line-height: 1;
     font-size: 100%;
     font-family: 'Tinos', serif;
