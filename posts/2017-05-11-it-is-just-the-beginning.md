@@ -4,7 +4,6 @@ title: It is Just the Beginning
 description: This is my first public post - following this style as a blog - on the internet, and writen in English, which is not my mother tongue.
 category: misc
 background: "#7aab13"
-layout: post
 ---
 
 Hi everyone!
