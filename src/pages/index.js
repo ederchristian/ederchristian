@@ -8,8 +8,8 @@ import PostItem from '../components/PostItem'
 const IndexPage = () => {
   const { allMarkdownRemark } = useStaticQuery(
     graphql`
-      query PostLis {
-        allMarkdownRemark {
+      query PostList {
+        allMarkdownRemark(sort: {fields: frontmatter___date, order: DESC}) {
           edges {
             node {
               fields {
