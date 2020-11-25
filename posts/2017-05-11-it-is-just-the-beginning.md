@@ -28,6 +28,8 @@ I agree with that, but I mean, I must live the way I always can say to myself:
 
 The point is to find what we'd love to do. And go on. Living this way I think it's easier and lighter. We'll always do our utmost to reach our goals.
 
+![Steve Jobs on the floor, holding an old Mac (P&B photo)](/assets/img/01-it-is-just-the-beginning-steve-jobs.jpg)
+
 > The only way to do great work is to love what you do. If you haven't found it yet, keep looking. Don't settle. - Steve Jobs
 
 As I wrote on About section:
