@@ -4,7 +4,7 @@ export const PostHeader = styled.header`
   max-width: 70rem;
   margin: auto;
   padding: 5rem 5rem 0;
-  color: #fff;
+  color: var(--postColor);
 `
 
 export const PostTitle = styled.h1`
@@ -68,7 +68,7 @@ export const MainContent = styled.section`
   .tags,
   iframe,
   .button-post {
-    color: #fff;
+    color: var(--postColor);
     font-size: 1.25rem;
     font-weight: 300;
     line-height: 1.7;
@@ -107,25 +107,25 @@ export const MainContent = styled.section`
   }
 
   blockquote {
-    color: #fff;
-    border-left: 0.4rem solid #00d59f;
+    color: var(--postColor);
+    border-left: 0.4rem solid var(--highlight);
     margin: 3rem auto;
     padding: 0 1.875rem;
   }
 
   hr {
-    border: 1px solid #38444d;
+    border: 1px solid var(--borders);
     margin: 3rem auto;
   }
 
   a {
-    border-bottom: 1px dashed #1fa1f2;
-    color: #1fa1f2;
+    border-bottom: 1px dashed var(--highlight);
+    color: var(--highlight);
     text-decoration: none;
     transition: opacity 0.5s;
 
     svg {
-      color: #fff;
+      color: var(--postColor);
     }
 
     &:hover {

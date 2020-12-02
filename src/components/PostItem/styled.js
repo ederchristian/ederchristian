@@ -6,16 +6,16 @@ export const PostItemWrapper = styled.section`
   align-items: center;
   width: 100%;
   padding: 2rem 3rem;
-  border-bottom: 1px solid #38444d;
+  border-bottom: 1px solid var(--borders);
 `
 
 export const PostItemLink = styled(Link)`
   display: flex;
-  color: #8899a6;
+  color: var(--texts);
   text-decoration: none;
 
   &:hover {
-    color: #00d59f;
+    color: var(--highlight);
   }
 `
 
@@ -23,7 +23,7 @@ export const PostItemTag = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  background: ${props => props.background ? props.background : '#00d59f'};
+  background: ${props => props.background ? props.background : 'var(--highlight)'};
   border-radius: 50%;
   color: #fff;
   font-size: 1.3rem;

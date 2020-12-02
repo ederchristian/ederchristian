@@ -50,10 +50,17 @@ const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
   }
   body {
-    background: #16212c;
     line-height: 1;
     font-size: 100%;
     font-family: 'Tinos', serif;
+
+    & .mainText {
+      fill: #30284f;
+    }
+
+    &.dark .mainText {
+      fill: #fff;
+    }
   }
   img {
     display: block;
@@ -62,6 +69,27 @@ const GlobalStyles = createGlobalStyle`
   }
   h1, h2 {
     font-family: 'Inter', sans-serif;
+  }
+
+  body {
+    --borders: #dedede;
+    --postColor: #111;
+    --texts: #555555;
+    --highlight: #00d59f;
+    --mediumBackground: #f0f0f3;
+    --background: #fff;
+    --white: #fff;
+    --black: #222;
+  }
+  body.dark {
+    --borders: #38444d;
+    --postColor: #8899a6;
+    --texts: #fff;
+    --highlight: #00d59f;
+    --mediumBackground: #192734;
+    --background: #16202c;
+    --white: #fff;
+    --black: #222;
   }
 `
 

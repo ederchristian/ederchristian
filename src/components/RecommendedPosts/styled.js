@@ -3,28 +3,28 @@ import { Link } from "gatsby"
 
 export const RecommendedWrapper = styled.section`
   display: flex;
-  background: #192734;
-  border-top: 1px solid #38444d;
-  border-bottom: 1px solid #38444d;
+  background: var(--mediumBackground);
+  border-top: 1px solid var(--borders);
+  border-bottom: 1px solid var(--borders);
 `
 
 export const RecommendedLink = styled(Link)`
   display: flex;
   align-items: center;
-  background: #192734;
+  background: var(--mediumBackground);
   width: 50%;
   padding: 3rem;
   transition: background 0.5s;
   font-family: 'Inter', sans-serif;
   text-decoration: none;
-  color: #00d59f;
+  color: var(--highlight);
 
   &:hover {
-    background: #38444d;
+    background: var(--borders);
   }
 
   &.previous {
-    border-right: 1px solid #38444d;
+    border-right: 1px solid var(--borders);
   }
 
   &.next {
