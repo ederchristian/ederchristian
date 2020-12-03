@@ -7,12 +7,23 @@ export const PostItemWrapper = styled.section`
   width: 100%;
   padding: 2rem 3rem;
   border-bottom: 1px solid var(--borders);
+
+  body#grid & {
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem 1rem;
+    border: none;
+  }
 `
 
 export const PostItemLink = styled(Link)`
   display: flex;
   color: var(--texts);
   text-decoration: none;
+
+  body#grid & {
+    background-color: var(--background);
+  }
 `
 
 export const PostItemTag = styled.div`
@@ -27,6 +38,10 @@ export const PostItemTag = styled.div`
   text-transform: uppercase;
   min-width: 90px;
   min-height: 90px;
+
+  body#grid & {
+    margin-bottom: 1.5rem;
+  }
 `
 
 export const PostItemInfo = styled.div`
@@ -48,6 +63,11 @@ export const PostItemTitle = styled.h1`
   font-size: 1.6rem;
   font-weight: 700;
   margin: 0.2rem 0 0.5rem;
+
+  body#grid & {
+    margin: 0.8rem 0;
+    line-height: 1.1;
+  }
 `
 
 export const PostItemDescription = styled.p`
