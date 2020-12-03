@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import media from "styled-media-query"
 import { Link } from "gatsby"
 
 export const RecommendedWrapper = styled.section`
@@ -6,6 +7,12 @@ export const RecommendedWrapper = styled.section`
   background: var(--mediumBackground);
   border-top: 1px solid var(--borders);
   border-bottom: 1px solid var(--borders);
+
+  ${media.lessThan("large")`
+    font-size: .9rem;
+    line-height: 1.3;
+    padding: 2rem 1rem;
+  `}
 `
 
 export const RecommendedLink = styled(Link)`

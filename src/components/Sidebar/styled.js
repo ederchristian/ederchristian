@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import media from 'styled-media-query'
 
 export const SidebarWrapper = styled.aside`
   display: flex;
@@ -11,4 +12,12 @@ export const SidebarWrapper = styled.aside`
   padding: 2rem;
   text-align: center;
   width: 20rem;
+
+  ${media.lessThan("large")`
+    align-items: flex-start;
+    width: 100%;
+    height: auto;
+    padding: .9rem;
+    z-index: 9;
+  `}
 `

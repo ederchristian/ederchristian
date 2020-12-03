@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import media from 'styled-media-query'
 import { Link } from 'gatsby'
 
 export const PostItemWrapper = styled.section`
@@ -6,7 +7,16 @@ export const PostItemWrapper = styled.section`
   align-items: center;
   width: 100%;
   padding: 2rem 3rem;
-  border-bottom: 1px solid var(--borders);
+
+  &:(not:last-child) {
+    border-bottom: 1px solid var(--borders);
+  }
+
+  ${media.lessThan("large")`
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 2rem 1rem;
+  `}
 
   body#grid & {
     flex-direction: column;
@@ -21,6 +31,15 @@ export const PostItemLink = styled(Link)`
   color: var(--texts);
   text-decoration: none;
 
+  ${media.lessThan("large")`
+    min-width: auto;
+    min-height: auto;
+    margin-bottom: .7rem;
+    padding: .2rem .5rem;
+    font-size: 1rem;
+    border-radius: 0;
+  `}
+
   body#grid & {
     background-color: var(--background);
   }
@@ -33,11 +52,21 @@ export const PostItemTag = styled.div`
   background: ${props => props.background ? props.background : 'var(--highlight)'};
   border-radius: 50%;
   color: #fff;
+  font-family: 'Inter', sans-serif;
   font-size: 1.3rem;
   font-weight: 700;
   text-transform: uppercase;
   min-width: 90px;
   min-height: 90px;
+
+  ${media.lessThan("large")`
+    min-width: initial;
+    min-height: 24px;
+    margin-bottom: 12px;
+    padding: 0 16px;
+    border-radius: 7px;
+    font-size: 0.8rem;
+  `}
 
   body#grid & {
     margin-bottom: 1.5rem;
@@ -49,6 +78,10 @@ export const PostItemInfo = styled.div`
   flex-direction: column;
   margin-left: 1.5rem;
   transition: transform 0.5s;
+
+  ${media.lessThan("large")`
+    margin: 0;
+  `}
 
   &:hover {
     transform: scale(1.02);

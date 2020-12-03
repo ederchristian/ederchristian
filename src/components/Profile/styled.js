@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import media from 'styled-media-query'
 import { Link } from 'gatsby'
 
 export const ProfileWrapper = styled.section`
@@ -22,10 +23,18 @@ export const ProfilePosition = styled.h1`
   font-size: 1rem;
   font-weight: 300;
   margin: 0.5rem auto 1.5rem;
+
+  ${media.lessThan("large")`
+    display: none;
+  `}
 `
 
 export const ProfileDescription = styled.p`
   font-size: 1rem;
   font-weight: 300;
   line-height: 1.4;
+
+  ${media.lessThan("large")`
+    display: none;
+  `}
 `
