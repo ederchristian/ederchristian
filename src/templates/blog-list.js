@@ -20,7 +20,7 @@ const BlogList = props => {
   return (
     <Layout>
       <SEO title="Home" />
-      <ListWrapper>
+      <S.ListWrapper>
         {postList.map(({
           node: {
             frontmatter: { background, category, date, description, title },
@@ -38,7 +38,7 @@ const BlogList = props => {
             description={description}
           />
         ))}
-      </ListWrapper>
+      </S.ListWrapper>
 
       <Pagination
         isFirst={isFirst}
