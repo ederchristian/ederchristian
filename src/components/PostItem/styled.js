@@ -13,10 +13,6 @@ export const PostItemLink = styled(Link)`
   display: flex;
   color: var(--texts);
   text-decoration: none;
-
-  &:hover {
-    color: var(--highlight);
-  }
 `
 
 export const PostItemTag = styled.div`
@@ -37,6 +33,11 @@ export const PostItemInfo = styled.div`
   display: flex;
   flex-direction: column;
   margin-left: 1.5rem;
+  transition: transform 0.5s;
+
+  &:hover {
+    transform: scale(1.02);
+  }
 `
 
 export const PostItemDate = styled.time`
