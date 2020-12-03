@@ -22,7 +22,13 @@ const Profile = () => {
 
   return (
     <S.ProfileWrapper>
-      <S.ProfileLink to="/">
+      <S.ProfileLink
+        to="/"
+        cover
+        direction="left"
+        bg="#16202c"
+        duration={0.5}
+      >
         <Logo style={{ width: 200 }} />
         <S.ProfilePosition>{position}</S.ProfilePosition>
       </S.ProfileLink>
