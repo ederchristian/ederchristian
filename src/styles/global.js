@@ -71,7 +71,7 @@ const GlobalStyles = createGlobalStyle`
     font-family: 'Inter', sans-serif;
   }
 
-  body {
+  body.light {
     --borders: #dedede;
     --postColor: #111;
     --texts: #555555;
