@@ -17,6 +17,8 @@ export const MenuLinksItem = styled.li`
 `
 
 export const MenuLinksLink = styled(Link)`
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
   color: var(--texts);
   text-decoration: none;
   transition: color 0.5s;
