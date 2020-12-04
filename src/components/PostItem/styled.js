@@ -77,14 +77,14 @@ export const PostItemInfo = styled.div`
   display: flex;
   flex-direction: column;
   margin-left: 1.5rem;
-  transition: transform 0.5s;
+  transition: color 0.5s;
 
   ${media.lessThan("large")`
     margin: 0;
   `}
 
   &:hover {
-    transform: scale(1.02);
+    color: var(--highlight);
   }
 `
 
