@@ -83,11 +83,11 @@ const GlobalStyles = createGlobalStyle`
   }
   body.dark {
     --borders: #38444d;
-    --postColor: #8899a6;
+    --postColor: #f9f9f9;
     --texts: #fff;
     --highlight: #00d59f;
-    --mediumBackground: #192734;
-    --background: #16202c;
+    --mediumBackground: #161c23;
+    --background: #0e1218;
     --white: #fff;
     --black: #222;
   }

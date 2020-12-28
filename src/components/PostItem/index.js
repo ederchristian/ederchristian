@@ -16,7 +16,7 @@ const PostItem = ({
     to={slug}
     cover
     direction="right"
-    bg="#16202c"
+    bg="#0e1218"
     duration={0.5}
   >
     <S.PostItemWrapper>

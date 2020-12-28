@@ -13,7 +13,7 @@ const MenuLinks = () => (
             to={link.url}
             cover
             direction="left"
-            bg="#16202c"
+            bg="#0e1218"
             duration={0.5}
             activeClassName="active"
           >

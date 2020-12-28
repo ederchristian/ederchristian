@@ -10,7 +10,7 @@ const RecommendedPosts = ({ next, previous }) => (
         className="previous"
         cover
         direction="left"
-        bg="#16202c"
+        bg="#0e1218"
         duration={0.5}
       >
         {previous.frontmatter.title}
@@ -22,7 +22,7 @@ const RecommendedPosts = ({ next, previous }) => (
         className="next"
         cover
         direction="right"
-        bg="#16202c"
+        bg="#0e1218"
         duration={0.5}
       >
         {next.frontmatter.title}

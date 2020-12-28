@@ -14,7 +14,7 @@ const Pagination = ({
 }) => (
   <S.PaginationWrapper>
     {!isFirst && (
-      <AniLink to={prevPage} cover direction="left" bg="#16202c" duration={0.5}>
+      <AniLink to={prevPage} cover direction="left" bg="#0e1218" duration={0.5}>
         ← previous page
       </AniLink>
     )}
@@ -22,7 +22,7 @@ const Pagination = ({
       {currentPage} of {numPages}
     </p>
     {!isLast && (
-      <AniLink to={nextPage} cover direction="right" bg="#16202c" duration={0.5}>
+      <AniLink to={nextPage} cover direction="right" bg="#0e1218" duration={0.5}>
         next page →
       </AniLink>
     )}

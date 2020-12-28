@@ -31,7 +31,7 @@ const MenuBar = () => {
           title="Go back to Home"
           cover
           direction="right"
-          bg="#16202c"
+          bg="#0e1218"
           duration={0.5}
         >
           <S.MenuBarItem><Home /></S.MenuBarItem>
