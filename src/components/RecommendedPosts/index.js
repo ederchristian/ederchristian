@@ -20,7 +20,6 @@ const RecommendedPosts = ({ next, previous }) => (
       <S.RecommendedLink
         to={next.fields.slug}
         className="next"
-        className="previous"
         cover
         direction="right"
         bg="#16202c"
