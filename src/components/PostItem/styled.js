@@ -55,7 +55,6 @@ export const PostItemTag = styled.div`
   font-family: 'Inter', sans-serif;
   font-size: 1.3rem;
   font-weight: 700;
-  text-transform: uppercase;
   min-width: 90px;
   min-height: 90px;
 
@@ -84,7 +83,7 @@ export const PostItemInfo = styled.div`
   `}
 
   &:hover {
-    color: var(--highlight);
+    color: var(--postColor);
   }
 `
 
