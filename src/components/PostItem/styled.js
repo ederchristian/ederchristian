@@ -52,7 +52,7 @@ export const PostItemTag = styled.div`
   background: ${props => props.background ? props.background : 'var(--highlight)'};
   border-radius: 50%;
   color: #fff;
-  font-family: 'Inter', sans-serif;
+  font-family: var(--fontInter);
   font-size: 1.3rem;
   font-weight: 700;
   min-width: 90px;
@@ -88,7 +88,9 @@ export const PostItemInfo = styled.div`
 `
 
 export const PostItemDate = styled.time`
-  font-size: 0.9rem;
+  font-size: 0.8rem;
+  font-family: var(--fontInter);
+  padding-bottom: 0.2rem;
 `
 
 export const PostItemTitle = styled.h1`

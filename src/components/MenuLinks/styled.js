@@ -22,7 +22,7 @@ export const MenuLinksItem = styled.li`
 `
 
 export const MenuLinksLink = styled(AniLink)`
-  font-family: 'Inter', sans-serif;
+  font-family: var(--fontInter);
   font-weight: 500;
   color: var(--texts);
   text-decoration: none;

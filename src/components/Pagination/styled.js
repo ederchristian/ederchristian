@@ -8,7 +8,7 @@ export const PaginationWrapper = styled.section`
   border-top: 1px solid var(--borders);
   padding: 1.5rem 3rem;
   color: var(--texts);
-  font-family: 'Inter', sans-serif;
+  font-family: var(--fontInter);
 
   ${media.lessThan("large")`
     font-size: .8rem;

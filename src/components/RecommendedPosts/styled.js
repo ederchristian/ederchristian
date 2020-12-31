@@ -22,7 +22,7 @@ export const RecommendedLink = styled(AniLink)`
   width: 50%;
   padding: 3rem;
   transition: background 0.5s;
-  font-family: 'Inter', sans-serif;
+  font-family: var(--fontInter);
   text-decoration: none;
   color: var(--highlight);
 
