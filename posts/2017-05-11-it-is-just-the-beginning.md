@@ -2,8 +2,8 @@
 date: 2017-05-11 05:10:00
 title: It is Just the Beginning
 description: This is my first public post - following this style as a blog - on the internet, and writen in English, which is not my mother tongue.
-category: misc
-background: "#7aab13"
+category: en-US
+background: "#30284f"
 image: "/assets/img/posts/01-it-is-just-the-beginning-steve-jobs.jpg"
 ---
 
@@ -29,7 +29,7 @@ I agree with that, but I mean, I must live the way I always can say to myself:
 
 The point is to find what we'd love to do. And go on. Living this way I think it's easier and lighter. We'll always do our utmost to reach our goals.
 
-![Steve Jobs on the floor, holding an old Mac (P&B photo)](/assets/img/posts/01-it-is-just-the-beginning-steve-jobs.jpg)
+![Steve Wozniak and Steve Jobs (P&B photo)](/assets/img/posts/01-it-is-just-the-beginning-steve-jobs.jpg)
 
 > The only way to do great work is to love what you do. If you haven't found it yet, keep looking. Don't settle. - Steve Jobs
 
