@@ -228,4 +228,32 @@ export const MainContent = styled.section`
       padding: 0;
     `}
   }
+
+  div h2 {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+
+  .subtitle {
+    text-align: center;
+    font-size: 0.8rem;
+    font-family: var(--fontInter);
+  }
+
+  .videoYouTubePost {
+    width: 100%;
+    height: 14rem;
+
+    ${media.greaterThan("medium")`
+      height: 26rem;
+    `}
+
+    ${media.greaterThan("large")`
+      height: 29rem;
+    `}
+
+    ${media.greaterThan("huge")`
+      height: 34rem;
+    `}
+  }
 `
