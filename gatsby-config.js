@@ -77,5 +77,6 @@ module.exports = {
     },
     `gatsby-plugin-sitemap`,
     'gatsby-plugin-instagram-embed',
+    'gatsby-plugin-offline',
   ],
 }
