@@ -1,13 +1,13 @@
 ---
 date: 2019-03-05 06:51:15
 title: Por que participei de 50 eventos de tecnologia em 1 ano e meio?
-description: Com 1 ano e meio de experiência trabalhando em uma startup e estando diretamente ligado a esse ecossistema, pessoas e conteúdos, acho que posso contar mais ainda sobre a empresa que trabalho.
+description: Sou do tipo de pessoa que curte os bastidores, de ajudar os palestrantes, de fornecer informações, de ficar atento pra tudo rolar como tem que ser.
 category: pt-BR
 background: "#00d59f"
-image: "/assets/img/posts/10-quem-sao-as-minhas-referencias-em-ti.jpg"
+image: "/assets/img/posts/11-por-que-participei-de-50-eventos-de-tecnologia-em-1-ano-e-meio.jpg"
 ---
 
-![Foto de dois guardanapos com escritas feitas pelo Matheus Marsiglio durante um bate-papo num Café na Rua dos Pinheiros, em São Paulo](/assets/img/posts/10-quem-sao-as-minhas-referencias-em-ti.jpg)
+![Final do evento React Conf 2018, com toda a galera que participou](/assets/img/posts/11-por-que-participei-de-50-eventos-de-tecnologia-em-1-ano-e-meio.jpg)
 
 Depois de passar por dois momentos próximos e conturbados na minha vida, tive a grande alegria de participar da Python Sudeste, em abril de 2018 - que também foi o mês que fiz minha primeira viagem pra fora do Brasil e <a href="http://www.ederchristian.com/blog/pt/do-vale-do-paraiba-ao-vale-do-silicio/" target="_blank">conheci parte do Norte da Califórnia, EUA (mais precisamente no Vale do Silício)</a>. Dias antes estava me mudando de apartamento e não imaginava o quão trabalhoso seria todo esse processo. Bom pra aprender. E dois meses antes precisei tirar os quatro sisos urgentemente, tendo sentido a pior dor da minha vida, até aqui. Tudo faz parte da vida.
 
@@ -184,7 +184,5 @@ Apesar de ter vários eventos e meetups de graça aqui em São Paulo, sou grato 
 Ser ativo nisso é algo que realmente me transforma pessoal e profissionalmente. Pretendo seguir por muito tempo participando de tudo isso.
 
 Nesse momento, não sou do tipo de pessoa que curte palestrar. Pra mim, toda pessoa tem algo pra compartilhar, mesmo que seja iniciante. E não precisa ser só conteúdo técnico. Inclusive, pelo que vejo, a galera curte bastante assuntos de <a href="https://exame.abril.com.br/carreira/qual-e-a-diferenca-entre-hard-skills-e-soft-skills/" target="_blank">soft skills</a>, já que a parte técnica a gente estuda e aprende, mesmo que demore. Soft skills a gente precisa desenvolver e acredito ser um processo mais complexo.
-
-Sou do tipo de pessoa que curte os bastidores, de ajudar os palestrantes, de fornecer informações, de ficar atento pra tudo rolar como tem que ser.
 
 Com isso, só posso convidar e recomendar uma coisa: bora pros eventos!?
