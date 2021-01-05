@@ -229,7 +229,21 @@ export const MainContent = styled.section`
     `}
   }
 
-  div h2 {
+  h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    margin: 1rem auto;
+    padding: 0 1.4rem;
+
+    ${media.lessThan("large")`
+      font-size: 2.8rem;
+      line-height: 1.1;
+      padding: 0 1rem;
+    `}
+  }
+
+  div h2,
+  h2 {
     font-size: 2rem;
     font-weight: 700;
   }
