@@ -1,6 +1,6 @@
 ---
 date: 2018-10-13 09:25:11
-title: O Que é essa tal de StartSe?
+title: O que é essa tal de StartSe?
 description: Com 1 ano e meio de experiência trabalhando em uma startup e estando diretamente ligado a esse ecossistema, pessoas e conteúdos, acho que posso contar mais ainda sobre a empresa que trabalho.
 category: pt-BR
 background: "#00d59f"

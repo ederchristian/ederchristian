@@ -1,6 +1,6 @@
 ---
 date: 2018-09-29 16:25:12
-title: O Começo do Começo
+title: O começo do começo
 description: Essa é a vida. Apenas o agora.
 category: pt-BR
 background: "#00d59f"
