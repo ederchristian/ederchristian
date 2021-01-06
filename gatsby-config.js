@@ -78,5 +78,13 @@ module.exports = {
     `gatsby-plugin-sitemap`,
     'gatsby-plugin-instagram-embed',
     'gatsby-plugin-offline',
+    {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        trackingIds: [
+          "UA-77253655-1",
+        ],
+      },
+    },
   ],
 }
