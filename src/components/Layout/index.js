@@ -34,6 +34,7 @@ const Layout = ({ children }) => {
         <Profile
           title={site.siteMetadata.title}
           position={site.siteMetadata.position}
+          description={site.siteMetadata.description}
           isMobileHeader={true}
         />
         <Sidebar
