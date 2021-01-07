@@ -37,6 +37,7 @@
     "styled-media-query": "^2.1.2"
   },
   "devDependencies": {
+    "gatsby-plugin-facebook-pixel": "^1.0.5",
     "gatsby-plugin-react-svg": "^3.0.0",
     "prettier": "2.1.0",
     "react-ga": "^3.3.0"
