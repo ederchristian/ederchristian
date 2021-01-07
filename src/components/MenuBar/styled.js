@@ -1,6 +1,7 @@
-import styled from 'styled-components'
-import media from 'styled-media-query'
-import AniLink from 'gatsby-plugin-transition-link/AniLink'
+import styled from "styled-components"
+import media from "styled-media-query"
+
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 export const MenuBarWrapper = styled.aside`
   position: fixed;
@@ -19,6 +20,7 @@ export const MenuBarWrapper = styled.aside`
   ${media.lessThan("large")`
     position: fixed;
     flex-direction: row;
+    justify-content: center;
     width: 100%;
     height: auto;
     bottom: 0;
@@ -34,6 +36,15 @@ export const MenuBarGroup = styled.div`
 
   ${media.lessThan("large")`
     flex-direction: row;
+    margin: 0 8px;
+  `}
+`
+
+export const MenuBarGroupMobile = styled.div`
+  display: none;
+
+  ${media.lessThan('large')`
+    display: block;
   `}
 `
 
