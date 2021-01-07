@@ -7,6 +7,15 @@ module.exports = {
     siteUrl: `https://ederchristian.com`,
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-77253655-1",
+        head: false,
+        anonymize: true,
+        respectDNT: true
+      },
+    },
     `gatsby-plugin-transition-link`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
@@ -78,13 +87,5 @@ module.exports = {
     `gatsby-plugin-sitemap`,
     'gatsby-plugin-instagram-embed',
     'gatsby-plugin-offline',
-    {
-      resolve: `gatsby-plugin-google-gtag`,
-      options: {
-        trackingIds: [
-          "UA-77253655-1",
-        ],
-      },
-    },
   ],
 }
