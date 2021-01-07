@@ -9,7 +9,7 @@ import * as S from "../components/About/styled"
 
 const About = () => (
   <Layout>
-    <SEO title="About" />
+    <SEO title="About | Eder Christian" />
     <S.MainContent>
       <h1>Hi, I'm Eder.</h1>
       <S.Image src={EderChristian} alt="Eder Christian" />
