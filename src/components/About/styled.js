@@ -126,19 +126,22 @@ export const MainContent = styled.section`
     border: 1px solid var(--highlight);
     border-radius: 7px;
     color: var(--highlight);
-    margin: 1rem 1.4rem 0 0;
-    padding: 0 2rem;
+    margin: 1rem 1rem 0 0;
+    padding: 0 1rem;
+    font-size: 1rem;
+    font-family: var(--fontInter);
   }
 `
 
 export const Image = styled.img`
   display: initial;
-  width: 100%;
+  width: 70%;
   border-bottom: 1px solid var(--texts);
   padding: 8px 8px 0;
-  margin: 0 1.875rem 2rem;
+  margin: 0 0 2rem 1rem;
 
   ${media.greaterThan("medium")`
     width: 300px;
+    margin: 0 1.875rem 2rem;
   `}
 `
