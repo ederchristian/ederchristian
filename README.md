@@ -1,4 +1,4 @@
-<img src="docs/assets/svg/blue-logo-startse.svg" alt="Logo Eder Christian" width="300">
+<img src="docs/assets/svg/logo-eder-christian.svg" alt="Logo Eder Christian" width="300">
 
 # Eder Christian
 
