@@ -1,32 +1,20 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import PropTypes from "prop-types"
+
 import Logo from "../../assets/logo-eder-christian.svg"
+
+import getThemeColor from '../../utils/getThemeColor'
 
 import * as S from './styled'
 
-const Profile = () => {
-  const {
-    site: {
-      siteMetadata: { position, description }
-    },
-  } = useStaticQuery(graphql`
-    query MySiteMetadata {
-      site {
-        siteMetadata {
-          position
-          description
-        }
-      }
-    }
-  `)
-
+const Profile = ({ title, position, description, isMobileHeader }) => {
   return (
-    <S.ProfileWrapper>
+    <S.ProfileWrapper isMobileHeader={isMobileHeader}>
       <S.ProfileLink
         to="/"
         cover
         direction="left"
-        bg="#0e1218"
+        bg={getThemeColor()}
         duration={0.5}
       >
         <Logo style={{ width: 200 }} />
@@ -35,6 +23,11 @@ const Profile = () => {
       <S.ProfileDescription>{description}</S.ProfileDescription>
     </S.ProfileWrapper>
   )
+}
+
+Profile.propTypes = {
+  title: PropTypes.string.isRequired,
+  position: PropTypes.string.isRequired,
 }
 
 export default Profile
