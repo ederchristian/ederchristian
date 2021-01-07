@@ -34,7 +34,6 @@ const About = () => (
       <ul>
         <li>Data Structure and Algorithms</li>
         <li>Advanced JavaScript</li>
-        <li>React</li>
         <li>Next.js</li>
       </ul>
 
