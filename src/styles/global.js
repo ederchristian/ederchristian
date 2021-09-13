@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle } from "styled-components"
 
 const GlobalStyles = createGlobalStyle`
   /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -50,7 +50,8 @@ const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
   }
   body {
-    line-height: 1;
+    background: var(--background);
+    line-height: 1.4;
     font-size: 100%;
     font-family: 'Tinos', serif;
     --fontInter: 'Inter', sans-serif;
