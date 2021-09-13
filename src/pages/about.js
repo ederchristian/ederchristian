@@ -1,7 +1,7 @@
 import React from "react"
 
 import Layout from "../components/Layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 
 import EderChristian from "../images/eder-christian.png"
 
@@ -9,14 +9,29 @@ import * as S from "../components/About/styled"
 
 const About = () => (
   <Layout>
-    <SEO title="About" />
+    <Seo title="About" />
     <S.MainContent>
       <h1>Hi, I'm Eder.</h1>
       <S.Image src={EderChristian} alt="Eder Christian" />
-      <p>I'm Eder Christian, a web developer, currently living in São Paulo - Brazil, and working at <a href="https://startse.com" target="_blank" rel="noopener noreferrer">StartSe</a>. I’m a passionate about technology and entrepreneurship, always looking for new opportunities and new connections with other people. I've got an entrepreneur mindset.</p>
-      <blockquote>I believe that life really begins when we leave our comfort zone.</blockquote>
-      <p>I love to make things for the web and to put my endeavor on it. In this path, each passing day I wanna get more envolved with the open source community.</p>
-      
+      <p>
+        I'm Eder Christian, a web developer, currently living in São Paulo -
+        Brazil, and working at{" "}
+        <a href="https://startse.com" target="_blank" rel="noopener noreferrer">
+          StartSe
+        </a>
+        . I’m a passionate about technology and entrepreneurship, always looking
+        for new opportunities and new connections with other people. I've got an
+        entrepreneur mindset.
+      </p>
+      <blockquote>
+        I believe that life really begins when we leave our comfort zone.
+      </blockquote>
+      <p>
+        I love to make things for the web and to put my endeavor on it. In this
+        path, each passing day I wanna get more envolved with the open source
+        community.
+      </p>
+
       <h2>Skills</h2>
       <ul>
         <li>HTML</li>
