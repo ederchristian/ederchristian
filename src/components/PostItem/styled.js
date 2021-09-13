@@ -1,14 +1,14 @@
-import styled from 'styled-components'
-import media from 'styled-media-query'
-import AniLink from 'gatsby-plugin-transition-link/AniLink'
+import styled from "styled-components"
+import media from "styled-media-query"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 export const PostItemWrapper = styled.section`
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   width: 100%;
   padding: 2rem 3rem;
 
-  &:(not:last-child) {
+  &: (not: last-child) {
     border-bottom: 1px solid var(--borders);
   }
 
@@ -34,8 +34,6 @@ export const PostItemLink = styled(AniLink)`
   ${media.lessThan("large")`
     min-width: auto;
     min-height: auto;
-    margin-bottom: .7rem;
-    padding: .2rem .5rem;
     font-size: 1rem;
     border-radius: 0;
   `}
@@ -49,8 +47,10 @@ export const PostItemTag = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  background: ${props => props.background ? props.background : 'var(--highlight)'};
-  border-radius: 50%;
+  background: ${props =>
+    props.background ? props.background : "var(--highlight)"};
+  border-radius: 0.7rem;
+  margin-left: 1.5rem;
   color: #fff;
   font-family: var(--fontInter);
   font-size: 1.3rem;
@@ -61,7 +61,7 @@ export const PostItemTag = styled.div`
   ${media.lessThan("large")`
     min-width: initial;
     min-height: 24px;
-    margin-bottom: 12px;
+    margin: 0 0 12px;
     padding: 0 16px;
     border-radius: 7px;
     font-size: 0.8rem;
