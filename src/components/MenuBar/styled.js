@@ -8,9 +8,7 @@ export const MenuBarWrapper = styled.aside`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  background: var(--mediumBackground);
-  border-left: 1px solid var(--borders);
+  justify-content: flex-end;
   width: 3.75rem;
   height: 100vh;
   padding: 0.8rem 0;
@@ -25,6 +23,7 @@ export const MenuBarWrapper = styled.aside`
     height: auto;
     bottom: 0;
     padding: 0;
+    background: var(--mediumBackground);
     border-top: 1px solid var(--borders);
     z-index: 9;
   `}
@@ -43,7 +42,7 @@ export const MenuBarGroup = styled.div`
 export const MenuBarGroupMobile = styled.div`
   display: none;
 
-  ${media.lessThan('large')`
+  ${media.lessThan("large")`
     display: block;
   `}
 `
