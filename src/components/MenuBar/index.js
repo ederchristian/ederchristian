@@ -39,22 +39,6 @@ const MenuBar = ({ setIsMenuOpen, isMenuOpen }) => {
 
   return (
     <Styled.MenuBarWrapper>
-      <Styled.MenuBarGroup>
-        <Styled.MenuBarLink
-          to="/"
-          title="Go back to Home"
-          cover
-          direction="right"
-          bg={getThemeColor()}
-          duration={0.5}
-          activeClassName="active"
-        >
-          <Styled.MenuBarItem>
-            <Home />
-          </Styled.MenuBarItem>
-        </Styled.MenuBarLink>
-      </Styled.MenuBarGroup>
-
       <Styled.MenuBarGroupMobile>
         <Styled.MenuBarGroup>
           <Styled.MenuBarItem title="Open Menu" onClick={openMenu}>
