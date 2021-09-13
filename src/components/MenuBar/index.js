@@ -1,13 +1,10 @@
 import React, { useState, useEffect } from "react"
 
-import { Home } from "@styled-icons/entypo/Home"
 import { UpArrowAlt as Arrow } from "@styled-icons/boxicons-regular/UpArrowAlt"
 import { LightBulb as Light } from "@styled-icons/entypo/LightBulb"
 import { GridHorizontal as Grid } from "@styled-icons/boxicons-regular/GridHorizontal"
 import { ListUl as List } from "@styled-icons/boxicons-regular/ListUl"
 import { Menu } from "@styled-icons/boxicons-regular/Menu"
-
-import getThemeColor from "../../utils/getThemeColor"
 
 import * as Styled from "./styled"
 
