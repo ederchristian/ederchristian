@@ -2,7 +2,7 @@
   "name": "ederchristian-blog",
   "private": true,
   "description": "My personal blog on ederchristian.com",
-  "version": "0.1.0",
+  "version": "2.1.0",
   "author": "Eder Christian <ederchristian92@gmail.com>",
   "dependencies": {
     "gatsby": "^3.11.1",
