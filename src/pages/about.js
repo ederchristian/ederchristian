@@ -14,9 +14,12 @@ const About = () => (
       <h1>Hi, I'm Eder.</h1>
       <Styled.Image src={EderChristian} alt="Eder Christian" />
       <p>
-        I'm Eder Christian, a web developer, currently living in São Paulo -
-        Brazil, and working at{" "}
-        <a href="https://startse.com" target="_blank" rel="noopener noreferrer">
+        I'm a Front-end Developer and Partner, based in São Paulo - Brazil, at{" "}
+        <a
+          href="https://app.startse.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           StartSe
         </a>
         . I’m a passionate about technology and entrepreneurship, always looking
@@ -29,26 +32,34 @@ const About = () => (
       <p>
         I love to make things for the web and to put my endeavor on it. In this
         path, each passing day I wanna get more envolved with the open source
-        community.
+        community and serve people with technology.
       </p>
 
       <h2>Skills</h2>
       <ul>
         <li>HTML</li>
         <li>CSS</li>
-        <li>JS</li>
-        <li>React</li>
+        <li>JavaScript</li>
         <li>Bootstrap 3 and 4</li>
+        <li>React</li>
         <li>SVG</li>
+        <li>Wordpress</li>
+        <li>BEM</li>
+        <li>TDD</li>
+        <li>Docker</li>
         <li>Git</li>
+        <li>Unix Commands</li>
+        <li>macOS</li>
+        <li>Linux</li>
+        <li>Sketch</li>
+        <li>Hubspot</li>
         <li>Scrum</li>
-        <li>Kanban</li>
       </ul>
 
       <h2>Currently studying</h2>
       <ul>
         <li>Data Structure and Algorithms</li>
-        <li>Advanced JavaScript</li>
+        <li>API</li>
         <li>Next.js</li>
       </ul>
 
