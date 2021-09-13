@@ -7,7 +7,7 @@ import getThemeColor from "../../utils/getThemeColor"
 
 import * as Styled from "./styled"
 
-const Profile = ({ title, position, description, isMobileHeader }) => {
+const Profile = ({ position, description, isMobileHeader }) => {
   return (
     <Styled.ProfileWrapper isMobileHeader={isMobileHeader}>
       <Styled.ProfileLink
@@ -17,7 +17,7 @@ const Profile = ({ title, position, description, isMobileHeader }) => {
         bg={getThemeColor()}
         duration={0.5}
       >
-        <Logo style={{ width: 200 }} />
+        <Logo style={{ width: 150 }} />
         <Styled.ProfilePosition>{position}</Styled.ProfilePosition>
       </Styled.ProfileLink>
       <Styled.ProfileDescription>{description}</Styled.ProfileDescription>
