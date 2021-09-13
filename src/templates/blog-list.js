@@ -6,7 +6,7 @@ import Seo from "../components/seo"
 import PostItem from "../components/PostItem"
 import Pagination from "../components/Pagination"
 
-import * as S from "../components/ListWrapper/styled"
+import * as Styled from "../components/ListWrapper/styled"
 
 const BlogList = props => {
   const postList = props.data.allMarkdownRemark.edges
@@ -20,7 +20,7 @@ const BlogList = props => {
   return (
     <Layout>
       <Seo title="Home" />
-      <S.ListWrapper>
+      <Styled.ListWrapper>
         {postList.map(
           (
             {
@@ -44,7 +44,7 @@ const BlogList = props => {
             />
           )
         )}
-      </S.ListWrapper>
+      </Styled.ListWrapper>
 
       <Pagination
         isFirst={isFirst}

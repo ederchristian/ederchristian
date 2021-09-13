@@ -5,14 +5,14 @@ import Seo from "../components/seo"
 
 import EderChristian from "../images/eder-christian.png"
 
-import * as S from "../components/About/styled"
+import * as Styled from "../components/About/styled"
 
 const About = () => (
   <Layout>
     <Seo title="About" />
-    <S.MainContent>
+    <Styled.MainContent>
       <h1>Hi, I'm Eder.</h1>
-      <S.Image src={EderChristian} alt="Eder Christian" />
+      <Styled.Image src={EderChristian} alt="Eder Christian" />
       <p>
         I'm Eder Christian, a web developer, currently living in São Paulo -
         Brazil, and working at{" "}
@@ -80,7 +80,7 @@ const About = () => (
         <li>Music (especially the old songs)</li>
         <li>Travel</li>
       </ul>
-    </S.MainContent>
+    </Styled.MainContent>
   </Layout>
 )
 

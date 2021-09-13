@@ -3,12 +3,12 @@ import React from "react"
 import Layout from "../components/Layout"
 import Seo from "../components/seo"
 
-import * as S from "../components/Newsletter/styled"
+import * as Styled from "../components/Newsletter/styled"
 
 const Newsletter = () => (
   <Layout>
     <Seo title="Newsletter" />
-    <S.MainContent>
+    <Styled.MainContent>
       <h1>I'd like to talk to you.</h1>
       <p>
         In this newsletter I'm gonna talk mainly about tech, lyfestyle, and
@@ -31,25 +31,25 @@ const Newsletter = () => (
         .
       </p>
 
-      <S.Group>
-        <S.Form
+      <Styled.Group>
+        <Styled.Form
           action="https://buttondown.email/api/emails/embed-subscribe/ederchristian"
           method="post"
           target="popupwindow"
           onsubmit="window.open('https://buttondown.email/ederchristian', 'popupwindow')"
           className="embeddable-buttondown-form"
         >
-          <S.Input
+          <Styled.Input
             type="email"
             name="email"
             id="bd-email"
             placeholder="Your email"
           />
-          <S.Input type="hidden" value="1" name="embed" />
-          <S.Input type="submit" value="Subscribe" />
-        </S.Form>
-      </S.Group>
-    </S.MainContent>
+          <Styled.Input type="hidden" value="1" name="embed" />
+          <Styled.Input type="submit" value="Subscribe" />
+        </Styled.Form>
+      </Styled.Group>
+    </Styled.MainContent>
   </Layout>
 )
 

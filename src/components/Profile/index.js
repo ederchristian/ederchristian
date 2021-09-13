@@ -3,14 +3,14 @@ import PropTypes from "prop-types"
 
 import Logo from "../../assets/logo-eder-christian.svg"
 
-import getThemeColor from '../../utils/getThemeColor'
+import getThemeColor from "../../utils/getThemeColor"
 
-import * as S from './styled'
+import * as Styled from "./styled"
 
 const Profile = ({ title, position, description, isMobileHeader }) => {
   return (
-    <S.ProfileWrapper isMobileHeader={isMobileHeader}>
-      <S.ProfileLink
+    <Styled.ProfileWrapper isMobileHeader={isMobileHeader}>
+      <Styled.ProfileLink
         to="/"
         cover
         direction="left"
@@ -18,10 +18,10 @@ const Profile = ({ title, position, description, isMobileHeader }) => {
         duration={0.5}
       >
         <Logo style={{ width: 200 }} />
-        <S.ProfilePosition>{position}</S.ProfilePosition>
-      </S.ProfileLink>
-      <S.ProfileDescription>{description}</S.ProfileDescription>
-    </S.ProfileWrapper>
+        <Styled.ProfilePosition>{position}</Styled.ProfilePosition>
+      </Styled.ProfileLink>
+      <Styled.ProfileDescription>{description}</Styled.ProfileDescription>
+    </Styled.ProfileWrapper>
   )
 }
 

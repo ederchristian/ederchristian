@@ -6,7 +6,7 @@ import Seo from "../components/seo"
 import RecommendedPosts from "../components/RecommendedPosts"
 import Comments from "../components/Comments"
 
-import * as S from "../components/Post/styled"
+import * as Styled from "../components/Post/styled"
 
 const BlogPost = ({ data, pageContext }) => {
   const post = data.markdownRemark
@@ -20,16 +20,18 @@ const BlogPost = ({ data, pageContext }) => {
         description={post.frontmatter.description}
         image={post.frontmatter.image}
       />
-      <S.PostHeader>
-        <S.PostDate>
+      <Styled.PostHeader>
+        <Styled.PostDate>
           {post.frontmatter.date} • {post.timeToRead} min to read
-        </S.PostDate>
-        <S.PostTitle>{post.frontmatter.title}</S.PostTitle>
-        <S.PostDescription>{post.frontmatter.description}</S.PostDescription>
-      </S.PostHeader>
-      <S.MainContent>
+        </Styled.PostDate>
+        <Styled.PostTitle>{post.frontmatter.title}</Styled.PostTitle>
+        <Styled.PostDescription>
+          {post.frontmatter.description}
+        </Styled.PostDescription>
+      </Styled.PostHeader>
+      <Styled.MainContent>
         <div dangerouslySetInnerHTML={{ __html: post.html }}></div>
-      </S.MainContent>
+      </Styled.MainContent>
       <RecommendedPosts previous={previous} next={next} />
       <Comments url={post.fields.slug} title={post.frontmatter.title} />
     </Layout>

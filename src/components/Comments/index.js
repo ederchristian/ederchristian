@@ -1,23 +1,22 @@
-
 import React from "react"
 import PropTypes from "prop-types"
 import ReactDisqusComments from "react-disqus-comments"
 
-import * as S from "./styled"
+import * as Styled from "./styled"
 
 const Comments = ({ url, title }) => {
   const completeURL = `https://ederchristian.com${url}`
 
   return (
-    <S.CommentsWrapper>
-      <S.CommentsTitle>Comments:</S.CommentsTitle>
+    <Styled.CommentsWrapper>
+      <Styled.CommentsTitle>Comments:</Styled.CommentsTitle>
       <ReactDisqusComments
         shortname="ederchristian"
         identifier={completeURL}
         title={title}
         url={completeURL}
       />
-    </S.CommentsWrapper>
+    </Styled.CommentsWrapper>
   )
 }
 

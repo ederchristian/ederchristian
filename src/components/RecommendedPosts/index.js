@@ -1,11 +1,11 @@
 import React from "react"
 import propTypes from "prop-types"
-import * as S from "./styled"
+import * as Styled from "./styled"
 
 const RecommendedPosts = ({ next, previous }) => (
-  <S.RecommendedWrapper>
+  <Styled.RecommendedWrapper>
     {previous && (
-      <S.RecommendedLink
+      <Styled.RecommendedLink
         to={previous.fields.slug}
         className="previous"
         cover
@@ -14,10 +14,10 @@ const RecommendedPosts = ({ next, previous }) => (
         duration={0.5}
       >
         {previous.frontmatter.title}
-      </S.RecommendedLink>
+      </Styled.RecommendedLink>
     )}
     {next && (
-      <S.RecommendedLink
+      <Styled.RecommendedLink
         to={next.fields.slug}
         className="next"
         cover
@@ -26,9 +26,9 @@ const RecommendedPosts = ({ next, previous }) => (
         duration={0.5}
       >
         {next.frontmatter.title}
-      </S.RecommendedLink>
+      </Styled.RecommendedLink>
     )}
-  </S.RecommendedWrapper>
+  </Styled.RecommendedWrapper>
 )
 
 RecommendedPosts.propTypes = {

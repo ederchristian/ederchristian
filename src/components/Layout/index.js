@@ -1,13 +1,13 @@
 import React, { useState } from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from 'gatsby'
+import { useStaticQuery, graphql } from "gatsby"
 import { TransitionPortal } from "gatsby-plugin-transition-link"
 
 import Profile from "../Profile"
 import Sidebar from "../Sidebar"
 import MenuBar from "../MenuBar"
 
-import * as S from "./styled"
+import * as Styled from "./styled"
 import GlobalStyles from "../../styles/global"
 
 const Layout = ({ children }) => {
@@ -28,7 +28,7 @@ const Layout = ({ children }) => {
   )
 
   return (
-    <S.LayoutWrapper>
+    <Styled.LayoutWrapper>
       <GlobalStyles />
       <TransitionPortal level="top">
         <Profile
@@ -43,14 +43,11 @@ const Layout = ({ children }) => {
           isMenuOpen={isMenuOpen}
         />
       </TransitionPortal>
-      <S.LayoutMain>{children}</S.LayoutMain>
+      <Styled.LayoutMain>{children}</Styled.LayoutMain>
       <TransitionPortal level="top">
-        <MenuBar
-          setIsMenuOpen={setIsMenuOpen}
-          isMenuOpen={isMenuOpen}
-        />
+        <MenuBar setIsMenuOpen={setIsMenuOpen} isMenuOpen={isMenuOpen} />
       </TransitionPortal>
-    </S.LayoutWrapper>
+    </Styled.LayoutWrapper>
   )
 }
 
