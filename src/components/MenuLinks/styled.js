@@ -17,11 +17,15 @@ export const MenuLinksList = styled.ul`
     font-size: 1.6rem;
     display: initial;
   `}
+
+  ${media.greaterThan("large")`
+    margin-left: 1.6rem;
+  `}
 `
 
 export const MenuLinksItem = styled.li`
   padding: 0.5rem 0;
-  margin-left: 3.2rem;
+  margin-left: 1.6rem;
 
   ${media.lessThan("large")`
     padding: 1rem 0;
