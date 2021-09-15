@@ -19,7 +19,7 @@ export const SidebarContainer = styled.nav`
   ${media.lessThan("large")`
     position: inherit;
     align-items: flex-start;
-    height: calc(100% - 50px);
+    height: calc(100% - 57px);
     border: 0;
     padding: 0;
     transform: ${props =>
@@ -36,7 +36,7 @@ export const SidebarContainerBox = styled.div`
   justify-content: space-between;
 
   ${media.lessThan("large")`
-    height: calc(100% - 50px);
+    height: calc(100% - 57px);
   `}
 `
 

@@ -14,6 +14,7 @@ export const ProfileWrapper = styled.section`
     border-bottom: 1px solid var(--borders);
     padding: 1rem;
     width: 100vw;
+    height: 57px;
   `}
 `
 
