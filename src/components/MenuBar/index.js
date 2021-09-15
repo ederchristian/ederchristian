@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react"
+import { useLocation } from "@reach/router"
 
 import { UpArrowAlt as Arrow } from "@styled-icons/boxicons-regular/UpArrowAlt"
 import { LightBulb as Light } from "@styled-icons/entypo/LightBulb"
@@ -13,6 +14,7 @@ import * as GA from "./trackers"
 const MenuBar = ({ setIsMenuOpen, isMenuOpen }) => {
   const [theme, setTheme] = useState(null)
   const [display, setDisplay] = useState(null)
+  const location = useLocation()
 
   const isDarkMode = theme === "dark"
   const isListMode = display === "list"
@@ -63,15 +65,17 @@ const MenuBar = ({ setIsMenuOpen, isMenuOpen }) => {
         >
           <Light />
         </Styled.MenuBarItem>
-        <Styled.MenuBarItem
-          title="Change visualization"
-          onClick={() => {
-            window.__setPreferredDisplay(isListMode ? "grid" : "list")
-          }}
-          className="display"
-        >
-          {isListMode ? <Grid /> : <List />}
-        </Styled.MenuBarItem>
+        {location.pathname === "/" && (
+          <Styled.MenuBarItem
+            title="Change visualization"
+            onClick={() => {
+              window.__setPreferredDisplay(isListMode ? "grid" : "list")
+            }}
+            className="display"
+          >
+            {isListMode ? <Grid /> : <List />}
+          </Styled.MenuBarItem>
+        )}
         <Styled.MenuBarItem
           title="Go to top"
           onClick={() => {
