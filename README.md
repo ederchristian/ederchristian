@@ -13,6 +13,7 @@
 ```sh
 git clone https://github.com/ederchristian/ederchristian.github.io.git && cd ederchristian.github.io && npm install
 ```
+
 or
 
 ```sh
@@ -24,13 +25,13 @@ git clone https://github.com/ederchristian/ederchristian.github.io.git && cd ede
 Running it:
 
 ```sh
-npm run develop
+npm run start
 ```
 
 or
 
 ```sh
-yarn develop
+yarn start
 ```
 
 In your browser, go to:
@@ -45,16 +46,29 @@ To view GraphiQL, go to:
 http://localhost:8000/___graphql
 ```
 
-### What I use?
+### Deploy
+
+Running it:
+
+```sh
+npm run deploy
+```
+
+or
+
+```sh
+yarn deploy
+```
+
+## What I use?
 
 - [Gatsby](https://www.gatsbyjs.org)
 - [React](https://reactjs.org)
+- [styled-components](https://styled-components.com/)
 - [GraphQL](https://graphql.org)
 - [GitHub Pages](https://pages.github.com/)
 
-### Thanks
+## Thanks
 
 - [Hugo Bessa](https://github.com/hugobdev), for all support and mentorship
 - [Willian Justen](https://github.com/willianjusten/) and his great [Gatsby course](https://www.udemy.com/course/gatsby-crie-um-site-pwa-com-react-graphql-e-netlify-cms/)
-
-> I'm lucky to have people like them as my friends. I do love how supportive our web community is.
