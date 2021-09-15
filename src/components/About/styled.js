@@ -124,11 +124,15 @@ export const MainContent = styled.section`
   }
 
   li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border: 1px solid var(--highlight);
     border-radius: 7px;
     color: var(--highlight);
     margin: 1rem 1rem 0 0;
     padding: 0 1rem;
+    height: 40px;
     font-size: 1rem;
     font-family: var(--fontInter);
   }
@@ -137,9 +141,11 @@ export const MainContent = styled.section`
 export const Image = styled.img`
   display: initial;
   width: 70%;
-  border-bottom: 1px solid var(--texts);
+  border: 1px solid var(--texts);
+  border-radius: 0.7rem;
+  box-shadow: 0 0.8rem 1rem rgba(var(--shadow), 0.2);
   padding: 8px 8px 0;
-  margin: 0 0 2rem 1rem;
+  margin: 1rem 0 2rem 1rem;
 
   ${media.greaterThan("medium")`
     width: 300px;
