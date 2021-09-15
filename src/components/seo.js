@@ -23,7 +23,11 @@ function SEO({ description, lang, meta, title, image }) {
 
   const url = site.siteMetadata.siteUrl
 
-  const ogImage = `${url}${image || '/assets/img/cards/card-eder-christian.png'}`
+  const imagePath = image?.replace(/^../, "")
+
+  const ogImage = `${url}${
+    imagePath || "/assets/img/cards/card-eder-christian.png"
+  }`
 
   return (
     <Helmet
