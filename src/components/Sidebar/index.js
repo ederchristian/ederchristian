@@ -22,8 +22,8 @@ const Sidebar = ({ site: { title }, isMenuOpen, setIsMenuOpen }) => (
 Sidebar.propTypes = {
   site: propTypes.shape({
     title: propTypes.string.isRequired,
-    position: propTypes.string.isRequired,
-    description: propTypes.string.isRequired,
+    position: propTypes.string,
+    description: propTypes.string,
   }),
 }
 
