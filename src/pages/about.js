@@ -61,6 +61,8 @@ const About = () => (
         <li>Data Structure and Algorithms</li>
         <li>API</li>
         <li>Next.js</li>
+        <li>WebGL</li>
+        <li>Three.js</li>
       </ul>
 
       <h2>I wanna learn</h2>
