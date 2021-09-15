@@ -1,7 +1,13 @@
 import React from "react"
 
+import { Hobbies } from "../components/About/hobbies"
+import { Languages } from "../components/About/languages"
 import Layout from "../components/Layout"
 import Seo from "../components/seo"
+import { OtherSkills } from "../components/About/otherSkills"
+import { Skills } from "../components/About/skills"
+import { StudiesFuture } from "../components/About/studiesFuture"
+import { StudiesPresent } from "../components/About/studiesPresent"
 
 import EderChristian from "../images/eder-christian.png"
 
@@ -37,61 +43,44 @@ const About = () => (
 
       <h2>Skills</h2>
       <ul>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-        <li>Bootstrap 3 and 4</li>
-        <li>React</li>
-        <li>SVG</li>
-        <li>Wordpress</li>
-        <li>BEM</li>
-        <li>TDD</li>
-        <li>Docker</li>
-        <li>Git</li>
-        <li>Unix Commands</li>
-        <li>macOS</li>
-        <li>Linux</li>
-        <li>Sketch</li>
-        <li>Hubspot</li>
-        <li>Scrum</li>
+        {Skills.map(skill => {
+          return <li key={skill.id}>{skill.item}</li>
+        })}
       </ul>
 
       <h2>Currently studying</h2>
       <ul>
-        <li>Data Structure and Algorithms</li>
-        <li>API</li>
-        <li>Next.js</li>
-        <li>WebGL</li>
-        <li>Three.js</li>
+        {StudiesPresent.map(subject => {
+          return <li key={subject.id}>{subject.item}</li>
+        })}
       </ul>
 
       <h2>I wanna learn</h2>
       <ul>
-        <li>Vue.js</li>
-        <li>Swift</li>
+        {StudiesFuture.map(subject => {
+          return <li key={subject.id}>{subject.item}</li>
+        })}
       </ul>
 
       <h2>I also do</h2>
       <ul>
-        <li>Design in Photoshop and Illustrator</li>
-        <li>Video editing at iMovie</li>
+        {OtherSkills.map(skill => {
+          return <li key={skill.id}>{skill.item}</li>
+        })}
       </ul>
 
       <h2>I speak</h2>
       <ul>
-        <li>Portuguese - Native</li>
-        <li>English - Professional working proficiency</li>
-        <li>Spanish - If you’re patient, we can understand each other</li>
+        {Languages.map(language => {
+          return <li key={language.id}>{language.item}</li>
+        })}
       </ul>
 
       <h2>My hobbies are</h2>
       <ul>
-        <li>Soccer (or football, if you prefer)</li>
-        <li>Workout</li>
-        <li>Programming</li>
-        <li>Books</li>
-        <li>Music (especially the old songs)</li>
-        <li>Travel</li>
+        {Hobbies.map(hobby => {
+          return <li key={hobby.id}>{hobby.item}</li>
+        })}
       </ul>
     </Styled.MainContent>
   </Layout>
