@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Eder Christian`,
     position: `Partner and Front-end Developer at StartSe`,
-    description: `A blog about my own path.`,
+    description: `My Learn in Public Blog`,
     author: `@ederchristian`,
     siteUrl: `https://ederchristian.com`,
   },
@@ -13,7 +13,7 @@ module.exports = {
         trackingId: "UA-77253655-1",
         head: false,
         anonymize: true,
-        respectDNT: true
+        respectDNT: true,
       },
     },
     {
@@ -53,18 +53,18 @@ module.exports = {
           {
             resolve: "gatsby-remark-relative-images",
             options: {
-              name: "uploads"
-            }
+              name: "uploads",
+            },
           },
           {
             resolve: "gatsby-remark-images",
             options: {
               maxWidth: 960,
-              linkImagesToOriginal: false
-            }
+              linkImagesToOriginal: false,
+            },
           },
           `gatsby-remark-lazy-load`,
-          `gatsby-remark-prismjs`
+          `gatsby-remark-prismjs`,
         ],
       },
     },
@@ -86,12 +86,12 @@ module.exports = {
       resolve: "gatsby-plugin-react-svg",
       options: {
         rule: {
-          include: /assets/
-        }
-      }
+          include: /assets/,
+        },
+      },
     },
     `gatsby-plugin-sitemap`,
-    'gatsby-plugin-instagram-embed',
-    'gatsby-plugin-offline',
+    "gatsby-plugin-instagram-embed",
+    "gatsby-plugin-offline",
   ],
 }

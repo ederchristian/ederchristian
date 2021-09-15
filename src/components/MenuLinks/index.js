@@ -3,27 +3,27 @@ import ReactGA from "react-ga"
 
 import links from "./content"
 
-import getThemeColor from '../../utils/getThemeColor'
+import getThemeColor from "../../utils/getThemeColor"
 
-import * as S from "./styled"
+import * as Styled from "./styled"
 
 const MenuLinks = ({ setIsMenuOpen, isMenuOpen }) => {
   const menuLinkClickTrack = link => {
     setIsMenuOpen(!isMenuOpen)
 
     ReactGA.event({
-      category: 'menu link',
-      action: 'click',
-      label: `Menu Link - ${link}`
+      category: "menu link",
+      action: "click",
+      label: `Menu Link - ${link}`,
     })
   }
 
   return (
-    <S.MenuLinksWrapper>
-      <S.MenuLinksList>
+    <Styled.MenuLinksWrapper>
+      <Styled.MenuLinksList>
         {links.map((link, i) => (
-          <S.MenuLinksItem key={i}>
-            <S.MenuLinksLink
+          <Styled.MenuLinksItem key={i}>
+            <Styled.MenuLinksLink
               to={link.url}
               cover
               direction="left"
@@ -33,11 +33,11 @@ const MenuLinks = ({ setIsMenuOpen, isMenuOpen }) => {
               activeClassName="active"
             >
               {link.label}
-            </S.MenuLinksLink>
-          </S.MenuLinksItem>
+            </Styled.MenuLinksLink>
+          </Styled.MenuLinksItem>
         ))}
-      </S.MenuLinksList>
-    </S.MenuLinksWrapper>
+      </Styled.MenuLinksList>
+    </Styled.MenuLinksWrapper>
   )
 }
 

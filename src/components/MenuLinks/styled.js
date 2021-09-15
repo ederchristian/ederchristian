@@ -9,19 +9,27 @@ export const MenuLinksWrapper = styled.nav`
 `
 
 export const MenuLinksList = styled.ul`
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 300;
+  display: flex;
 
-  ${media.lessThan('large')`
-    font-size: 1.8rem;
+  ${media.lessThan("large")`
+    font-size: 1.6rem;
+    display: initial;
+  `}
+
+  ${media.greaterThan("large")`
+    margin-left: 1.6rem;
   `}
 `
 
 export const MenuLinksItem = styled.li`
   padding: 0.5rem 0;
+  margin-left: 1.6rem;
 
-  ${media.lessThan('large')`
+  ${media.lessThan("large")`
     padding: 1rem 0;
+    margin-left: initial;
   `}
 
   .active {

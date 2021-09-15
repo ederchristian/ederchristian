@@ -1,7 +1,7 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from "react"
+import PropTypes from "prop-types"
 
-import * as S from './styled'
+import * as Styled from "./styled"
 
 const PostItem = ({
   slug,
@@ -10,24 +10,28 @@ const PostItem = ({
   date,
   timeToRead,
   title,
-  description
+  description,
 }) => (
-  <S.PostItemLink
+  <Styled.PostItemLink
     to={slug}
     cover
     direction="right"
     bg="#0e1218"
     duration={0.5}
   >
-    <S.PostItemWrapper>
-      <S.PostItemTag background={background}>{category}</S.PostItemTag>
-      <S.PostItemInfo>
-        <S.PostItemDate>{date} • {timeToRead} min to read</S.PostItemDate>
-        <S.PostItemTitle>{title}</S.PostItemTitle>
-        <S.PostItemDescription>{description}</S.PostItemDescription>
-      </S.PostItemInfo>
-    </S.PostItemWrapper>
-  </S.PostItemLink>
+    <Styled.PostItemWrapper>
+      <Styled.PostItemTag background={background}>
+        {category}
+      </Styled.PostItemTag>
+      <Styled.PostItemInfo>
+        <Styled.PostItemDate>
+          {date} • {timeToRead} min to read
+        </Styled.PostItemDate>
+        <Styled.PostItemTitle>{title}</Styled.PostItemTitle>
+        <Styled.PostItemDescription>{description}</Styled.PostItemDescription>
+      </Styled.PostItemInfo>
+    </Styled.PostItemWrapper>
+  </Styled.PostItemLink>
 )
 
 PostItem.propTypes = {
@@ -37,7 +41,7 @@ PostItem.propTypes = {
   date: PropTypes.string.isRequired,
   timeToRead: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired
+  description: PropTypes.string.isRequired,
 }
 
 export default PostItem

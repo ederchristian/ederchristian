@@ -4,7 +4,7 @@ import media from "styled-media-query"
 export const PostHeader = styled.header`
   max-width: 70rem;
   margin: auto;
-  padding: 5rem 5rem 0;
+  padding: 2rem 5rem 0;
   color: var(--postColor);
 
   ${media.lessThan("large")`
@@ -14,25 +14,24 @@ export const PostHeader = styled.header`
 `
 
 export const PostTitle = styled.h1`
-  font-size: 4rem;
+  font-size: 3.6rem;
   font-weight: 700;
   margin: 1rem auto;
   padding: 0 1.4rem;
 
   ${media.lessThan("large")`
-    font-size: 2.8rem;
+    font-size: 2.4rem;
     line-height: 1.1;
     padding: 0 1rem;
   `}
 `
 
 export const PostDescription = styled.h2`
-  font-size: 2rem;
+  font-size: 1.6rem;
   font-weight: 200;
   padding: 0 1.4rem;
 
   ${media.lessThan("large")`
-    font-size: 1.6rem;
     line-height: 1.3;
     padding: 0 1rem;
   `}
@@ -230,13 +229,13 @@ export const MainContent = styled.section`
   }
 
   h1 {
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: 700;
     margin: 1rem auto;
     padding: 0 1.4rem;
 
     ${media.lessThan("large")`
-      font-size: 2.8rem;
+      font-size: 2.4rem;
       line-height: 1.1;
       padding: 0 1rem;
     `}
