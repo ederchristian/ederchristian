@@ -17,7 +17,7 @@ const Profile = ({ position, description, isMobileHeader }) => {
         bg={getThemeColor()}
         duration={0.5}
       >
-        <Logo style={{ width: 150 }} />
+        <Logo style={{ width: 150, height: 25 }} />
         <Styled.ProfilePosition>{position}</Styled.ProfilePosition>
       </Styled.ProfileLink>
       <Styled.ProfileDescription>{description}</Styled.ProfileDescription>
