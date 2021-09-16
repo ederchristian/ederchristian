@@ -131,10 +131,13 @@ export const MainContent = styled.section`
     border-radius: 7px;
     color: var(--highlight);
     margin: 1rem 1rem 0 0;
-    padding: 0 1rem;
-    height: 40px;
+    padding: 0.5rem 1rem;
     font-size: 1rem;
     font-family: var(--fontInter);
+    ${media.greaterThan("medium")`
+      height: 40px;
+      padding: 0 1rem;
+    `}
   }
 `
 
