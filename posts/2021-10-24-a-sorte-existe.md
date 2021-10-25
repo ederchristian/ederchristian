@@ -1,5 +1,5 @@
 ---
-date: 2021-10-23 08:42:04
+date: 2021-10-24 08:42:04
 title: A Sorte Existe
 description: Transcrição do vídeo A Sorte Existe — Learning in Public 1
 category: pt-BR
