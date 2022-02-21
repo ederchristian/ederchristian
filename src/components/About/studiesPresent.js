@@ -5,19 +5,15 @@ export const StudiesPresent = [
   },
   {
     id: 2,
-    item: "API",
+    item: "TypeScript",
   },
   {
     id: 3,
-    item: "Next.js",
+    item: "XState",
   },
   {
     id: 4,
-    item: "WebGL",
-  },
-  {
-    id: 5,
-    item: "Three.js",
+    item: "Elixir",
   },
 ]
 

@@ -1,11 +1,15 @@
 export const StudiesFuture = [
   {
     id: 1,
-    item: "Vue.js",
+    item: "Swift",
   },
   {
     id: 2,
-    item: "Swift",
+    item: "WebGL",
+  },
+  {
+    id: 3,
+    item: "Three.js",
   },
 ]
 
