@@ -32,10 +32,6 @@ export const Skills = [
     item: "BEM",
   },
   {
-    id: 9,
-    item: "TDD",
-  },
-  {
     id: 10,
     item: "Docker",
   },
@@ -54,10 +50,6 @@ export const Skills = [
   {
     id: 14,
     item: "Linux",
-  },
-  {
-    id: 15,
-    item: "Sketch",
   },
   {
     id: 16,

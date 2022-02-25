@@ -20,7 +20,10 @@ const About = () => (
       <h1>Hi, I'm Eder.</h1>
       <Styled.Image src={EderChristian} alt="Eder Christian" />
       <p>
-        I'm a Front-end Developer working at an American company remotely from São Paulo, Brazil. I'm a passionate about technology and entrepreneurship, always looking for new opportunities and new connections with other people. I've got an entrepreneur mindset.
+        I'm a Front-end Developer working at an American company remotely from
+        São Paulo, Brazil. I'm a passionate about technology and
+        entrepreneurship, always looking for new opportunities and new
+        connections with other people.
       </p>
       <blockquote>
         I believe that life really begins when we leave our comfort zone.
