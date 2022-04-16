@@ -9,7 +9,7 @@ import { Skills } from "../components/About/skills"
 import { StudiesFuture } from "../components/About/studiesFuture"
 import { StudiesPresent } from "../components/About/studiesPresent"
 
-import EderChristian from "../images/eder-christian.png"
+import EderChristian from "../images/new-eder-christian.jpg"
 
 import * as Styled from "../components/About/styled"
 
@@ -20,18 +20,13 @@ const About = () => (
       <h1>Hi, I'm Eder.</h1>
       <Styled.Image src={EderChristian} alt="Eder Christian" />
       <p>
-        I'm a Front-end Developer working at an American company remotely from
-        São Paulo, Brazil. I'm a passionate about technology and
-        entrepreneurship, always looking for new opportunities and new
-        connections with other people.
+        I'm a Front-end Developer, based in São Paulo - Brazil, working remotely at <a href="https://brokergenius.com/" target="_blank" rel="noopener noreferrer">Broker Genius</a>, an American company from New York City. I'm a passionate about technology and entrepreneurship, always looking for new opportunities and new connections with other people.
       </p>
-      <blockquote>
-        I believe that life really begins when we leave our comfort zone.
-      </blockquote>
       <p>
-        I love to make things for the web and to put my endeavor on it. In this
-        path, each passing day I wanna get more envolved with the open source
-        community and serve people with technology.
+        I'm a Former Partner and Front-end Developer at StartSe, one of the biggest education startups in Brazil. 
+      </p>
+      <p>
+        I love to make things for the web and serve people with it. I'm extremely grateful to get to build it for a living.
       </p>
 
       <h2>Skills</h2>
