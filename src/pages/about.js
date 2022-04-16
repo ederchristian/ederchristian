@@ -20,7 +20,7 @@ const About = () => (
       <h1>Hi, I'm Eder.</h1>
       <Styled.Image src={EderChristian} alt="Eder Christian" />
       <p>
-        I'm a Front-end Developer, based in São Paulo - Brazil, working remotely at <a href="https://brokergenius.com/" target="_blank" rel="noopener noreferrer">Broker Genius</a>, an American company from New York City. I'm a passionate about technology and entrepreneurship, always looking for new opportunities and new connections with other people.
+        I'm a Front-end Developer, based in São Paulo - Brazil, working remotely at <a href="https://brokergenius.com/" target="_blank" rel="noopener noreferrer">Broker Genius</a>, an American company from New York City. I'm passionate about technology and entrepreneurship, always looking for new opportunities and new connections with other people.
       </p>
       <p>
         I'm a Former Partner and Front-end Developer at StartSe, one of the biggest education startups in Brazil. 
