@@ -53,8 +53,8 @@ const GlobalStyles = createGlobalStyle`
     background: var(--background);
     line-height: 1.4;
     font-size: 100%;
-    font-family: 'Tinos', serif;
     --fontInter: 'Inter', sans-serif;
+    font-family: var(--fontInter);
 
     & .mainText {
       fill: #30284f;
@@ -70,7 +70,7 @@ const GlobalStyles = createGlobalStyle`
     height: auto;
   }
   h1, h2 {
-    font-family: 'Inter', sans-serif;
+    line-height: 1.2;
   }
 
   body.light {

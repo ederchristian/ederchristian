@@ -48,12 +48,13 @@ export const PostDate = styled.p`
 `
 
 export const MainContent = styled.section`
-  max-width: 70rem;
-  margin: auto;
+  max-width: 54rem;
+  margin: 0 auto 0 0;
   padding: 2rem 5rem;
 
   ${media.lessThan("large")`
     padding: 2rem 0;
+    margin: auto;
     max-width: 100%;
   `}
 
