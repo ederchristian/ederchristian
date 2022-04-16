@@ -143,15 +143,14 @@ export const MainContent = styled.section`
 
 export const Image = styled.img`
   display: initial;
-  width: 70%;
-  border: 1px solid var(--texts);
+  width: 100%;
   border-radius: 0.7rem;
-  box-shadow: 0 0.8rem 1rem rgba(var(--shadow), 0.2);
-  padding: 8px 8px 0;
-  margin: 1rem 0 2rem 1rem;
+  padding: 8px 16px 0;
+  margin: 1rem 0;
 
   ${media.greaterThan("medium")`
-    width: 300px;
-    margin: 0 1.875rem 2rem;
+    width: 400px;
+    padding: 0;
+    margin: 0.5rem 1.7rem 2rem;
   `}
 `
