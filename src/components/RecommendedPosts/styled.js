@@ -26,6 +26,11 @@ export const RecommendedLink = styled(AniLink)`
   text-decoration: none;
   color: var(--highlight);
 
+  ${media.lessThan("large")`
+    padding: 1rem;
+    line-height: 1.6;
+  `}
+
   &:hover {
     background: var(--borders);
   }

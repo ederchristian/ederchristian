@@ -18,7 +18,7 @@ export const LayoutMain = styled.main`
   width: 100%;
 
   ${media.lessThan("large")`
-    padding: 3.2rem 0;
+    padding: 4rem 0;
   `}
 
   body#grid & {

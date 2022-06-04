@@ -15,7 +15,7 @@ export const PostItemWrapper = styled.section`
   ${media.lessThan("large")`
     align-items: flex-start;
     flex-direction: column;
-    padding: 2rem 1rem;
+    padding: 1.6rem 1rem;
   `}
 
   body#grid & {

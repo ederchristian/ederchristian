@@ -68,6 +68,11 @@ export const MainContent = styled.section`
   p {
     margin: 0 auto 1.6rem;
     word-wrap: break-word;
+
+    ${media.lessThan("large")`
+      padding: 0 1rem;
+      font-size: 0.8rem;
+    `}
   }
 
   a {
@@ -95,6 +100,7 @@ export const MainContent = styled.section`
       font-size: 2.4rem;
       line-height: 1.1;
       padding: 0 1rem;
+      margin: 1rem auto 2rem;
     `}
   }
 

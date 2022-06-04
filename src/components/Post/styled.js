@@ -8,7 +8,7 @@ export const PostHeader = styled.header`
   color: var(--postColor);
 
   ${media.lessThan("large")`
-    padding: 3rem 0 0;
+    padding: 1.6rem 0 0;
     max-width: 100%;
   `}
 `
@@ -20,19 +20,20 @@ export const PostTitle = styled.h1`
   padding: 0 1.4rem;
 
   ${media.lessThan("large")`
-    font-size: 2.4rem;
+    font-size: 2rem;
     line-height: 1.1;
     padding: 0 1rem;
   `}
 `
 
 export const PostDescription = styled.h2`
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   font-weight: 200;
   padding: 0 1.4rem;
 
   ${media.lessThan("large")`
     line-height: 1.3;
+    font-size: 1.2rem;
     padding: 0 1rem;
   `}
 `
@@ -44,6 +45,7 @@ export const PostDate = styled.p`
 
   ${media.lessThan("large")`
     padding: 0 1rem;
+    font-size: 0.8rem;
   `}
 `
 
@@ -73,14 +75,14 @@ export const MainContent = styled.section`
     font-size: 2.8rem;
 
     ${media.lessThan("large")`
-      font-size: 1.875rem;
+      font-size: 2rem;
     `}
   }
   h2 {
     font-size: 2.1rem;
 
     ${media.lessThan("large")`
-      font-size: 1.375rem;
+      font-size: 1.2rem;
     `}
   }
   h3 {
@@ -122,6 +124,10 @@ export const MainContent = styled.section`
 
   p {
     margin: 0 auto 1.6rem;
+
+    ${media.lessThan("large")`
+      font-size: 0.8rem;
+    `}
   }
 
   ul,
@@ -133,6 +139,10 @@ export const MainContent = styled.section`
 
   li {
     padding: 0.625rem 0;
+
+    ${media.lessThan("large")`
+      font-size: 0.8rem;
+    `}
 
     & > ul {
       margin-bottom: 0;
@@ -155,6 +165,17 @@ export const MainContent = styled.section`
     border-left: 0.4rem solid var(--highlight);
     margin: 3rem auto;
     padding: 0 1.875rem;
+
+    ${media.lessThan("large")`
+      padding: 0 1rem;
+    `}
+
+    p {
+      ${media.lessThan("large")`
+        font-size: 0.8rem;
+      `}
+    }
+
   }
 
   hr {

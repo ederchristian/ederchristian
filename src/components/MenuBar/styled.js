@@ -35,7 +35,6 @@ export const MenuBarGroup = styled.div`
 
   ${media.lessThan("large")`
     flex-direction: row;
-    margin: 0 8px;
   `}
 `
 
