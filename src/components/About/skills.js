@@ -13,51 +13,71 @@ export const Skills = [
   },
   {
     id: 4,
-    item: "Bootstrap 3 and 4",
-  },
-  {
-    id: 5,
     item: "React",
   },
   {
+    id: 5,
+    item: "Next.js",
+  },
+  {
     id: 6,
-    item: "SVG",
+    item: "Gatsby",
   },
   {
     id: 7,
-    item: "Wordpress",
+    item: "SVG",
   },
   {
     id: 8,
-    item: "BEM",
+    item: "Stiches",
+  },
+  {
+    id: 9,
+    item: "Styled Components",
   },
   {
     id: 10,
-    item: "Docker",
+    item: "Sass",
   },
   {
     id: 11,
-    item: "Git",
+    item: "Wordpress",
   },
   {
     id: 12,
-    item: "Unix Commands",
+    item: "BEM",
   },
   {
     id: 13,
-    item: "macOS",
+    item: "Docker",
   },
   {
     id: 14,
-    item: "Linux",
+    item: "Git",
+  },
+  {
+    id: 15,
+    item: "Unix Commands",
   },
   {
     id: 16,
-    item: "Hubspot",
+    item: "macOS",
   },
   {
     id: 17,
+    item: "Linux",
+  },
+  {
+    id: 18,
+    item: "Hubspot",
+  },
+  {
+    id: 19,
     item: "Scrum",
+  },
+  {
+    id: 20,
+    item: "Jira",
   },
 ]
 

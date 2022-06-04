@@ -1,11 +1,11 @@
 export const OtherSkills = [
   {
     id: 1,
-    item: "Design in Photoshop and Illustrator",
+    item: "Design in Photoshop, Illustrator, and Figma",
   },
   {
     id: 2,
-    item: "Video editing at iMovie",
+    item: "Video editing in Final Cut Pro and iMovie",
   },
 ]
 

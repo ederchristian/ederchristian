@@ -5,10 +5,14 @@ export const StudiesFuture = [
   },
   {
     id: 2,
-    item: "WebGL",
+    item: "Elixir",
   },
   {
     id: 3,
+    item: "WebGL",
+  },
+  {
+    id: 4,
     item: "Three.js",
   },
 ]
