@@ -101,3 +101,9 @@ I'd like to give a special shout-out to:
 
 - Drew Gainor, our CPO; and
 - Hugo Bessa, my great friend and our Lead Front-end Software Engineer.
+
+## P.S.
+
+Onewheels are really cool!
+
+![Kent C. Dodds and Eder Christian. There is a girl on an Onewheel](/assets/img/posts/2022-06-05-reactathon-2022/10.jpeg)
