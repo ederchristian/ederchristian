@@ -4,7 +4,7 @@ title: My highlights from Reactathon 2022
 description: After 2 years, finally, tech events are back!
 category: en-US
 background: "#30284f"
-image: "/assets/img/posts/2022-06-05-reactathon-2022/.jpeg"
+image: "/assets/img/posts/2022-06-05-reactathon-2022/card.jpg"
 ---
 
 ![Reactathon 2022. Orinda, California](/assets/img/posts/2022-06-05-reactathon-2022/1.jpeg)
