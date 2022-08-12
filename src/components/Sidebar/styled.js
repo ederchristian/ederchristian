@@ -34,8 +34,10 @@ export const SidebarContainerBox = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 0 6.6rem;
 
   ${media.lessThan("large")`
+    padding: initial;
     height: calc(100% - 57px);
   `}
 `
