@@ -8,14 +8,14 @@ export const PostItemWrapper = styled.section`
   width: 100%;
   padding: 2rem 3rem;
 
-  &: (not: last-child) {
-    border-bottom: 1px solid var(--borders);
-  }
-
   ${media.lessThan("large")`
     align-items: flex-start;
     flex-direction: column;
     padding: 1.6rem 1rem;
+  `}
+
+  ${media.greaterThan("large")`
+    margin: 0 2rem;
   `}
 
   body#grid & {
@@ -30,6 +30,7 @@ export const PostItemLink = styled(AniLink)`
   display: flex;
   color: var(--texts);
   text-decoration: none;
+  font-family: var(--fontInter);
 
   ${media.lessThan("large")`
     min-width: auto;
@@ -52,7 +53,6 @@ export const PostItemTag = styled.div`
   border-radius: 0.7rem;
   margin-left: 1.5rem;
   color: #fff;
-  font-family: var(--fontInter);
   font-size: 1.3rem;
   font-weight: 700;
   min-width: 90px;
@@ -61,9 +61,9 @@ export const PostItemTag = styled.div`
   ${media.lessThan("large")`
     min-width: initial;
     min-height: 24px;
-    margin: 0 0 12px;
-    padding: 0 16px;
-    border-radius: 7px;
+    margin: 0 0 1.2rem;
+    padding: 0 1.6rem;
+    border-radius: 0.7rem;
     font-size: 0.8rem;
   `}
 
@@ -75,8 +75,10 @@ export const PostItemTag = styled.div`
 export const PostItemInfo = styled.div`
   display: flex;
   flex-direction: column;
-  margin-left: 1.5rem;
+  justify-content: space-between;
+  margin-left: 1.6rem;
   transition: color 0.5s;
+  height: 100%;
 
   ${media.lessThan("large")`
     margin: 0;
@@ -89,14 +91,11 @@ export const PostItemInfo = styled.div`
 
 export const PostItemDate = styled.time`
   font-size: 0.8rem;
-  font-family: var(--fontInter);
-  padding-bottom: 0.2rem;
 `
 
 export const PostItemTitle = styled.h1`
   font-size: 1.6rem;
   font-weight: 700;
-  margin: 0.2rem 0 0.5rem;
 
   body#grid & {
     margin: 0.8rem 0;
@@ -108,4 +107,12 @@ export const PostItemDescription = styled.p`
   font-size: 1.2rem;
   font-weight: 300;
   line-height: 1.2;
+  max-width: 27rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  ${media.greaterThan("large")`
+    max-width: 50rem;
+  `}
 `

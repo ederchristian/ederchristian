@@ -14,7 +14,7 @@ export const PostHeader = styled.header`
 `
 
 export const PostTitle = styled.h1`
-  font-size: 3.6rem;
+  font-size: 3rem;
   font-weight: 700;
   margin: 1rem auto;
   padding: 0 1.4rem;
@@ -51,7 +51,7 @@ export const PostDate = styled.p`
 
 export const MainContent = styled.section`
   max-width: 54rem;
-  margin: 0 auto 0 0;
+  margin: 0 auto;
   padding: 2rem 5rem;
 
   ${media.lessThan("large")`
@@ -59,45 +59,6 @@ export const MainContent = styled.section`
     margin: auto;
     max-width: 100%;
   `}
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5 {
-    margin: 2.4rem auto 1rem;
-    font-weight: 800;
-    letter-spacing: 0.069rem;
-    line-height: 1.4;
-  }
-
-  h1 {
-    font-size: 2.8rem;
-
-    ${media.lessThan("large")`
-      font-size: 2rem;
-    `}
-  }
-  h2 {
-    font-size: 2.1rem;
-
-    ${media.lessThan("large")`
-      font-size: 1.2rem;
-    `}
-  }
-  h3 {
-    font-size: 1.6rem;
-
-    ${media.lessThan("large")`
-      font-size: 1.125rem;
-    `}
-  }
-  h4 {
-    font-size: 1.4rem;
-  }
-  h5 {
-    font-size: 1.2rem;
-  }
 
   p,
   h1,
@@ -110,24 +71,19 @@ export const MainContent = styled.section`
   iframe,
   .button-post {
     color: var(--postColor);
-    font-size: 1.25rem;
+    font-size: 1.4rem;
     font-weight: 300;
-    line-height: 1.7;
-    letter-spacing: 0.069rem;
-    padding: 0 1.4rem;
+    line-height: 1.8;
+    word-break: break-word;
 
     ${media.lessThan("large")`
       padding: 0 1rem;
-      word-break: break-word;
+      font-size: 1.4rem;
     `}
   }
 
   p {
     margin: 0 auto 1.6rem;
-
-    ${media.lessThan("large")`
-      font-size: 0.8rem;
-    `}
   }
 
   ul,
@@ -138,11 +94,7 @@ export const MainContent = styled.section`
   }
 
   li {
-    padding: 0.625rem 0;
-
-    ${media.lessThan("large")`
-      font-size: 0.8rem;
-    `}
+    padding: 0.4rem 0;
 
     & > ul {
       margin-bottom: 0;
@@ -169,13 +121,6 @@ export const MainContent = styled.section`
     ${media.lessThan("large")`
       padding: 0 1rem;
     `}
-
-    p {
-      ${media.lessThan("large")`
-        font-size: 0.8rem;
-      `}
-    }
-
   }
 
   hr {
@@ -265,7 +210,7 @@ export const MainContent = styled.section`
 
   div h2,
   h2 {
-    font-size: 2rem;
+    font-size: 2.1rem;
     font-weight: 700;
   }
 
