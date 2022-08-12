@@ -7,11 +7,13 @@ export const RecommendedWrapper = styled.section`
   background: var(--mediumBackground);
   border-top: 1px solid var(--borders);
   border-bottom: 1px solid var(--borders);
+  margin: 0 6.5rem;
 
   ${media.lessThan("large")`
     font-size: .9rem;
     line-height: 1.3;
     padding: 2rem 1rem;
+    margin: initial;
   `}
 `
 
