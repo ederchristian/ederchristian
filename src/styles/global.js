@@ -5,6 +5,9 @@ const GlobalStyles = createGlobalStyle`
     v2.0 | 20110126
     License: none (public domain)
   */
+  html {
+    font-size: 62.5%;
+  }
 
   html, body, div, span, applet, object, iframe,
   h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -22,7 +25,6 @@ const GlobalStyles = createGlobalStyle`
     margin: 0;
     padding: 0;
     border: 0;
-    font-size: 100%;
     font: inherit;
     vertical-align: baseline;
   }
@@ -36,6 +38,11 @@ const GlobalStyles = createGlobalStyle`
   }
   blockquote, q {
     quotes: none;
+    color: var(--postColor);
+    border-left: 0.4rem solid var(--highlight);
+    margin: 3rem auto;
+    padding: 0 1.875rem;
+    font-size: 1.4rem;
   }
   blockquote:before, blockquote:after,
   q:before, q:after {
@@ -68,9 +75,6 @@ const GlobalStyles = createGlobalStyle`
     display: block;
     width: 100%;
     height: auto;
-  }
-  h1, h2 {
-    line-height: 1.2;
   }
 
   body.light {
