@@ -1,18 +1,14 @@
 export const StudiesPresent = [
   {
     id: 1,
-    item: "Computer Science from HarvardX CS50x",
-  },
-  {
-    id: 2,
     item: "JavaScript (under the hood)",
   },
   {
-    id: 3,
+    id: 2,
     item: "TypeScript",
   },
   {
-    id: 4,
+    id: 3,
     item: "XState",
   },
 ]
