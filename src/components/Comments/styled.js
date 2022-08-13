@@ -2,7 +2,7 @@ import styled from "styled-components"
 import media from "styled-media-query"
 
 export const CommentsWrapper = styled.section`
-  max-width: 70rem;
+  max-width: 90rem;
   margin: auto;
   padding: 3rem 6.4rem 3rem;
 

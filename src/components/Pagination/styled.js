@@ -10,9 +10,10 @@ export const PaginationWrapper = styled.section`
   color: var(--texts);
   font-family: var(--fontInter);
   margin: 2rem 6.5rem 0;
+  font-size: 1.4rem;
 
   ${media.lessThan("large")`
-    font-size: .8rem;
+    font-size: 1.2rem;
     padding: 1rem;
     margin: 0.8rem 0 0;
   `}

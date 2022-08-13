@@ -12,13 +12,13 @@ export const LayoutWrapper = styled.section`
 export const LayoutMain = styled.main`
   background: var(--background);
   min-height: 100vh;
-  max-width: 70rem;
+  max-width: 90rem;
   margin: 0 auto;
-  padding-top: 5rem;
+  padding-top: 8.6rem;
   width: 100%;
 
   ${media.lessThan("large")`
-    padding: 4rem 0;
+    padding: 6rem 0;
   `}
 
   body#grid & {

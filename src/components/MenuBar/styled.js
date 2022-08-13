@@ -60,16 +60,19 @@ export const MenuBarItem = styled.span`
   display: block;
   color: var(--texts);
   cursor: pointer;
-  height: 3.75rem;
-  width: 3.75rem;
-  padding: 1.1rem;
+  height: 4.4rem;
+  width: 4.4rem;
+  padding: 1rem;
   position: relative;
+  margin-right: 1.6rem;
 
   ${media.lessThan("large")`
     position: relative;
-    width: 3.2rem;
-    height: 3.2rem;
+    width: 4rem;
+    height: 4rem;
     padding: .9rem;
+    margin: 0.8rem;
+    margin-right: initial;
   `}
 
   ${media.greaterThan("large")`

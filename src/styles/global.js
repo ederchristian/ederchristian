@@ -5,7 +5,7 @@ const GlobalStyles = createGlobalStyle`
     v2.0 | 20110126
     License: none (public domain)
   */
-  html {
+  html, body {
     font-size: 62.5%;
   }
 
@@ -25,7 +25,6 @@ const GlobalStyles = createGlobalStyle`
     margin: 0;
     padding: 0;
     border: 0;
-    font: inherit;
     vertical-align: baseline;
   }
   /* HTML5 display-role reset for older browsers */
@@ -59,7 +58,6 @@ const GlobalStyles = createGlobalStyle`
   body {
     background: var(--background);
     line-height: 1.4;
-    font-size: 100%;
     --fontInter: 'Inter', sans-serif;
     font-family: var(--fontInter);
 

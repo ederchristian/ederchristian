@@ -27,6 +27,7 @@ export const RecommendedLink = styled(AniLink)`
   font-family: var(--fontInter);
   text-decoration: none;
   color: var(--highlight);
+  font-size: 1.4rem;
 
   ${media.lessThan("large")`
     padding: 1rem;

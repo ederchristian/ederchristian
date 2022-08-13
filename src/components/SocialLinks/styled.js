@@ -12,7 +12,7 @@ export const SocialLinksWrapper = styled.nav`
 export const SocialLinksList = styled.ul`
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
   list-style: none;
 
   ${media.greaterThan("large")`
@@ -22,8 +22,10 @@ export const SocialLinksList = styled.ul`
 `
 
 export const SocialLinksItem = styled.li`
+  margin: 1.6rem;
+
   ${media.greaterThan("large")`
-    margin-left: 1.6rem;
+    margin: 0 0 0 1.6rem;
   `}
 `
 
@@ -39,11 +41,11 @@ export const SocialLinksLink = styled.a`
 
 export const IconWrapper = styled.div`
   fill: #fff;
-  width: 32px;
-  height: 32px;
+  width: 3rem;
+  height: 3rem;
 
   ${media.greaterThan("large")`
-    width: 1.6rem;
-    height: 1.6rem;
+    width: 2.2rem;
+    height: 2.2rem;
   `}
 `

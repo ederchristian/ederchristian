@@ -26,6 +26,7 @@ export const MenuLinksList = styled.ul`
 export const MenuLinksItem = styled.li`
   padding: 0.5rem 0;
   margin-left: 1.6rem;
+  font-size: 1.6rem;
 
   ${media.lessThan("large")`
     padding: 1rem 0;

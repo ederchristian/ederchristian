@@ -8,7 +8,7 @@ export const SidebarContainer = styled.nav`
   justify-content: space-between;
   background: var(--mediumBackground);
   border-right: 1px solid var(--borders);
-  height: 4rem;
+  height: 6rem;
   position: fixed;
   padding: 1rem 0;
   text-align: center;
@@ -29,7 +29,7 @@ export const SidebarContainer = styled.nav`
 
 export const SidebarContainerBox = styled.div`
   width: 100%;
-  max-width: 70rem;
+  max-width: 90rem;
   margin: 0 auto;
   display: flex;
   align-items: center;

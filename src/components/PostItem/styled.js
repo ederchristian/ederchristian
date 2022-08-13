@@ -11,7 +11,7 @@ export const PostItemWrapper = styled.section`
   ${media.lessThan("large")`
     align-items: flex-start;
     flex-direction: column;
-    padding: 1.6rem 1rem;
+    padding: 1.6rem;
   `}
 
   ${media.greaterThan("large")`
@@ -53,10 +53,10 @@ export const PostItemTag = styled.div`
   border-radius: 0.7rem;
   margin-left: 1.5rem;
   color: #fff;
-  font-size: 1.3rem;
+  font-size: 1.8rem;
   font-weight: 700;
-  min-width: 90px;
-  min-height: 90px;
+  min-width: 9rem;
+  min-height: 9rem;
 
   ${media.lessThan("large")`
     min-width: initial;
@@ -64,7 +64,7 @@ export const PostItemTag = styled.div`
     margin: 0 0 1.2rem;
     padding: 0 1.6rem;
     border-radius: 0.7rem;
-    font-size: 0.8rem;
+    font-size: 1.4rem;
   `}
 
   body#grid & {
@@ -90,24 +90,33 @@ export const PostItemInfo = styled.div`
 `
 
 export const PostItemDate = styled.time`
-  font-size: 0.8rem;
+  font-size: 1.2rem;
 `
 
 export const PostItemTitle = styled.h1`
-  font-size: 1.6rem;
+  font-size: 2.4rem;
   font-weight: 700;
+  padding: 0.4rem 0;
 
   body#grid & {
     margin: 0.8rem 0;
     line-height: 1.1;
   }
+
+  ${media.greaterThan("large")`
+    padding: initial;
+    max-width: 68rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  `}
 `
 
 export const PostItemDescription = styled.p`
-  font-size: 1.2rem;
+  font-size: 1.6rem;
   font-weight: 300;
   line-height: 1.2;
-  max-width: 27rem;
+  max-width: 28rem;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;

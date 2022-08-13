@@ -2,7 +2,7 @@ import styled from "styled-components"
 import media from "styled-media-query"
 
 export const PostHeader = styled.header`
-  max-width: 70rem;
+  max-width: 90rem;
   margin: auto;
   padding: 2rem 5rem 0;
   color: var(--postColor);
@@ -14,43 +14,42 @@ export const PostHeader = styled.header`
 `
 
 export const PostTitle = styled.h1`
-  font-size: 3rem;
+  font-size: 4.2rem;
   font-weight: 700;
   margin: 1rem auto;
   padding: 0 1.4rem;
 
   ${media.lessThan("large")`
-    font-size: 2rem;
-    line-height: 1.1;
-    padding: 0 1rem;
+    font-size: 3.4rem;
+    padding: 0 1.6rem;
   `}
 `
 
 export const PostDescription = styled.h2`
-  font-size: 1.4rem;
+  font-size: 2rem;
   font-weight: 200;
   padding: 0 1.4rem;
 
   ${media.lessThan("large")`
     line-height: 1.3;
-    font-size: 1.2rem;
-    padding: 0 1rem;
+    font-size: 1.8rem;
+    padding: 0 1.6rem;
   `}
 `
 
 export const PostDate = styled.p`
-  font-size: 1.1rem;
+  font-size: 1.4rem;
   font-weight: 100;
   padding: 0 1.4rem;
 
   ${media.lessThan("large")`
-    padding: 0 1rem;
-    font-size: 0.8rem;
+    padding: 0 1.6rem;
+    font-size: 1.2rem;
   `}
 `
 
 export const MainContent = styled.section`
-  max-width: 54rem;
+  max-width: 68rem;
   margin: 0 auto;
   padding: 2rem 5rem;
 
@@ -71,14 +70,13 @@ export const MainContent = styled.section`
   iframe,
   .button-post {
     color: var(--postColor);
-    font-size: 1.4rem;
+    font-size: 1.8rem;
     font-weight: 300;
     line-height: 1.8;
     word-break: break-word;
 
     ${media.lessThan("large")`
-      padding: 0 1rem;
-      font-size: 1.4rem;
+      padding: 0 1.6rem;
     `}
   }
 
@@ -119,7 +117,7 @@ export const MainContent = styled.section`
     padding: 0 1.875rem;
 
     ${media.lessThan("large")`
-      padding: 0 1rem;
+      padding: 0 1.6rem;
     `}
   }
 
@@ -154,7 +152,7 @@ export const MainContent = styled.section`
     width: 100%;
 
     ${media.lessThan("large")`
-      padding: 0 1rem;
+      padding: 0 1.6rem;
     `}
   }
 
@@ -204,14 +202,15 @@ export const MainContent = styled.section`
     ${media.lessThan("large")`
       font-size: 2.4rem;
       line-height: 1.1;
-      padding: 0 1rem;
+      padding: 0 1.6rem;
     `}
   }
 
   div h2,
   h2 {
-    font-size: 2.1rem;
+    font-size: 2.8rem;
     font-weight: 700;
+    padding-top: 1.6rem;
   }
 
   .subtitle {
