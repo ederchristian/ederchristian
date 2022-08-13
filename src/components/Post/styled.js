@@ -2,8 +2,8 @@ import styled from "styled-components"
 import media from "styled-media-query"
 
 export const PostHeader = styled.header`
-  max-width: 90rem;
-  margin: auto;
+  max-width: 128rem;
+  margin: 0 auto 3.2rem;
   padding: 2rem 5rem 0;
   color: var(--postColor);
 
@@ -49,7 +49,7 @@ export const PostDate = styled.p`
 `
 
 export const MainContent = styled.section`
-  max-width: 68rem;
+  max-width: 88rem;
   margin: 0 auto;
   padding: 2rem 5rem;
 
@@ -145,6 +145,11 @@ export const MainContent = styled.section`
     display: block;
     max-width: 100%;
     margin: 1.875rem auto;
+  }
+
+  .gatsby-resp-image-wrapper span,
+  .gatsby-resp-image-wrapper img {
+    border-radius: 0.7rem;
   }
 
   iframe {

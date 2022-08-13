@@ -75,10 +75,6 @@ export const Skills = [
     id: 19,
     item: "Scrum",
   },
-  {
-    id: 20,
-    item: "Jira",
-  },
 ]
 
 export default Skills

@@ -105,7 +105,7 @@ export const PostItemTitle = styled.h1`
 
   ${media.greaterThan("large")`
     padding: initial;
-    max-width: 68rem;
+    max-width: 88rem;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;

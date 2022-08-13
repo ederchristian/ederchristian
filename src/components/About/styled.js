@@ -2,7 +2,7 @@ import styled from "styled-components"
 import media from "styled-media-query"
 
 export const MainContent = styled.section`
-  max-width: 90rem;
+  max-width: 128rem;
   margin: auto;
   padding: 2rem 5rem 5rem;
   color: var(--postColor);
