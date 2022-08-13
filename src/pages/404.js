@@ -6,7 +6,7 @@ import Layout from "../components/Layout"
 import Seo from "../components/seo"
 
 const MainContent = styled.section`
-  100rem
+  max-width: 100rem;
   margin: auto;
   padding: 2rem 5rem 5rem;
   color: var(--postColor);

@@ -2,7 +2,7 @@ import styled from "styled-components"
 import media from "styled-media-query"
 
 export const PostHeader = styled.header`
-  100rem
+  max-width: 100rem;
   margin: 0 auto 3.2rem;
   padding: 2rem 5rem 0;
   color: var(--postColor);
