@@ -15,7 +15,7 @@ There was no other way to achieve that, but in style: Reactathon 2022, in Orinda
 
 ## Context
 
-Going to events is really important to me. During those events, I could meet new people — and make good friends. One of them is Hugo Bessa. He helped to hired me to work with him at Broker Genius, an american company that has an automated software for ticket brokers in the USA (and this opportunity has already changed my life). This is just one example of how connections in events are important — for your career and personal life.
+Going to events is really important to me. During those events, I could meet new people — and make good friends. One of them is Hugo Bessa. He helped to hired me to work with him at Automatiq, an american company that has an automated software for ticket brokers in the USA (and this opportunity has already changed my life). This is just one example of how connections in events are important — for your career and personal life.
 
 ![Eder Christian and Hugo Bessa at Reactathon 2022](/assets/img/posts/2022-06-05-reactathon-2022/2.jpeg)
 
@@ -75,7 +75,7 @@ Talking to them was really great and I'll keep those moments forever in my mind.
 
 Some topics are on my list to invest my time studying and practicing — or even reading more about: React 18, React Native, Remix, XState, Serverless, and Jamstack.
 
-Some of these items I've been practicing with real work at Broker Genius. I'm really excited to continue on this path learning a lot and helping people to create good stuff on the web.
+Some of these items I've been practicing with real work at Automatiq. I'm really excited to continue on this path learning a lot and helping people to create good stuff on the web.
 
 ![A MacBook Pro. Public Library in Berkeley, California](/assets/img/posts/2022-06-05-reactathon-2022/8.jpeg)
 
@@ -95,7 +95,7 @@ This is exciting!
 
 ## Special Thanks
 
-Broker Genius helped me to make this happen.
+Automatiq helped me to make this happen.
 
 I'd like to give a special shout-out to:
 
