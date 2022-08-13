@@ -12,7 +12,7 @@ export const LayoutWrapper = styled.section`
 export const LayoutMain = styled.main`
   background: var(--background);
   min-height: 100vh;
-  max-width: 128rem;
+  100rem
   margin: 0 auto;
   padding-top: 8.6rem;
   width: 100%;

@@ -29,7 +29,7 @@ export const SidebarContainer = styled.nav`
 
 export const SidebarContainerBox = styled.div`
   width: 100%;
-  max-width: 128rem;
+  100rem
   margin: 0 auto;
   display: flex;
   align-items: center;
