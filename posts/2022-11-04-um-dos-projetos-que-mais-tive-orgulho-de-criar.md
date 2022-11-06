@@ -4,7 +4,7 @@ title: Um dos projetos que mais tive orgulho de criar
 description: O novo site do Padre Fábio de Melo é um espaço pra organizar informações relevantes referentes a todo o ministério dele
 category: pt-BR
 background: "#00d59f"
-image: "/assets/img/posts/13-eder-christian-and-padre-fabio-de-melo.jpg"
+image: "/assets/img/cards/card-eder-christian-and-padre-fabio-de-melo.jpg"
 ---
 
 Você não precisa ser da religião Católica, como eu sou, pra saber e confirmar que o Padre Fábio de Melo dispensa comentários. Não só pelo dom de ser padre, mas também pelas diversas áreas de atuação que, cá entre nós, ele as faz com maestria: comunicador, escritor, cantor e compositor — e comediante nas horas vagas. Dono de diversos recordes, tendo vendido milhões de cópias de CDs e livros, possui um em especial que vale mais do que qualquer outro: o de atingir uma infinidade de pessoas espalhadas pelo mundo e fazê-las melhores. Uma dessas pessoas sou eu.

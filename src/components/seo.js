@@ -23,7 +23,7 @@ function SEO({ description, lang, meta, title, image }) {
 
   const url = site.siteMetadata.siteUrl
 
-  const imagePath = image?.replace(/^../, "")
+  const imagePath = image?.replace("../static", "")
 
   const ogImage = `${url}${
     imagePath || "/assets/img/cards/card-eder-christian.png"
