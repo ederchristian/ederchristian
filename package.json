@@ -39,6 +39,7 @@
   },
   "devDependencies": {
     "gatsby-plugin-facebook-pixel": "^1.0.8",
+    "gatsby-plugin-google-adsense": "^1.1.3",
     "gatsby-plugin-react-svg": "^3.0.1",
     "prettier": "2.3.2",
     "react-ga": "^3.3.0"
