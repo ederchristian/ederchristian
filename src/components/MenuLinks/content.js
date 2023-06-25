@@ -7,6 +7,10 @@ const links = [
     label: 'About',
     url: '/about'
   },
+  {
+    label: 'Newsletter',
+    url: '/newsletter'
+  },
 ]
 
 export default links

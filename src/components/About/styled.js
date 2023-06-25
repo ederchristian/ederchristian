@@ -116,3 +116,9 @@ export const SkillItem = styled.li`
     padding: 0 1.6rem;
   `}
 `
+
+export const CenteredContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`
