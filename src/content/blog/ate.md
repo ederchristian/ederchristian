@@ -1,9 +1,10 @@
 ---
 title: "Até"
 description: "Até que ponto você realmente quer aquilo que você diz que quer?"
-pubDate: "May 29 2017"
-heroImage: "/02-ate-stairs.jpg"
-category: "pt-BR"
+date: "May 29 2017"
+heroImage: "/post-ate.jpg"
+imageAlt: "Mulher sentada numa escada de cimento mexendo num notebook"
+language: "pt-BR"
 color: "#00d59f"
 ---
 
@@ -21,8 +22,6 @@ Mas sei que quero sempre ter esse brio e vontade de conquistar o que pretendo. S
 Isso entra também no papo que tenho e aprendi há um tempo com meu amigo [Henrique Bastos] e com a comunidade do [Welcome to the Django]. O _baby steps_ é importante. Cada pequeno passo vale muito até a gente chegar no objetivo final. O negócio é sair do lugar.
 
 Eu mesmo, há uns anos, ficava estagnado em alguns projetos por querer esperar estar tudo certinho e "ter a hora certa". E uma das coisas que aprendi com a vida é que os pequenos passos fazem muita diferença e não existe a hora certa - é agora.
-
-![Mulher sentada numa escada, mexendo num notebook branco](/02-ate-stairs.jpg)
 
 > A palavra-chave aqui é ATÉ
 

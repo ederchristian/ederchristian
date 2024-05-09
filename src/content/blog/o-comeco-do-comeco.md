@@ -1,9 +1,10 @@
 ---
 title: "O começo do começo"
 description: "Essa é a vida. Apenas o agora."
-pubDate: "Sep 09 2018"
-heroImage: "/08-o-comeco-do-comeco-macbook-air.jpg"
-category: "pt-BR"
+date: "Sep 09 2018"
+heroImage: "/post-o-comeco-do-comeco.jpg"
+imageAlt: "MacBook Air semi aberto com luz iluminando e fundo escuro"
+language: "pt-BR"
 color: "#00d59f"
 ---
 

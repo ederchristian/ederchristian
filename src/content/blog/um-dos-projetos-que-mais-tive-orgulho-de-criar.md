@@ -1,17 +1,16 @@
 ---
 title: "Um dos projetos que mais tive orgulho de criar"
 description: "O novo site do Padre Fábio de Melo é um espaço pra organizar informações relevantes referentes a todo o ministério dele"
-pubDate: "Jun 11 2022"
-heroImage: "/card-eder-christian-and-padre-fabio-de-melo.jpg"
-category: "pt-BR"
+date: "Jun 11 2022"
+heroImage: "/post-um-dos-projetos-que-mais-tive-orgulho-de-criar.jpg"
+imageAlt: "Eder e Padre Fábio de Melo"
+language: "pt-BR"
 color: "#00d59f"
 ---
 
 Você não precisa ser da religião Católica, como eu sou, pra saber e confirmar que o Padre Fábio de Melo dispensa comentários. Não só pelo dom de ser padre, mas também pelas diversas áreas de atuação que, cá entre nós, ele as faz com maestria: comunicador, escritor, cantor e compositor — e comediante nas horas vagas. Dono de diversos recordes, tendo vendido milhões de cópias de CDs e livros, possui um em especial que vale mais do que qualquer outro: o de atingir uma infinidade de pessoas espalhadas pelo mundo e fazê-las melhores. Uma dessas pessoas sou eu.
 
-![Eder Christian e Padre Fábio de Melo num evento em Ribeirão Preto/SP em Maio de 2022](/13-eder-christian-and-padre-fabio-de-melo.jpg)
-
-<p style="font-size: 12px; text-align: center;">Eder Christian e Padre Fábio de Melo, minutos antes de um show em Ribeirão Preto/SP, em Maio de 2022</p>
+<p class="text-caption">Eder Christian e Padre Fábio de Melo, minutos antes de um show em Ribeirão Preto/SP, em Maio de 2022</p>
 
 ## Início de tudo
 

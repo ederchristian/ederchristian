@@ -1,13 +1,14 @@
 ---
 title: "It is Just the Beginning"
 description: "This is my first public post - following this style as a blog - on the internet, and writen in English, which is not my mother tongue."
-pubDate: "May 11 2017"
-heroImage: "/01-it-is-just-the-beginning-steve-jobs.jpg"
-category: "en-US"
+date: "May 11 2017"
+heroImage: "/post-it-is-just-the-beginning.jpg"
+imageAlt: "Steve Wozniak and Steve Jobs"
+language: "en-US"
 color: "#30284f"
 ---
 
-Hi everyone!
+Hi, everyone!
 
 This is my first public post - following this style as a blog - on the internet, and writen in English, which is not my mother tongue. I'll also publish some posts in Portuguese here, anyway. Nowadays my English is rusty and I must practice more and more - and this is a great way to do it.
 
@@ -28,8 +29,6 @@ I agree with that, but I mean, I must live the way I always can say to myself:
 > Life is worth living!
 
 The point is to find what we'd love to do. And go on. Living this way I think it's easier and lighter. We'll always do our utmost to reach our goals.
-
-![Steve Wozniak and Steve Jobs (P&B photo)](/01-it-is-just-the-beginning-steve-jobs.jpg)
 
 > The only way to do great work is to love what you do. If you haven't found it yet, keep looking. Don't settle. - Steve Jobs
 

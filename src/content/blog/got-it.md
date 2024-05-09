@@ -1,9 +1,10 @@
 ---
 title: "Got it"
 description: "This post is just an update of what happened in my life almost 1 month ago."
-pubDate: "May 15 2018"
-heroImage: "06-got-it-eder-christian.jpg"
-category: "en-US"
+date: "May 15 2018"
+heroImage: "/post-got-it.jpg"
+imageAlt: "Eder Christian in San Francisco California. In this photo, we can see the Golden Gate Bridge behind"
+language: "en-US"
 color: "#30284f"
 ---
 

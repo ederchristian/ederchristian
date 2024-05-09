@@ -1,9 +1,10 @@
 ---
 title: "28 eventos em 1 ano — pelo menos"
 description: "A gente aprende demais não só com os conteúdos, mas também com as trocas de ideias e interações com a galera."
-pubDate: "Jan 28 2018"
-heroImage: "/05-28-eventos-em-1-ano-pelo-menos-google-brasil.jpg"
-category: "pt-BR"
+date: "Jan 28 2018"
+heroImage: "/post-28-eventos-em-1-ano-pelo-menos.jpg"
+imageAlt: "Pessoas depois de um meetup na sede do Google Brasil"
+language: "pt-BR"
 color: "#00d59f"
 ---
 

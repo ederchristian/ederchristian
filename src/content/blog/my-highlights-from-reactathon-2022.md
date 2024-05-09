@@ -1,13 +1,12 @@
 ---
 title: "My highlights from Reactathon 2022"
 description: "After 2 years, finally, tech events are back!"
-pubDate: "Jun 06 2022"
-heroImage: "/2022-06-05-reactathon-2022-card.jpg"
-category: "en-US"
+date: "Jun 06 2022"
+heroImage: "/post-my-highlights-from-reactathon-2022-1.jpg"
+imageAlt: "Reactathon 2022. Orinda, California"
+language: "en-US"
 color: "#30284f"
 ---
-
-![Reactathon 2022. Orinda, California](/2022-06-05-reactathon-2022-1.jpeg)
 
 From 2017 to 2020, I attended 63 tech events in Brazil. One of my career goals was attending at least an international tech event.
 
@@ -17,7 +16,7 @@ There was no other way to achieve that, but in style: Reactathon 2022, in Orinda
 
 Going to events is really important to me. During those events, I could meet new people — and make good friends. One of them is Hugo Bessa. He helped to hired me to work with him at Automatiq, an american company that has an automated software for ticket brokers in the USA (and this opportunity has already changed my life). This is just one example of how connections in events are important — for your career and personal life.
 
-![Eder Christian and Hugo Bessa at Reactathon 2022](/2022-06-05-reactathon-2022-2.jpeg)
+![Eder Christian and Hugo Bessa at Reactathon 2022](/post-my-highlights-from-reactathon-2022-2.jpeg)
 
 ## The travel
 
@@ -29,7 +28,7 @@ The travel started on May 1, with a 9-hour flight to Newark, New Jersey. I had a
 
 I took the BART right from the San Francisco Airport to Berkeley, where I stayed during the event.
 
-![Plane](/2022-06-05-reactathon-2022-3-plane.jpeg)
+![Plane](/post-my-highlights-from-reactathon-2022-3.jpeg)
 
 ## Berkeley
 
@@ -41,7 +40,7 @@ As a good Brazilian, it was cold during this first week. 55º F is cold. Don't j
 
 But I could adapt really quickly.
 
-![Berkeley, California](/2022-06-05-reactathon-2022-4.jpeg)
+![Berkeley, California](/post-my-highlights-from-reactathon-2022-4.jpeg)
 
 ## Hotel
 
@@ -49,7 +48,7 @@ I stayed at the Marina Inn hotel at the University Avenue. It was good to me.
 
 I just needed a place to take a shower and sleep, because, of course, I wanted to explore the city and work from different places, like cafes or bars. It was better than I expected.
 
-![Hotel Marina Inn in Berkeley, California](/2022-06-05-reactathon-2022-5.jpeg)
+![Hotel Marina Inn in Berkeley, California](/post-my-highlights-from-reactathon-2022-5.jpeg)
 
 ## The event
 
@@ -59,7 +58,7 @@ Beautiful outdoor venue, amazing connections, and great talks.
 
 I was really impressed with the excellent Attendee Welcome Guide we received about a month before it happened. It was this document with helpful content about the whole experience, such as Covid Policy Information, Slack group invite link, Berkeley Map, Shuttle Service locations and times, dress code and recommendations, and food/beverage preview.
 
-![Reactathon 2022 with a beautiful outdoor venue](/2022-06-05-reactathon-2022-6.jpeg)
+![Reactathon 2022 with a beautiful outdoor venue](/post-my-highlights-from-reactathon-2022-6.jpeg)
 
 ## Speakers
 
@@ -69,7 +68,7 @@ The first 4 people mentioned I already knew from the great work they've done for
 
 Talking to them was really great and I'll keep those moments forever in my mind.
 
-![David Khourshid's talk at Reactathon 2022](/2022-06-05-reactathon-2022-7.jpeg)
+![David Khourshid's talk at Reactathon 2022](/post-my-highlights-from-reactathon-2022-7.jpeg)
 
 ## Topics to keep an eye on
 
@@ -77,7 +76,7 @@ Some topics are on my list to invest my time studying and practicing — or even
 
 Some of these items I've been practicing with real work at Automatiq. I'm really excited to continue on this path learning a lot and helping people to create good stuff on the web.
 
-![A MacBook Pro. Public Library in Berkeley, California](/2022-06-05-reactathon-2022/8.jpeg)
+![A MacBook Pro. Public Library in Berkeley, California](/post-my-highlights-from-reactathon-2022-8.jpeg)
 
 ## Future
 
@@ -91,7 +90,7 @@ We have a lot of future to create, a lot of "new JavaScript" to code. We have a 
 
 This is exciting!
 
-![People eating at Reactathon 2022](/2022-06-05-reactathon-2022-9.jpeg)
+![People eating at Reactathon 2022](/post-my-highlights-from-reactathon-2022-9.jpeg)
 
 ## Special Thanks
 
@@ -106,4 +105,4 @@ I'd like to give a special shout-out to:
 
 Onewheels are really cool!
 
-![Kent C. Dodds and Eder Christian. There is a girl on an Onewheel](/2022-06-05-reactathon-2022-10.jpeg)
+![Kent C. Dodds and Eder Christian. There is a girl on an Onewheel](/post-my-highlights-from-reactathon-2022-10.jpeg)

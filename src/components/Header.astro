@@ -1,13 +1,15 @@
 ---
-import HeaderLink from "./HeaderLink.astro";
-import { SITE_TITLE } from "../consts";
+import { Icon } from "astro-icon/components"
 
-const path = Astro.url.pathname;
-const isPortuguese = path.startsWith("/pt");
+import HeaderLink from "./HeaderLink.astro"
+
+const path = Astro.url.pathname
+const isPortuguese = path.startsWith("/pt")
+const isBlog = path.startsWith("/blog")
 
 type LocalePathMap = {
-  [key: string]: string;
-};
+  [key: string]: string
+}
 
 function getLocalizedPath(
   currentPath: string,
@@ -16,7 +18,7 @@ function getLocalizedPath(
 ): string {
   return toPortuguese
     ? pathMap[currentPath] || "/pt/"
-    : pathMap[currentPath] || "/";
+    : pathMap[currentPath] || "/"
 }
 
 const pathMap: LocalePathMap = {
@@ -24,91 +26,60 @@ const pathMap: LocalePathMap = {
   "/about": "/pt/sobre",
   "/pt/": "/",
   "/pt/sobre": "/about",
-};
+}
 ---
 
 <header>
   <nav>
-    <img src="/logo-eder-christian.svg" alt="Logo Eder Christian" />
+    <HeaderLink href={isPortuguese ? "/pt/" : "/"}>
+      <img src="/logo-eder-christian.svg" alt="Logo Eder Christian" />
+    </HeaderLink>
 
-    <div class="internal-links">
-      <HeaderLink href={isPortuguese ? "/pt/" : "/"}>Home</HeaderLink>
+    <div class="nav-links">
       <HeaderLink href="/blog">Blog</HeaderLink>
       <HeaderLink href={isPortuguese ? "/pt/sobre" : "/about"}
         >{isPortuguese ? "Sobre" : "About"}</HeaderLink
       >
-      <div class="dropdown">
-        <HeaderLink href="#">A</HeaderLink>
-        <img
-          src="/arrow-down.svg"
-          alt="Arrow down / Seta para baixo"
-          style="width: 12px; margin-bottom: 4px;"
-        />
-        <div class="dropdown-content">
-          <a href={getLocalizedPath(path, false, pathMap)}>en-US</a>
-          <a href={getLocalizedPath(path, true, pathMap)}>pt-BR</a>
-        </div>
-      </div>
+      {
+        !isBlog ? (
+          <HeaderLink
+            href={getLocalizedPath(path, isPortuguese ? true : false, pathMap)}
+          >
+            {isPortuguese ? (
+              <Icon
+                name="openmoji:flag-united-states"
+                size={28}
+                class="nav-links--i11n"
+              />
+            ) : (
+              <Icon
+                name="openmoji:flag-brazil"
+                size={28}
+                class="nav-links--i11n"
+              />
+            )}
+          </HeaderLink>
+        ) : null
+      }
     </div>
   </nav>
 </header>
 <style>
-  header {
-    margin: 0;
-    padding: 0 1em;
-    background: linear-gradient(var(--gray-gradient)) no-repeat;
-    box-shadow: 0 2px 8px rgba(var(--black), 5%);
-  }
-  nav {
+  .nav-links {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    width: 720px;
-    margin: auto;
+    justify-content: flex-end;
+    gap: 12px;
+    min-width: 70px;
   }
-  .internal-links a {
+  .nav-links a {
+    text-decoration: none;
     padding: 1em 0.5em;
-    color: var(--black);
-    border-bottom: 4px solid transparent;
+    color: var(--black-primary);
+    border-bottom: 2px solid transparent;
     text-decoration: none;
   }
-  nav a.active {
-    text-decoration: none;
-    border-bottom-color: var(--accent);
-  }
-  nav img {
-    width: 150px;
-  }
-
-  /* Container for the dropdown to position the dropdown content */
-  .dropdown {
-    position: relative;
-    display: inline-block;
-  }
-
-  /* Dropdown content (hidden by default) */
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background: #ffffff;
-    min-width: 140px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-  }
-
-  /* Links inside the dropdown */
-  .dropdown-content a {
-    padding: 0.5em 1em;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-  }
-
-  .dropdown-content a:hover {
-    background-color: #f1f1f1;
-  }
-
-  .dropdown:hover .dropdown-content {
-    display: block;
+  .nav-links--i11n {
+    margin-top: 0.4em;
   }
 </style>

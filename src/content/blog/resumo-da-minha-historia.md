@@ -1,9 +1,10 @@
 ---
 title: "Resumo da minha história"
 description: "Versão 2022"
-pubDate: "Jun 14 2022"
-heroImage: "/01-it-is-just-the-beginning-steve-jobs.jpg"
-category: "pt-BR"
+date: "Jun 14 2022"
+heroImage: "/post-resumo-da-minha-historia.jpg"
+imageAlt: "Eder Christian sentado numa escada de cimento com vista de San Francisco ao fundo"
+language: "pt-BR"
 color: "#00d59f"
 ---
 

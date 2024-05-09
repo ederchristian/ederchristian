@@ -1,9 +1,10 @@
 ---
 title: "Do Vale do Paraíba ao Vale do Silício"
 description: "A gente aprende demais não só com os conteúdos, mas também com as trocas de ideias e interações com a galera."
-pubDate: "Jul 17 2018"
-heroImage: "/07-do-vale-do-paraiba-ao-vale-do-silicio-startse-na-rua.jpg"
-category: "pt-BR"
+date: "Jul 17 2018"
+heroImage: "/post-do-vale-do-paraiba-ao-vale-do-silicio-1.jpg"
+imageAlt: "Pessoas de costas, em pé, numa rua do Vale do Silício, Califórnia, em 2018"
+language: "pt-BR"
 color: "#00d59f"
 ---
 
@@ -52,7 +53,7 @@ O processo de ida pra São Paulo até o momento em que vivo hoje renderia boas h
 
 Contei tudo isso pra voltar ao ponto inicial desse post e concluir: a vida é surpreendente e as palavras têm poder. 10 meses depois - dia 20 de abril de 2018; por coincidência aniversário da minha mãe - eu jamais imaginaria que visitaria a Califórnia por 2 semanas com a StartSe, trabalharia com o Mauricio e realizaria mais um sonho à curto prazo. Isso era impossível há 1 ano.
 
-![Parte da equipe da StartSe (9 pessoas de pé e 6 pessoas sentadas, numa calçada), todas olhando para a foto, em frente a um lugar com muro baixo feito de tijolos, em San Carlos, Califórnia.](/07-do-vale-do-paraiba-ao-vale-do-silicio-startse-san-carlos.jpg)
+![Parte da equipe da StartSe (9 pessoas de pé e 6 pessoas sentadas, numa calçada), todas olhando para a foto, em frente a um lugar com muro baixo feito de tijolos, em San Carlos, Califórnia.](/post-do-vale-do-paraiba-ao-vale-do-silicio-2.jpg)
 
 <p class="subtitle">Parte da equipe StartSe em San Carlos, Califórnia, em Abril de 2018</p>
 
