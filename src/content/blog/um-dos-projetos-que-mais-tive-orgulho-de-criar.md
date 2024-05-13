@@ -10,8 +10,6 @@ color: "#00d59f"
 
 Você não precisa ser da religião Católica, como eu sou, pra saber e confirmar que o Padre Fábio de Melo dispensa comentários. Não só pelo dom de ser padre, mas também pelas diversas áreas de atuação que, cá entre nós, ele as faz com maestria: comunicador, escritor, cantor e compositor — e comediante nas horas vagas. Dono de diversos recordes, tendo vendido milhões de cópias de CDs e livros, possui um em especial que vale mais do que qualquer outro: o de atingir uma infinidade de pessoas espalhadas pelo mundo e fazê-las melhores. Uma dessas pessoas sou eu.
 
-<p class="text-caption">Eder Christian e Padre Fábio de Melo, minutos antes de um show em Ribeirão Preto/SP, em Maio de 2022</p>
-
 ## Início de tudo
 
 Desde criança eu frequentava a <a href="https://www.cancaonova.com/" target="_blank" rel="noopener noreferrer">Comunidade Canção Nova</a>, em Cachoeira Paulista/SP, com minha família. Nasci e fui criado em Lorena, cidade que fica a 20 minutos de carro de lá. Ou 15 minutos à época, se levar em conta meu tio dirigindo o Gol quadrado branco, ouvindo Kid Abelha e Falamansa.
