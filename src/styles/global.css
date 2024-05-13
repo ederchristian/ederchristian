@@ -192,6 +192,7 @@ textarea {
 }
 input {
   font-size: 16px;
+  font-family: 'Merriweather', serif;
 }
 table {
   width: 100%;
@@ -200,6 +201,16 @@ img {
   max-width: 100%;
   height: auto;
   border-radius: 8px;
+}
+
+/*
+ HOME
+*/
+.title-newsletter {
+  margin-top: 2em;
+  padding-top: 2em;
+  border-top: 1px solid rgb(var(--gray-light));
+
 }
 
 /*
