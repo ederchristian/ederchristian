@@ -1,7 +1,10 @@
 ---
+import { TypeAnimation } from "react-type-animation"
+
 import BaseHead from "../components/BaseHead.astro"
 import Header from "../components/Header.astro"
 import Footer from "../components/Footer.astro"
+
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts"
 ---
 
@@ -490,7 +493,29 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts"
   <Header />
   <main transition:animate="slide">
     <h1>Hi, I'm Eder!</h1>
-    <h2>I'm a</h2>
+    <h2>
+      I'm
+      <TypeAnimation
+        client:only
+        preRenderFirstString={true}
+        sequence={[
+          "a developer.",
+          2000,
+          "a content creator.",
+          2000,
+          "a writer.",
+          2000,
+          "a video editor.",
+          2000,
+          "more than just one attribute.",
+          2000,
+        ]}
+        wrapper="span"
+        cursor={true}
+        repeat={Infinity}
+        style={{ display: "inline-block" }}
+      />
+    </h2>
 
     <h3 class="title-newsletter">Newsletter</h3>
     <p>I respect your privacy. There will be no spam at all.</p>

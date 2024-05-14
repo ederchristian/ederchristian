@@ -1,7 +1,10 @@
 ---
+import { TypeAnimation } from "react-type-animation"
+
 import BaseHead from "../../components/BaseHead.astro"
 import Header from "../../components/Header.astro"
 import Footer from "../../components/Footer.astro"
+
 import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts"
 ---
 
@@ -489,7 +492,30 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts"
     <Header />
     <main transition:animate="slide">
       <h1>Olá, Eder aqui!</h1>
-      <h2>Eu sou</h2>
+      <h2>
+        Eu sou
+
+        <TypeAnimation
+          client:only
+          preRenderFirstString={true}
+          sequence={[
+            "programador.",
+            2000,
+            "criador de conteúdo.",
+            2000,
+            "escritor.",
+            2000,
+            "editor de vídeos.",
+            2000,
+            "mais do que apenas um atributo.",
+            2000,
+          ]}
+          wrapper="span"
+          cursor={true}
+          repeat={Infinity}
+          style={{ display: "inline-block" }}
+        />
+      </h2>
 
       <h3 class="title-newsletter">Newsletter</h3>
       <p>
@@ -500,11 +526,11 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts"
         Com a minha newsletter, eu quero compartilhar conteúdos mais pessoais e
         que gerem valor para você.
       </p>
-      <p>Se inscreva gratuitamente no formulário a seguir.</p>
       <p>
-        E não se preocupe. Eu respeito seu tempo e privacidade. Tenho um
-        compromisso de nunca mandar spams.
+        Não se preocupe. Eu respeito seu tempo e privacidade. Não vou te mandar
+        spam.
       </p>
+      <p>Se inscreva gratuitamente no formulário a seguir.</p>
       <script src="https://f.convertkit.com/ckjs/ck.5.js"></script>
       <form
         action="https://app.convertkit.com/forms/6570588/subscriptions"
