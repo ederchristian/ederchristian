@@ -1,0 +1,85 @@
+---
+import { Icon } from "astro-icon/components"
+
+import HeaderLink from "./HeaderLink.astro"
+
+const path = Astro.url.pathname
+const isPortuguese = path.startsWith("/pt")
+const isBlog = path.startsWith("/blog")
+
+type LocalePathMap = {
+  [key: string]: string
+}
+
+function getLocalizedPath(
+  currentPath: string,
+  toPortuguese: boolean,
+  pathMap: LocalePathMap
+): string {
+  return toPortuguese
+    ? pathMap[currentPath] || "/pt/"
+    : pathMap[currentPath] || "/"
+}
+
+const pathMap: LocalePathMap = {
+  "/": "/pt/",
+  "/about": "/pt/sobre",
+  "/pt/": "/",
+  "/pt/sobre": "/about",
+}
+---
+
+<header>
+  <nav>
+    <HeaderLink href={isPortuguese ? "/pt/" : "/"}>
+      <img src="/logo-eder-christian.svg" alt="Logo Eder Christian" />
+    </HeaderLink>
+
+    <div class="nav-links">
+      <HeaderLink href="/blog">Blog</HeaderLink>
+      <HeaderLink href={isPortuguese ? "/pt/sobre" : "/about"}
+        >{isPortuguese ? "Sobre" : "About"}</HeaderLink
+      >
+      {
+        !isBlog ? (
+          <HeaderLink
+            href={getLocalizedPath(path, isPortuguese ? true : false, pathMap)}
+          >
+            {isPortuguese ? (
+              <Icon
+                name="openmoji:flag-united-states"
+                size={28}
+                class="nav-links--i11n"
+              />
+            ) : (
+              <Icon
+                name="openmoji:flag-brazil"
+                size={28}
+                class="nav-links--i11n"
+              />
+            )}
+          </HeaderLink>
+        ) : null
+      }
+    </div>
+  </nav>
+</header>
+<style>
+  .nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 12px;
+    min-width: 70px;
+  }
+  .nav-links a {
+    text-decoration: none;
+    padding: 1em 0.5em;
+    color: var(--black-primary);
+    border-bottom: 2px solid transparent;
+    text-decoration: none;
+  }
+  .nav-links--i11n {
+    margin-top: 0.4em;
+  }
+</style>

@@ -1,0 +1,84 @@
+---
+import { Icon } from "astro-icon/components"
+
+const today = new Date()
+
+const defaultUsername = "ederchristian"
+---
+
+<footer>
+  <div class="footer-container">
+    <hr />
+    <span style="padding-bottom: 2em">
+      &copy; {today.getFullYear()} Eder Christian. All rights reserved.
+    </span>
+    <span>AVANTI CODER LTDA | 44.271.549/0001-96</span>
+    <span>Av. Engenheiro Luís Carlos Berrini, 1748 - Conjunto 1710</span>
+    <span>Cidade Monções, São Paulo - SP</span>
+    <span>CEP: 04571-000</span>
+    <div class="social-links">
+      <a
+        href={`https://youtube.com/${defaultUsername}`}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <Icon name="mdi:youtube" size={22} />
+      </a>
+      <a
+        href={`https://instagram.com/${defaultUsername}`}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <Icon name="mdi:instagram" size={22} />
+      </a>
+      <a
+        href={`https://twitter.com/${defaultUsername}_`}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <Icon name="pajamas:twitter" size={22} />
+      </a>
+      <a
+        href={`https://github.com/${defaultUsername}`}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <Icon name="pajamas:github" size={22} />
+      </a>
+      <a
+        href="mailto:ederchristian92+website@gmail.com"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <Icon name="mdi:email-outline" size={22} />
+      </a>
+    </div>
+  </div>
+</footer>
+<style>
+  footer {
+    width: 720px;
+    max-width: 100%;
+    margin: auto;
+    padding: 0 1em;
+  }
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+    border-top: 1px solid rgb(var(--gray-light));
+    padding: 3em 0 7em;
+  }
+  .social-links {
+    display: flex;
+    gap: 1em;
+    margin-top: 2em;
+  }
+  .social-links a {
+    text-decoration: none;
+    color: var(--black-primary);
+  }
+  .social-links a:hover {
+    color: rgb(var(--gray-dark));
+  }
+</style>

@@ -1,74 +1,68 @@
-<img src="docs/assets/svg/logo-eder-christian.svg" alt="Logo Eder Christian" width="50">
-
-# Eder Christian
-
-[![License](https://img.shields.io/github/license/ederchristian/ederchristian.github.io?color=%2300d59f)](https://github.com/ederchristian/ederchristian.github.io/blob/main/LICENSE)
-
-> My personal blog about my own path
-
-## Getting Started
-
-### Installation
+# Astro Starter Kit: Blog
 
 ```sh
-git clone https://github.com/ederchristian/ederchristian.github.io.git && cd ederchristian.github.io && npm install
+npm create astro@latest -- --template blog
 ```
 
-or
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/blog)
+[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/blog)
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/blog/devcontainer.json)
 
-```sh
-git clone https://github.com/ederchristian/ederchristian.github.io.git && cd ederchristian.github.io && yarn
+> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+
+![blog](https://github.com/withastro/astro/assets/2244813/ff10799f-a816-4703-b967-c78997e8323d)
+
+Features:
+
+- ✅ Minimal styling (make it your own!)
+- ✅ 100/100 Lighthouse performance
+- ✅ SEO-friendly with canonical URLs and OpenGraph data
+- ✅ Sitemap support
+- ✅ RSS Feed support
+- ✅ Markdown & MDX support
+
+## 🚀 Project Structure
+
+Inside of your Astro project, you'll see the following folders and files:
+
+```text
+├── public/
+├── src/
+│   ├── components/
+│   ├── content/
+│   ├── layouts/
+│   └── pages/
+├── astro.config.mjs
+├── README.md
+├── package.json
+└── tsconfig.json
 ```
 
-### Basic Usage
+Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
 
-Running it:
+There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
 
-```sh
-npm run start
-```
+The `src/content/` directory contains "collections" of related Markdown and MDX documents. Use `getCollection()` to retrieve posts from `src/content/blog/`, and type-check your frontmatter using an optional schema. See [Astro's Content Collections docs](https://docs.astro.build/en/guides/content-collections/) to learn more.
 
-or
+Any static assets, like images, can be placed in the `public/` directory.
 
-```sh
-yarn start
-```
+## 🧞 Commands
 
-In your browser, go to:
+All commands are run from the root of the project, from a terminal:
 
-```sh
-http://localhost:8000/
-```
+| Command                   | Action                                           |
+| :------------------------ | :----------------------------------------------- |
+| `npm install`             | Installs dependencies                            |
+| `npm run dev`             | Starts local dev server at `localhost:4321`      |
+| `npm run build`           | Build your production site to `./dist/`          |
+| `npm run preview`         | Preview your build locally, before deploying     |
+| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
+| `npm run astro -- --help` | Get help using the Astro CLI                     |
 
-To view GraphiQL, go to:
+## 👀 Want to learn more?
 
-```sh
-http://localhost:8000/___graphql
-```
+Check out [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
 
-### Deploy
+## Credit
 
-Running it:
-
-```sh
-npm run deploy
-```
-
-or
-
-```sh
-yarn deploy
-```
-
-## What I use?
-
-- [Gatsby](https://www.gatsbyjs.org)
-- [React](https://reactjs.org)
-- [styled-components](https://styled-components.com/)
-- [GraphQL](https://graphql.org)
-- [GitHub Pages](https://pages.github.com/)
-
-## Thanks
-
-- [Hugo Bessa](https://github.com/hugobdev), for all support and mentorship
-- [Willian Justen](https://github.com/willianjusten/) and his great [Gatsby course](https://www.udemy.com/course/gatsby-crie-um-site-pwa-com-react-graphql-e-netlify-cms/)
+This theme is based off of the lovely [Bear Blog](https://github.com/HermanMartinus/bearblog/).

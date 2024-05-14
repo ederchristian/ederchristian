@@ -1,0 +1,109 @@
+---
+import type { CollectionEntry } from "astro:content"
+import BaseHead from "../components/BaseHead.astro"
+import Header from "../components/Header.astro"
+import Footer from "../components/Footer.astro"
+import FormattedDateUS from "../components/FormattedDateUS.astro"
+import FormattedDatePT from "../components/FormattedDatePT.astro"
+
+type Props = CollectionEntry<"blog">["data"]
+
+const {
+  title,
+  titleTag,
+  description,
+  date,
+  updatedDate,
+  heroImage,
+  imageAlt,
+  language,
+} = Astro.props
+---
+
+<html lang="en">
+  <head>
+    <BaseHead title={titleTag} description={description} />
+    <style>
+      main {
+        width: calc(100% - 2em);
+        max-width: 100%;
+        margin: 0;
+      }
+      .hero-image {
+        width: 100%;
+      }
+      .hero-image img {
+        display: block;
+        margin: 0 auto 1em;
+        border-radius: 12px;
+      }
+      .prose {
+        width: 720px;
+        max-width: 100%;
+        margin: 0 auto 2em;
+      }
+      .title {
+        padding-bottom: 0.3em;
+      }
+      .title h1 {
+        padding: 0 0 0.5em;
+      }
+      .date {
+        margin: 0 0 0.5em;
+        color: rgb(var(--gray));
+      }
+      .last-updated-on {
+        font-style: italic;
+      }
+    </style>
+  </head>
+
+  <body>
+    <Header />
+    <main transition:animate="slide">
+      <article>
+        <div class="hero-image">
+          {
+            heroImage && (
+              <img width={1020} height={510} src={heroImage} alt={imageAlt} />
+            )
+          }
+        </div>
+        <div class="prose">
+          <div class="title">
+            <div class="date">
+              {
+                language === "en-US" ? (
+                  <FormattedDateUS date={date} />
+                ) : (
+                  <FormattedDatePT date={date} />
+                )
+              }
+              {
+                updatedDate ? (
+                  <div class="last-updated-on">
+                    {language === "en-US" ? (
+                      <>
+                        Last updated on <FormattedDateUS date={date} />
+                      </>
+                    ) : (
+                      <>
+                        Última atualização em <FormattedDatePT date={date} />
+                      </>
+                    )}
+                  </div>
+                ) : null
+              }
+            </div>
+
+            <h1>{title}</h1>
+
+            <hr />
+          </div>
+          <slot />
+        </div>
+      </article>
+    </main>
+    <Footer />
+  </body>
+</html>
