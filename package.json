@@ -22,13 +22,13 @@
     "@types/react-dom": "^18.3.0",
     "astro": "^4.7.0",
     "astro-icon": "^1.1.0",
+    "esbuild": "0.19.12",
     "prop-types": "^15.8.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-type-animation": "^3.2.0",
     "typescript": "^5.4.5",
-    "vite": "^5.2.11",
-    "esbuild": "0.19.12"
+    "vite": "^5.2.11"
   },
   "devDependencies": {
     "@iconify-json/mdi": "^1.1.66",
