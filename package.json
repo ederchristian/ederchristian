@@ -1,11 +1,13 @@
 {
-  "name": "ederchristian.github.io",
+  "name": "ederchristian",
   "type": "module",
-  "version": "0.0.1",
+  "version": "3.0.0",
+  "license": "MIT",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro check && astro build",
+    "build": "astro check && node --max-old-space-size=8192 ./node_modules/.bin/astro build",
+    "check": "astro check",
     "preview": "astro preview",
     "astro": "astro"
   },
@@ -19,10 +21,12 @@
     "@types/react-dom": "^18.3.0",
     "astro": "^4.7.0",
     "astro-icon": "^1.1.0",
+    "prop-types": "^15.8.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-type-animation": "^3.2.0",
-    "typescript": "^5.4.5"
+    "typescript": "^5.4.5",
+    "vite": "^5.2.11"
   },
   "devDependencies": {
     "@iconify-json/mdi": "^1.1.66",
