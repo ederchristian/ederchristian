@@ -36,5 +36,9 @@
     "@iconify-json/openmoji": "^1.1.51",
     "@iconify-json/pajamas": "^1.1.45",
     "prettier": "^3.2.5"
+  },
+  "resolutions": {
+    "typescript": "^5.4.5",
+    "vite": "^5.2.11"
   }
 }
