@@ -64,7 +64,7 @@
   resolved "https://registry.npmjs.org/@astrojs/internal-helpers/-/internal-helpers-0.4.0.tgz"
   integrity sha512-6B13lz5n6BrbTqCTwhXjJXuR1sqiX/H6rTxzlXx+lN1NnV4jgnq/KJldCQaUWJzPL5SiWahQyinxAbxQtwgPHA==
 
-"@astrojs/language-server@^2.8.4":
+"@astrojs/language-server@^2.10.0", "@astrojs/language-server@^2.8.4":
   version "2.10.0"
   resolved "https://registry.npmjs.org/@astrojs/language-server/-/language-server-2.10.0.tgz"
   integrity sha512-crHXpqYfA5qWioiuZnZFpTsNItgBlF1f0S9MzDYS7/pfCALkHNJ7K3w9U/j0uMKymsT4hC7BfMaX0DYlfdSzHg==
@@ -140,7 +140,7 @@
 
 "@astrojs/react@^3.3.4":
   version "3.3.4"
-  resolved "https://registry.npmjs.org/@astrojs/react/-/react-3.3.4.tgz"
+  resolved "https://registry.yarnpkg.com/@astrojs/react/-/react-3.3.4.tgz#d9f2815777c7be2d417b562327be0ba0c8f6d270"
   integrity sha512-azFYckxcMnHcc5kfXW38oNXR3Na+OMFnzimXVBxRJ906tHkO/sBOBXhsmgQ8JGr/4WEjyaz8zKZj76TWjNMCdw==
   dependencies:
     "@vitejs/plugin-react" "^4.2.1"
