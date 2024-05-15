@@ -36,5 +36,6 @@
     "@iconify-json/openmoji": "^1.1.51",
     "@iconify-json/pajamas": "^1.1.45",
     "prettier": "^3.2.5"
-  }
+  },
+  "packageManager": "yarn@4.2.2"
 }
