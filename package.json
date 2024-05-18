@@ -6,8 +6,8 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro check && cross-env NODE_OPTIONS='--max-old-space-size=4096' astro build",
     "check": "astro check",
+    "build": "astro build",
     "preview": "astro preview",
     "astro": "astro"
   },
