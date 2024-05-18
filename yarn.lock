@@ -3117,7 +3117,7 @@ __metadata:
     astro: "npm:^4.7.0"
     astro-icon: "npm:^1.1.0"
     cross-env: "npm:^7.0.3"
-    esbuild: "npm:0.19.12"
+    esbuild: "npm:^0.21.2"
     prettier: "npm:^3.2.5"
     prop-types: "npm:^15.8.1"
     react: "npm:^18.3.1"
@@ -3289,7 +3289,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"esbuild@npm:0.19.12, esbuild@npm:^0.19.5":
+"esbuild@npm:^0.19.5":
   version: 0.19.12
   resolution: "esbuild@npm:0.19.12"
   dependencies:
