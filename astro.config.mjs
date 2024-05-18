@@ -44,5 +44,8 @@ export default defineConfig({
         '@': '/src',
       },
     },
+    optimizeDeps: {
+      include: ['astro:assets'],
+    },
   },
 });
