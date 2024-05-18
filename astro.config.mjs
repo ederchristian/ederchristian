@@ -42,5 +42,4 @@ export default defineConfig({
       include: ['astro:assets'],
     },
   },
-  exclude: ['**/layouts/tsconfig.json'],
 });
