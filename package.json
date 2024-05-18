@@ -12,18 +12,14 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/check": "^0.5.10",
     "@astrojs/cloudflare": "^10.2.6",
     "@astrojs/language-server": "^2.10.0",
     "@astrojs/mdx": "^2.3.1",
     "@astrojs/react": "^3.3.4",
     "@astrojs/rss": "^4.0.5",
     "@astrojs/sitemap": "^3.1.4",
-    "@types/react": "^18.3.2",
-    "@types/react-dom": "^18.3.0",
     "astro": "^4.7.0",
     "astro-icon": "^1.1.0",
-    "esbuild": "^0.21.2",
     "prop-types": "^15.8.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
@@ -35,6 +31,8 @@
     "@iconify-json/mdi": "^1.1.66",
     "@iconify-json/openmoji": "^1.1.51",
     "@iconify-json/pajamas": "^1.1.45",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
     "cross-env": "^7.0.3",
     "prettier": "^3.2.5"
   },
