@@ -23,14 +23,4 @@ export default defineConfig({
     sourcemap: true,
     target: 'esnext'
   },
-  vite: {
-    resolve: {
-      alias: {
-        '@': '/src',
-      },
-    },
-    optimizeDeps: {
-      include: ['astro:assets'],
-    },
-  },
 });
