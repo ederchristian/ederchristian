@@ -24,15 +24,6 @@ export default defineConfig({
     target: 'esnext'
   },
   vite: {
-    build: {
-      minify: 'terser',
-      sourcemap: true,
-      terserOptions: {
-        compress: {
-          drop_console: true,
-        },
-      },
-    },
     resolve: {
       alias: {
         '@': '/src',
