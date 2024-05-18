@@ -9,7 +9,7 @@ import icon from 'astro-icon';
 export default defineConfig({
   output: 'server',
   adapter: cloudflare({
-    imageService: 'passthrough'
+    imageService: 'compile'
   }),
   site: 'https://ederchristian.com',
   integrations: [mdx(), sitemap(), icon(), react()],
