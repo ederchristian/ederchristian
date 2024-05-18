@@ -33,6 +33,15 @@ export default defineConfig({
       sourcemap: true,
       target: 'esnext',
       minifier: 'terser',
+      rollupOptions: {
+        output: {
+          manualChunks(id) {
+            if (id.includes('node_modules')) {
+              return 'vendor';
+            }
+          }
+        }
+      }
     },
     resolve: {
       alias: {
@@ -41,6 +50,9 @@ export default defineConfig({
     },
     optimizeDeps: {
       include: ['astro:assets'],
+    },
+    experimental: {
+      minify: true,
     },
   },
 });
