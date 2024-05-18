@@ -3118,6 +3118,7 @@ __metadata:
     astro-icon: "npm:^1.1.0"
     cross-env: "npm:^7.0.3"
     esbuild: "npm:^0.21.2"
+    miniflare: "npm:^3.20240512.0"
     prettier: "npm:^3.2.5"
     prop-types: "npm:^15.8.1"
     react: "npm:^18.3.1"
@@ -3125,6 +3126,7 @@ __metadata:
     react-type-animation: "npm:^3.2.0"
     typescript: "npm:^5.4.5"
     vite: "npm:^5.2.11"
+    wrangler: "npm:^3.57.0"
   languageName: unknown
   linkType: soft
 
@@ -5495,7 +5497,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"miniflare@npm:3.20240512.0, miniflare@npm:^3.20240320.0":
+"miniflare@npm:3.20240512.0, miniflare@npm:^3.20240320.0, miniflare@npm:^3.20240512.0":
   version: 3.20240512.0
   resolution: "miniflare@npm:3.20240512.0"
   dependencies:
@@ -7774,7 +7776,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"wrangler@npm:^3.39.0":
+"wrangler@npm:^3.39.0, wrangler@npm:^3.57.0":
   version: 3.57.0
   resolution: "wrangler@npm:3.57.0"
   dependencies:
