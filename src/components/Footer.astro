@@ -8,66 +8,71 @@ const defaultUsername = "ederchristian"
 
 <footer>
   <div class="footer-container">
-    <hr />
-    <span style="padding-bottom: 2em">
-      &copy; {today.getFullYear()} Eder Christian. All rights reserved.
-    </span>
-    <span>AVANTI CODER LTDA | 44.271.549/0001-96</span>
-    <span>Av. Engenheiro Luís Carlos Berrini, 1748 - Conjunto 1710</span>
-    <span>Cidade Monções, São Paulo - SP</span>
-    <span>CEP: 04571-000</span>
-    <div class="social-links">
-      <a
-        href={`https://youtube.com/${defaultUsername}`}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <Icon name="mdi:youtube" size={22} />
-      </a>
-      <a
-        href={`https://instagram.com/${defaultUsername}`}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <Icon name="mdi:instagram" size={22} />
-      </a>
-      <a
-        href={`https://twitter.com/${defaultUsername}_`}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <Icon name="pajamas:twitter" size={22} />
-      </a>
-      <a
-        href={`https://github.com/${defaultUsername}`}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <Icon name="pajamas:github" size={22} />
-      </a>
-      <a
-        href="mailto:ederchristian92+website@gmail.com"
-        target="_blank"
-        rel="noreferrer"
-      >
-        <Icon name="mdi:email-outline" size={22} />
-      </a>
+    <div class="footer-container--wrapper">
+      <span style="padding-bottom: 2em;">
+        &copy; {today.getFullYear()} Eder Christian. All rights reserved.
+      </span>
+      <span>AVANTI CODER LTDA | 44.271.549/0001-96</span>
+      <span>Av. Engenheiro Luís Carlos Berrini, 1748 - Conjunto 1710</span>
+      <span>Cidade Monções, São Paulo - SP</span>
+      <span>CEP: 04571-000</span>
+      <div class="social-links">
+        <a
+          href={`https://youtube.com/${defaultUsername}`}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Icon name="mdi:youtube" size={22} />
+        </a>
+        <a
+          href={`https://instagram.com/${defaultUsername}`}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Icon name="mdi:instagram" size={22} />
+        </a>
+        <a
+          href={`https://twitter.com/${defaultUsername}_`}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Icon name="pajamas:twitter" size={22} />
+        </a>
+        <a
+          href={`https://github.com/${defaultUsername}`}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Icon name="pajamas:github" size={22} />
+        </a>
+        <a
+          href="mailto:ederchristian92+website@gmail.com"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <Icon name="mdi:email-outline" size={22} />
+        </a>
+      </div>
     </div>
   </div>
 </footer>
 <style>
   footer {
-    width: 720px;
-    max-width: 100%;
-    margin: auto;
+    width: 100%;
     padding: 0 1em;
+    box-sizing: border-box;
   }
   .footer-container {
+    max-width: 720px;
+    margin: auto;
+    font-size: 12px;
+    padding-bottom: 8em;
+  }
+  .footer-container--wrapper {
     display: flex;
     flex-direction: column;
-    font-size: 12px;
     border-top: 1px solid rgb(var(--gray-light));
-    padding: 3em 0 7em;
+    padding: 4em 0;
   }
   .social-links {
     display: flex;
