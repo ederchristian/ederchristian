@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro check && NODE_OPTIONS='--max-old-space-size=4096' astro build",
+    "build": "astro check && cross-env NODE_OPTIONS='--max-old-space-size=4096' astro build",
     "check": "astro check",
     "preview": "astro preview",
     "astro": "astro"
@@ -35,6 +35,7 @@
     "@iconify-json/mdi": "^1.1.66",
     "@iconify-json/openmoji": "^1.1.51",
     "@iconify-json/pajamas": "^1.1.45",
+    "cross-env": "^7.0.3",
     "prettier": "^3.2.5"
   },
   "packageManager": "yarn@4.2.2"
