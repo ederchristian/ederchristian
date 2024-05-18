@@ -24,6 +24,12 @@ export default defineConfig({
     target: 'esnext'
   },
   vite: {
+    build: {
+      minify: true,
+      sourcemap: true,
+      target: 'esnext',
+      minifier: 'terser',
+    },
     resolve: {
       alias: {
         '@': '/src',
