@@ -17,6 +17,6 @@ const post = Astro.props
 const { Content } = await post.render()
 ---
 
-<BlogPost {...post.data}>
-  <Content />
+<BlogPost {...post.data} client:visible>
+  <Content client:visible />
 </BlogPost>

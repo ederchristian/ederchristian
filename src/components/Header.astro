@@ -1,7 +1,10 @@
 ---
+import { Image } from "astro:assets"
 import { Icon } from "astro-icon/components"
 
 import HeaderLink from "./HeaderLink.astro"
+
+import logoEderChristian from "../../public/logo-eder-christian.svg"
 
 const path = Astro.url.pathname
 const isPortuguese = path.startsWith("/pt")
@@ -32,7 +35,7 @@ const pathMap: LocalePathMap = {
 <header>
   <nav>
     <HeaderLink href={isPortuguese ? "/pt/" : "/"}>
-      <img src="/logo-eder-christian.svg" alt="Logo Eder Christian" />
+      <Image src={logoEderChristian} alt="Logo Eder Christian" />
     </HeaderLink>
 
     <div class="nav-links">
