@@ -9,7 +9,9 @@ import icon from "astro-icon";
 // https://astro.build/config
 export default defineConfig({
   output: 'server',
-  adapter: cloudflare(),
+  adapter: cloudflare({
+    imageService: 'cloudflare'
+ }),
   site: 'https://ederchrisitan.com',
   integrations: [mdx(), sitemap(), icon(), react()],
   i18n: {
@@ -21,6 +23,7 @@ export default defineConfig({
   },
   build: {
     minify: true,
+    sourcemap: true,
     target: 'esnext'
   }
 });
