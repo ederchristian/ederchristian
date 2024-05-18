@@ -45,4 +45,4 @@ http://localhost:4321/
 - [Astro](https://astro.build/)
 - [React](https://reactjs.org)
 - CSS only
-- [Cloudflare](https://www.cloudflare.com/)
+- [Vercel](https://vercel.com/)
