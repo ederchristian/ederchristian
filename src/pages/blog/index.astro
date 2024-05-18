@@ -55,7 +55,7 @@ const posts = (await getCollection("blog")).sort(
     </style>
   </head>
   <body>
-    <Header client:visible />
+    <Header />
 
     <main transition:animate="slide">
       <section>
@@ -91,6 +91,6 @@ const posts = (await getCollection("blog")).sort(
         </ul>
       </section>
     </main>
-    <Footer client:visible />
+    <Footer />
   </body>
 </html>
