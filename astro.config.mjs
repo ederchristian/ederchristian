@@ -13,6 +13,17 @@ export default defineConfig({
       service: 'cloudflare'
     }
   }),
+  image: {
+    service: {
+       entrypoint: 'astro/assets/services/sharp',
+       config: {
+         limitInputPixels: false,
+      },
+      options: {
+        formats: ['jpeg', 'png', 'webp']
+      }
+     },
+  },
   site: 'https://ederchristian.com',
   integrations: [mdx(), sitemap(), icon(), react()],
   i18n: {
