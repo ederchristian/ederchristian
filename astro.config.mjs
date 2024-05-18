@@ -12,11 +12,6 @@ export default defineConfig({
   adapter: cloudflare(),
   site: 'https://ederchrisitan.com',
   integrations: [mdx(), sitemap(), icon(), react()],
-  image: {
-    service: {
-      entrypoint: 'astro/assets/services/noop.ts',
-    },
-  },
   i18n: {
     defaultLocale: "en",
     locales: ["en", "pt"],
