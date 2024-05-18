@@ -18,5 +18,9 @@ export default defineConfig({
     routing: {
       prefixDefaultLocale: false
     }
+  },
+  build: {
+    minify: true,
+    target: 'esnext'
   }
 });
