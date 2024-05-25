@@ -9,21 +9,13 @@ import FormattedDatePT from "../components/FormattedDatePT.astro"
 
 type Props = CollectionEntry<"blog">["data"]
 
-const {
-  title,
-  titleTag,
-  description,
-  date,
-  updatedDate,
-  heroImage,
-  imageAlt,
-  language,
-} = Astro.props
+const { title, description, date, updatedDate, heroImage, imageAlt, language } =
+  Astro.props
 ---
 
-<html lang="en">
+<html>
   <head>
-    <BaseHead title={titleTag} description={description} />
+    <BaseHead title={`${title} | Eder Christian`} description={description} />
     <style>
       main {
         width: calc(100% - 2em);
