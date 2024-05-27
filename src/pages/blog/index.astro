@@ -62,30 +62,30 @@ const posts = (await getCollection("blog")).sort(
         <ul>
           {
             posts.reverse().map(post => (
-              <li class="blog-post">
-                <a href={`/blog/${post.slug}/`}>
+              <a class="blog-post-link" href={`/blog/${post.slug}/`}>
+                <li class="blog-post">
                   <h4 class="title title--blog">{post.data.title}</h4>
-                </a>
 
-                <div class="container-blog container-blog--gap-large">
-                  {post.data.language === "pt-BR" ? (
-                    <Icon name="openmoji:flag-brazil" size={22} />
-                  ) : (
-                    <Icon name="openmoji:flag-united-states" size={22} />
-                  )}
+                  <div class="container-blog container-blog--gap-large">
+                    {post.data.language === "pt-BR" ? (
+                      <Icon name="openmoji:flag-brazil" size={22} />
+                    ) : (
+                      <Icon name="openmoji:flag-united-states" size={22} />
+                    )}
 
-                  <div class="container-blog container-blog--gap-small">
-                    <Icon name="mdi:calendar" size={18} color="#000000" />
-                    <p class="date-blog">
-                      {post.data.language === "en-US" ? (
-                        <FormattedDateUS date={post.data.date} />
-                      ) : (
-                        <FormattedDatePT date={post.data.date} />
-                      )}
-                    </p>
+                    <div class="container-blog container-blog--gap-small">
+                      <Icon name="mdi:calendar" size={18} color="#000000" />
+                      <p class="date-blog">
+                        {post.data.language === "en-US" ? (
+                          <FormattedDateUS date={post.data.date} />
+                        ) : (
+                          <FormattedDatePT date={post.data.date} />
+                        )}
+                      </p>
+                    </div>
                   </div>
-                </div>
-              </li>
+                </li>
+              </a>
             ))
           }
         </ul>

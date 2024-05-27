@@ -132,6 +132,9 @@ p, li {
 /*
   BLOG
 */
+.blog-post-link {
+  text-decoration: none;
+}
 .blog-post {
   display: flex;
   flex-direction: column;
@@ -145,7 +148,7 @@ p, li {
 .title--blog {
   font-size: 17px;
   font-weight: 500;
-  color: var(--green-brand);
+  color: var(--black-primary);
 }
 .date-blog {
   color: var(--black-secondary);
