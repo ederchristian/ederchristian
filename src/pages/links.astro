@@ -59,6 +59,21 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts"
         border-radius: 0.5em;
         color: var(--black-primary);
       }
+      .header-buttons__item--purple {
+        background: var(--purple-brand);
+        color: var(--white-primary);
+      }
+      .header-buttons__item--green {
+        background: var(--green-brand);
+      }
+      .header-buttons__item--red {
+        background: #ff0000;
+        color: var(--white-primary);
+      }
+      .header-buttons__item--black {
+        background: var(--black-primary);
+        color: var(--white-primary);
+      }
     </style>
   </head>
 
@@ -81,7 +96,16 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts"
 
       <div class="header-buttons">
         <a
-          class="header-buttons__item"
+          class="header-buttons__item header-buttons__item--purple"
+          href="https://pay.kiwify.com.br/8RGygC2"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Tenha Reconhecimento no Trabalho
+          <Icon name="mdi:star" size={28} />
+        </a>
+        <a
+          class="header-buttons__item header-buttons__item--green"
           href="https://www.produtividadeai.com.br/"
           target="_blank"
           rel="noopener noreferrer"
@@ -101,7 +125,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts"
           </svg>
         </a>
         <a
-          class="header-buttons__item"
+          class="header-buttons__item header-buttons__item--red"
           href="https://www.youtube.com/@ederchristian?sub_confirmation=1"
           target="_blank"
           rel="noopener noreferrer"
@@ -110,7 +134,10 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts"
 
           <Icon name="mdi:youtube" size={28} />
         </a>
-        <a class="header-buttons__item" href="/newsletter">
+        <a
+          class="header-buttons__item header-buttons__item--black"
+          href="/newsletter"
+        >
           Newsletter Gratuita
           <Icon name="mdi:email" size={24} />
         </a>
