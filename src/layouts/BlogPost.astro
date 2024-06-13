@@ -58,7 +58,13 @@ const { title, description, date, updatedDate, heroImage, imageAlt, language } =
         <div class="hero-image">
           {
             heroImage && (
-              <Image width={1020} height={510} src={heroImage} alt={imageAlt} />
+              <Image
+                width={1020}
+                height={510}
+                src={heroImage}
+                alt={imageAlt}
+                style="max-height: 535px; object-fit: cover;"
+              />
             )
           }
         </div>
