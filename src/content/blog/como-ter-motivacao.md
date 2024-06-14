@@ -40,4 +40,4 @@ Posso destacar:
 
 E você, o que te motiva?
 
-Espero que essa newsletter tenha te motivado, pelo menos um pouco, a fazer o que tem que ser feito. Ou ao menos refletir sobre isso. Mesmo que seja logo depois de descansar, ou curtir, nesse Carnaval
+Espero que essa newsletter tenha te motivado, pelo menos um pouco, a fazer o que tem que ser feito. Ou ao menos refletir sobre isso. Mesmo que seja logo depois de descansar, ou curtir, nesse Carnaval.
