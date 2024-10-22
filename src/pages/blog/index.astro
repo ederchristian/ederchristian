@@ -64,17 +64,19 @@ const posts = (await getCollection("blog")).sort(
             posts.reverse().map(post => (
               <a class="blog-post-link" href={`/blog/${post.slug}/`}>
                 <li class="blog-post">
-                  <h4 class="title title--blog">{post.data.title}</h4>
-
-                  <div class="container-blog container-blog--gap-large">
+                  <div class="container-blog container-blog--title container-blog--gap-medium">
                     {post.data.language === "pt-BR" ? (
                       <Icon name="openmoji:flag-brazil" size={22} />
                     ) : (
                       <Icon name="openmoji:flag-united-states" size={22} />
                     )}
 
+                    <h4 class="title title--blog">{post.data.title}</h4>
+                  </div>
+
+                  <div class="container-blog container-blog--gap-large">
                     <div class="container-blog container-blog--gap-small">
-                      <Icon name="mdi:calendar" size={18} color="#000000" />
+                      <Icon name="mdi:calendar" size={18} color="#b3b3b3" />
                       <p class="date-blog">
                         {post.data.language === "en-US" ? (
                           <FormattedDateUS date={post.data.date} />
