@@ -1,0 +1,28 @@
+---
+import BaseHead from "../components/BaseHead.astro"
+import Header from "../components/Header.astro"
+import Footer from "../components/Footer.astro"
+
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts"
+---
+
+<!doctype html>
+<html lang="pt">
+  <head>
+    <BaseHead
+      title={`${SITE_TITLE} | Natalia Fuentes`}
+      description={SITE_DESCRIPTION}
+      noIndex
+    />
+  </head>
+
+  <body>
+    <Header />
+    <main transition:animate="slide">
+      <div class="header-links">
+        <h1>Te amo, Natalia Fuentes!</h1>
+      </div>
+    </main>
+    <Footer />
+  </body>
+</html>
