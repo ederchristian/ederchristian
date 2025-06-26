@@ -45,23 +45,33 @@ const pathMap: LocalePathMap = {
       >
       {
         !isBlog ? (
-          <HeaderLink
-            href={getLocalizedPath(path, isPortuguese ? true : false, pathMap)}
-          >
-            {isPortuguese ? (
-              <Icon
-                name="openmoji:flag-united-states"
-                size={28}
-                class="nav-links--i11n"
-              />
-            ) : (
-              <Icon
-                name="openmoji:flag-brazil"
-                size={28}
-                class="nav-links--i11n"
-              />
-            )}
-          </HeaderLink>
+          <div class="switch-container">
+            <Icon
+              name="openmoji:flag-united-states"
+              size={28}
+              class={`flag flag-us ${!isPortuguese ? "active" : ""}`}
+            />
+            <a
+              href={getLocalizedPath(
+                path,
+                isPortuguese ? true : false,
+                pathMap
+              )}
+              class="language-switch"
+              aria-label={
+                isPortuguese ? "Switch to English" : "Mudar para Português"
+              }
+            >
+              <div class="switch">
+                <div class={`switch-slider ${isPortuguese ? "active" : ""}`} />
+              </div>
+            </a>
+            <Icon
+              name="openmoji:flag-brazil"
+              size={30}
+              class={`flag flag-br ${isPortuguese ? "active" : ""}`}
+            />
+          </div>
         ) : null
       }
     </div>
@@ -84,5 +94,51 @@ const pathMap: LocalePathMap = {
   }
   .nav-links--i11n {
     margin-top: 0.4em;
+  }
+
+  .switch-container {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+  }
+
+  .language-switch {
+    display: flex;
+    align-items: center;
+  }
+
+  .flag {
+    opacity: 0.5;
+    transition: opacity 0.2s ease;
+  }
+
+  .flag.active {
+    opacity: 1;
+  }
+
+  .switch {
+    position: relative;
+    width: 44px;
+    height: 22px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+
+  .switch-slider {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 18px;
+    height: 18px;
+    background-color: var(--green-brand);
+    border-radius: 50%;
+    transition: transform 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+
+  .switch-slider.active {
+    transform: translateX(20px);
   }
 </style>
