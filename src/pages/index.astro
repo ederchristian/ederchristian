@@ -18,15 +18,13 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts"
 <body>
   <Header />
   <main transition:animate="slide">
-    <h1>Hi, I'm Eder!</h1>
+    <h1>I'm Eder Christian, a self-taught developer from Brazil.</h1>
     <h2>
-      I'm
+      I'm also
       <TypeAnimation
         client:only
         preRenderFirstString={true}
         sequence={[
-          "a developer.",
-          2000,
           "a content creator.",
           2000,
           "a writer.",
@@ -42,6 +40,25 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts"
         style={{ display: "inline-block" }}
       />
     </h2>
+    <p style="padding-top: 24px;">I came from outside the tech bubble.</p>
+    <p>
+      No Silicon Valley origin story. Just a secondhand MacBook, discipline, a
+      lot of mistakes, and a quiet will to keep going.
+    </p>
+    <p>
+      In 2018, I had the chance to visit Silicon Valley while helping at a tech
+      event. That trip shifted how I saw technology, career, and what is
+      possible.
+    </p>
+    <p>
+      My career started in Brazil, but my vision has always been global. Today,
+      I work remotely for a U.S. company based in New York, building a life
+      shaped by code, clarity, and intention.
+    </p>
+    <p>
+      This is my <strong>inner commit</strong>: to keep building a life that
+      makes sense, from the inside out.
+    </p>
   </main>
   <Footer />
 </body>

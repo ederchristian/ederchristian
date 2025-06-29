@@ -17,16 +17,14 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts"
   <body>
     <Header />
     <main transition:animate="slide">
-      <h1>Olá, Eder aqui!</h1>
+      <h1>Sou Eder Christian, um desenvolvedor autodidata brasileiro.</h1>
       <h2>
-        Sou
+        Também sou
 
         <TypeAnimation
           client:only
           preRenderFirstString={true}
           sequence={[
-            "programador.",
-            2000,
             "criador de conteúdo.",
             2000,
             "escritor.",
@@ -42,6 +40,28 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts"
           style={{ display: "inline-block" }}
         />
       </h2>
+      <p style="padding-top: 24px;">
+        Vim de fora da bolha tradicional da tecnologia.
+      </p>
+      <p>
+        Nada de história clássica do Vale do Silício. O começo foi com um
+        MacBook usado, disciplina, muitos erros e uma vontade silenciosa de
+        continuar.
+      </p>
+      <p>
+        Em 2018, tive a chance de visitar o Vale enquanto ajudava em um evento
+        de tecnologia. Aquela viagem mudou a forma como eu enxergava tecnologia,
+        carreira e o que é possível.
+      </p>
+      <p>
+        Minha carreira começou no Brasil, mas minha visão sempre foi global.
+        Hoje, trabalho remotamente para uma empresa americana sediada em Nova
+        Iorque, construindo uma vida moldada por código, clareza e intenção.
+      </p>
+      <p>
+        Esse é o meu <i><strong>inner commit</strong></i>: continuar construindo
+        uma vida que faça sentido. De dentro pra fora.
+      </p>
     </main>
     <Footer />
   </body>
