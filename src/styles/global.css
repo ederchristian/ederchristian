@@ -357,3 +357,57 @@ pre code .token.attr-value {
     height: 400px;
   }
 }
+
+.content-pillars {
+  margin-top: 5em;
+  padding-top: 2em;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2em;
+  margin-top: 2em;
+}
+
+.pillar-card {
+  padding: 1.5em;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  transition: border-color 0.2s ease;
+}
+
+.pillar-card:hover {
+  border-color: var(--green-brand);
+}
+
+.pillar-card h3 {
+  color: var(--green-brand);
+  margin-bottom: 0.5em;
+  font-size: 18px;
+}
+
+.pillar-subtitle {
+  color: var(--white-primary);
+  font-weight: 500;
+  margin-bottom: 1em;
+  font-size: 14px;
+}
+
+.pillar-card p:last-child {
+  color: var(--white-secondary);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+@media (max-width: 720px) {
+  .pillars-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5em;
+  }
+  
+  .pillar-card {
+    padding: 1em;
+  }
+}
