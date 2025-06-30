@@ -22,34 +22,81 @@ const posts = (await getCollection("blog")).sort(
     <style>
       main {
         width: 720px;
+        margin: 0 auto;
+        padding-top: 2rem;
       }
       ul {
         display: flex;
         flex-direction: column;
-        gap: 1em;
+        gap: 0;
         list-style-type: none;
         margin: 0;
         padding: 0;
       }
-      ul li * {
+      .blog-post-link {
         text-decoration: none;
-        transition: 0.2s ease;
-      }
-
-      ul li img {
-        margin-bottom: 0.5rem;
-        border-radius: 12px;
-      }
-      ul li a {
+        color: inherit;
         display: block;
       }
-      .date {
-        margin: 0;
-        color: var(--black-primary);
+      .blog-post {
+        background: rgba(255, 255, 255, 0.02);
+        border: 1px solid var(--black-primary);
+        border-radius: 18px;
+        box-shadow: 0 2px 12px 0 rgba(var(--gray), 0.04);
+        margin-bottom: 1.5rem;
+        padding: 1.5rem;
+        transition: all 0.2s;
+        position: relative;
+        overflow: hidden;
       }
+      .blog-post:not(:last-child)::after {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 1.5rem;
+        right: 1.5rem;
+        bottom: -0.75rem;
+        height: 1px;
+        background: linear-gradient(
+          to right,
+          transparent,
+          var(--black-primary) 40%,
+          transparent 100%
+        );
+        opacity: 0.08;
+      }
+      .blog-post-link:hover .blog-post {
+        box-shadow: 0 6px 32px 0 rgba(var(--gray), 0.1);
+        background: rgba(255, 255, 255, 0.04);
+        transform: translateY(-2px) scale(1.012);
+        border-color: var(--green-brand);
+      }
+      .title--blog {
+        font-size: 1.18rem;
+        font-weight: 600;
+        letter-spacing: -0.01em;
+        color: var(--white-primary);
+        margin: 0;
+        line-height: 1.3;
+      }
+      .date-blog {
+        font-size: 1rem;
+        color: var(--white-secondary);
+        margin: 0;
+        letter-spacing: 0.01em;
+      }
+
       @media (max-width: 720px) {
-        ul li {
+        main {
           width: 100%;
+          padding: 0 0.5rem;
+        }
+        .blog-post {
+          padding: 1.2rem 1rem;
+        }
+        .blog-post:not(:last-child)::after {
+          left: 1rem;
+          right: 1rem;
         }
       }
     </style>
@@ -64,27 +111,17 @@ const posts = (await getCollection("blog")).sort(
             posts.reverse().map(post => (
               <a class="blog-post-link" href={`/blog/${post.slug}/`}>
                 <li class="blog-post">
-                  <div class="container-blog container-blog--title container-blog--gap-medium">
-                    {post.data.language === "pt-BR" ? (
-                      <Icon name="openmoji:flag-brazil" size={22} />
-                    ) : (
-                      <Icon name="openmoji:flag-united-states" size={22} />
-                    )}
-
+                  <div class="container-blog">
                     <h4 class="title title--blog">{post.data.title}</h4>
                   </div>
-
-                  <div class="container-blog container-blog--gap-large">
-                    <div class="container-blog container-blog--gap-small">
-                      <Icon name="mdi:calendar" size={18} color="#b3b3b3" />
-                      <p class="date-blog">
-                        {post.data.language === "en-US" ? (
-                          <FormattedDateUS date={post.data.date} />
-                        ) : (
-                          <FormattedDatePT date={post.data.date} />
-                        )}
-                      </p>
-                    </div>
+                  <div class="container-blog">
+                    <p class="date-blog">
+                      {post.data.language === "en-US" ? (
+                        <FormattedDateUS date={post.data.date} />
+                      ) : (
+                        <FormattedDatePT date={post.data.date} />
+                      )}
+                    </p>
                   </div>
                 </li>
               </a>
