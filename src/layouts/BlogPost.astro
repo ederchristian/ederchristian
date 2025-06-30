@@ -11,6 +11,10 @@ type Props = CollectionEntry<"blog">["data"]
 
 const { title, description, date, updatedDate, heroImage, imageAlt, language } =
   Astro.props
+
+const url = new URL(Astro.request.url)
+const fromPage = url.searchParams.get("fromPage")
+const backHref = fromPage ? `/blog/page/${fromPage}/` : "/blog/"
 ---
 
 <html>
@@ -47,6 +51,31 @@ const { title, description, date, updatedDate, heroImage, imageAlt, language } =
       }
       .last-updated-on {
         font-style: italic;
+      }
+      .back-to-blog-wrapper {
+        width: 720px;
+        max-width: 100%;
+        margin: 2em auto 0 auto;
+        display: flex;
+        justify-content: flex-start;
+      }
+      .back-to-blog-btn {
+        display: inline-flex;
+        align-items: center;
+        font-size: 0.88rem;
+        padding: 0.3em 0.8em;
+        border-radius: 6px;
+        background: transparent;
+        color: var(--green-brand);
+        border: 1px solid var(--green-brand);
+        text-decoration: none;
+        transition: all 0.15s;
+        cursor: pointer;
+        gap: 0.2em;
+      }
+      .back-to-blog-btn:hover {
+        background: var(--green-brand);
+        color: var(--black-background);
       }
     </style>
   </head>
@@ -102,6 +131,26 @@ const { title, description, date, updatedDate, heroImage, imageAlt, language } =
           <slot />
         </div>
       </article>
+      <div class="back-to-blog-wrapper">
+        <a id="back-to-blog-btn" href="/blog/" class="back-to-blog-btn"
+          >← Back to Blog</a
+        >
+        <script is:inline type="module">
+          function updateBackToBlog() {
+            const urlParams = new URLSearchParams(window.location.search)
+            const fromPage = urlParams.get("fromPage")
+            const btn = document.getElementById("back-to-blog-btn")
+            if (btn) {
+              btn.setAttribute(
+                "href",
+                fromPage ? `/blog/page/${fromPage}/` : "/blog/"
+              )
+            }
+          }
+          updateBackToBlog()
+          window.addEventListener("astro:after-swap", updateBackToBlog)
+        </script>
+      </div>
     </main>
     <Footer />
   </body>

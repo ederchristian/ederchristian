@@ -118,9 +118,7 @@ const paginatedPosts = posts.reverse().slice(0, POSTS_PER_PAGE)
         color: var(--green-brand);
         border: 1px solid var(--green-brand);
         text-decoration: none;
-        transition:
-          background 0.15s,
-          color 0.15s;
+        transition: all 0.15s;
         cursor: pointer;
         gap: 0.2em;
       }
@@ -141,7 +139,10 @@ const paginatedPosts = posts.reverse().slice(0, POSTS_PER_PAGE)
         <ul>
           {
             paginatedPosts.map(post => (
-              <a class="blog-post-link" href={`/blog/${post.slug}/`}>
+              <a
+                class="blog-post-link"
+                href={`/blog/${post.slug}/?fromPage=${currentPage}`}
+              >
                 <li class="blog-post">
                   <div class="container-blog">
                     <h4 class="title title--blog">{post.data.title}</h4>
