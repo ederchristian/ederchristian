@@ -1,28 +1,43 @@
 ---
 import { getCollection } from "astro:content"
 
-import BaseHead from "../../components/BaseHead.astro"
-import Header from "../../components/Header.astro"
-import Footer from "../../components/Footer.astro"
-import FormattedDatePT from "../../components/FormattedDatePT.astro"
-import FormattedDateUS from "../../components/FormattedDateUS.astro"
+import BaseHead from "../../../components/BaseHead.astro"
+import Header from "../../../components/Header.astro"
+import Footer from "../../../components/Footer.astro"
+import FormattedDatePT from "../../../components/FormattedDatePT.astro"
+import FormattedDateUS from "../../../components/FormattedDateUS.astro"
 
-import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts"
+import { SITE_TITLE, SITE_DESCRIPTION } from "../../../consts"
 
+const POSTS_PER_PAGE = 12
+
+export async function getStaticPaths() {
+  const posts = await getCollection("blog")
+  const totalPages = Math.ceil(posts.length / POSTS_PER_PAGE)
+
+  return Array.from({ length: totalPages }).map((_, i) => ({
+    params: { page: String(i + 1) },
+  }))
+}
+
+const { page } = Astro.params
+const currentPage = parseInt(page)
 const posts = (await getCollection("blog")).sort(
   (a, b) => a.data.date.valueOf() - b.data.date.valueOf()
 )
-
-const POSTS_PER_PAGE = 12
 const totalPages = Math.ceil(posts.length / POSTS_PER_PAGE)
-const currentPage = 1
-const paginatedPosts = posts.reverse().slice(0, POSTS_PER_PAGE)
+const start = (currentPage - 1) * POSTS_PER_PAGE
+const end = start + POSTS_PER_PAGE
+const paginatedPosts = posts.reverse().slice(start, end)
 ---
 
 <!doctype html>
 <html>
   <head>
-    <BaseHead title={`Blog | ${SITE_TITLE}`} description={SITE_DESCRIPTION} />
+    <BaseHead
+      title={`Blog — Page ${currentPage} | ${SITE_TITLE}`}
+      description={SITE_DESCRIPTION}
+    />
     <style>
       main {
         width: 720px;
@@ -89,23 +104,9 @@ const paginatedPosts = posts.reverse().slice(0, POSTS_PER_PAGE)
         margin: 0;
         letter-spacing: 0.01em;
       }
-      @media (max-width: 720px) {
-        main {
-          width: 100%;
-          padding: 0 0.5rem;
-        }
-        .blog-post {
-          padding: 1.2rem 1rem;
-        }
-        .blog-post:not(:last-child)::after {
-          left: 1rem;
-          right: 1rem;
-        }
-      }
-
       .pagination {
         display: flex;
-        justify-content: flex-end;
+        justify-content: space-between;
         margin-top: 1.5rem;
       }
       .pagination-btn {
@@ -124,6 +125,12 @@ const paginatedPosts = posts.reverse().slice(0, POSTS_PER_PAGE)
         cursor: pointer;
         gap: 0.2em;
       }
+      .pagination-btn[disabled],
+      .pagination-btn.disabled {
+        opacity: 0.5;
+        pointer-events: none;
+        cursor: default;
+      }
       .pagination-btn:hover {
         background: var(--green-brand);
         color: var(--black-background);
@@ -131,11 +138,23 @@ const paginatedPosts = posts.reverse().slice(0, POSTS_PER_PAGE)
       .pagination-btn:hover svg path {
         stroke: var(--black-background);
       }
+      @media (max-width: 720px) {
+        main {
+          width: 100%;
+          padding: 0 0.5rem;
+        }
+        .blog-post {
+          padding: 1.2rem 1rem;
+        }
+        .blog-post:not(:last-child)::after {
+          left: 1rem;
+          right: 1rem;
+        }
+      }
     </style>
   </head>
   <body>
     <Header />
-
     <main transition:animate="slide">
       <section>
         <ul>
@@ -162,8 +181,56 @@ const paginatedPosts = posts.reverse().slice(0, POSTS_PER_PAGE)
         </ul>
         <div class="pagination">
           {
-            totalPages > currentPage && (
-              <a href="/blog/page/2/" class="pagination-btn">
+            currentPage > 1 ? (
+              <a
+                href={
+                  currentPage === 2
+                    ? "/blog/"
+                    : `/blog/page/${currentPage - 1}/`
+                }
+                class="pagination-btn"
+              >
+                <svg
+                  width="16"
+                  height="16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  style="margin-right:4px;vertical-align:middle;"
+                >
+                  <path
+                    d="M10 4l-4 4 4 4"
+                    stroke="var(--green-brand)"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                Previous
+              </a>
+            ) : (
+              <span class="pagination-btn disabled" aria-disabled="true">
+                <svg
+                  width="16"
+                  height="16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  style="margin-right:4px;vertical-align:middle;"
+                >
+                  <path
+                    d="M10 4l-4 4 4 4"
+                    stroke="var(--green-brand)"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                Previous
+              </span>
+            )
+          }
+          {
+            currentPage < totalPages ? (
+              <a href={`/blog/page/${currentPage + 1}/`} class="pagination-btn">
                 Next
                 <svg
                   width="16"
@@ -181,7 +248,7 @@ const paginatedPosts = posts.reverse().slice(0, POSTS_PER_PAGE)
                   />
                 </svg>
               </a>
-            )
+            ) : null
           }
         </div>
       </section>
