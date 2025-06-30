@@ -13,6 +13,7 @@ const blog = defineCollection({
     language: z.string().optional(),
     color: z.string().optional(),
     category: z.string().optional(),
+    showBackToBlog: z.boolean().optional(),
   }),
 })
 

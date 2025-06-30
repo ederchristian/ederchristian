@@ -9,12 +9,7 @@ import FormattedDatePT from "../components/FormattedDatePT.astro"
 
 type Props = CollectionEntry<"blog">["data"]
 
-const { title, description, date, updatedDate, heroImage, imageAlt, language } =
-  Astro.props
-
-const url = new URL(Astro.request.url)
-const fromPage = url.searchParams.get("fromPage")
-const backHref = fromPage ? `/blog/page/${fromPage}/` : "/blog/"
+const { title, description, date, updatedDate, heroImage, imageAlt, language, showBackToBlog } = Astro.props
 ---
 
 <html>
@@ -123,34 +118,30 @@ const backHref = fromPage ? `/blog/page/${fromPage}/` : "/blog/"
                 ) : null
               }
             </div>
-
             <h1>{title}</h1>
-
             <hr />
           </div>
           <slot />
+
+          {showBackToBlog !== false ? (
+            <div class="back-to-blog-wrapper">
+              <a id="back-to-blog-btn" href="/blog/" class="back-to-blog-btn">← Back to Blog</a>
+              <script is:inline type="module">
+                function updateBackToBlog() {
+                  const urlParams = new URLSearchParams(window.location.search);
+                  const fromPage = urlParams.get('fromPage');
+                  const btn = document.getElementById('back-to-blog-btn');
+                  if (btn) {
+                    btn.setAttribute('href', fromPage ? `/blog/page/${fromPage}/` : '/blog/');
+                  }
+                }
+                updateBackToBlog();
+                window.addEventListener('astro:after-swap', updateBackToBlog);
+              </script>
+            </div>
+          ) : null}
         </div>
       </article>
-      <div class="back-to-blog-wrapper">
-        <a id="back-to-blog-btn" href="/blog/" class="back-to-blog-btn"
-          >← Back to Blog</a
-        >
-        <script is:inline type="module">
-          function updateBackToBlog() {
-            const urlParams = new URLSearchParams(window.location.search)
-            const fromPage = urlParams.get("fromPage")
-            const btn = document.getElementById("back-to-blog-btn")
-            if (btn) {
-              btn.setAttribute(
-                "href",
-                fromPage ? `/blog/page/${fromPage}/` : "/blog/"
-              )
-            }
-          }
-          updateBackToBlog()
-          window.addEventListener("astro:after-swap", updateBackToBlog)
-        </script>
-      </div>
     </main>
     <Footer />
   </body>
