@@ -9,6 +9,7 @@ import logoEderChristian from "../../public/logo-eder-christian.svg"
 const path = Astro.url.pathname
 const isPortuguese = path.startsWith("/pt")
 const isBlog = path.startsWith("/blog")
+const isCv = path.startsWith("/cv")
 
 type LocalePathMap = {
   [key: string]: string
@@ -45,7 +46,7 @@ const pathMap: LocalePathMap = {
         >{isPortuguese ? "Sobre" : "About"}</HeaderLink
       >
       {
-        !isBlog ? (
+        !isBlog && !isCv ? (
           <div class="switch-container">
             <Icon
               name="openmoji:flag-united-states"
