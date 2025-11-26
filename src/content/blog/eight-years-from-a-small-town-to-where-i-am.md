@@ -16,4 +16,4 @@ I started with computer support, moved to WordPress at a small agency, picked up
 
 Eder’s Path is where I’m at now, sharing what I’ve picked up in 8 years, tech and life. I’m not done growing. Been coding for a while, but I want my skills stronger—front-end, back-end, tools, whatever comes. It’s not just work. I got sedentary, then flipped it after COVID with gym, better food, better mental health. Slipped lately, but I’ll get back. This is me, a Brazilian dev with Asperger’s, putting it out there. Real stuff, no filter.
 
-I’ll write weekly: tech lessons, life lessons, whatever hits me. If you’re into building something too, stay with me. What’s one thing you want to learn or fix? Tell me on X [@ederchristian_](https://x.com/ederschristian_). I’d like to know.
+I’ll write weekly: tech lessons, life lessons, whatever hits me. If you’re into building something too, stay with me. What’s one thing you want to learn or fix? Tell me on X [@ederchristian](https://x.com/ederschristian). I’d like to know.
