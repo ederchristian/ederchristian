@@ -4,7 +4,12 @@
     "moduleResolution": "node",
     "strictNullChecks": true,
     "jsx": "react-jsx",
-    "jsxImportSource": "react"
+    "jsxImportSource": "react",
+    "baseUrl": ".",
+    "paths": {
+      "styled-system/*": ["./styled-system/*"],
+      "~/*": ["./src/*"]
+    }
   },
-  "include": ["src"]
+  "include": ["src", "styled-system"]
 }

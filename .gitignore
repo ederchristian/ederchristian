@@ -2,6 +2,10 @@
 dist/
 # generated types
 .astro/
+# Panda CSS generated
+styled-system/
+# Pagefind index, generated at build time
+public/pagefind/
 
 # dependencies
 node_modules/
