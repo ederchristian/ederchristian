@@ -3,149 +3,109 @@ import PageLayout from "../layouts/PageLayout.astro"
 ---
 
 <PageLayout
-  titleTag="About | Eder Christian"
-  title="Hi, I'm Eder Christian!"
-  description=""
-  date={new Date("June 29 2025")}
-  imageAlt=""
+  title="About"
+  description="Self-taught frontend engineer from Brazil. Building a life shaped by code, clarity, and intention."
 >
-  <p>I'm from Lorena, a small city in the State of Sao Paulo, Brazil.</p>
+  <article class="about container">
+    <header class="about__head">
+      <h1>About</h1>
+    </header>
 
-  <p>
-    I've been curious about computers since I was a kid. At 17, I earned a
-    technical certificate in computing. Three years later, I enrolled in a
-    public college to study Information Technology Management.
-  </p>
+    <section class="about__body">
+      <p>I came from outside the tech bubble.</p>
 
-  <p>
-    At that point, we still didn't have a computer at home. My first one came
-    through a local NGO — an old and simple PC from a City Hall project. Years
-    later, I used my savings to buy a used MacBook Air. That's when I fell in
-    love with Apple and decided I wanted to learn how to code. I considered
-    Swift and Objective-C, but after some research, I chose web development and
-    found my place in front-end.
-  </p>
+      <p>
+        No Silicon Valley origin story. Just a secondhand MacBook, discipline, a lot of mistakes, and a quiet will to keep going.
+      </p>
 
-  <p>
-    In 2015, I completed a postgrad certificate in Web Application Development.
-    That's when I consider my real career to have started — even though I barely
-    knew how to program at the time.
-  </p>
+      <p>
+        In 2018, I had the chance to visit Silicon Valley while helping at a tech event. That trip shifted how I saw technology, career, and what is possible.
+      </p>
 
-  <p>
-    <strong>
-      Most of what I truly learned came through doing: working on real projects,
-      attending events, studying on my own, and asking more experienced
-      developers the right questions. I built my skills outside the classroom,
-      not in it.
-    </strong>
-  </p>
+      <p>
+        My career started in Brazil, but my vision has always been global. Today, I work remotely for a U.S. company based in New York, building a life shaped by code, clarity, and intention.
+      </p>
 
-  <p>Over the next five years, everything changed:</p>
+      <p>
+        This is my <strong>inner commit</strong>: to keep building a life that makes sense, from the inside out.
+      </p>
+    </section>
 
-  <ul>
-    <li>
-      I started at a small marketing agency in my hometown, working with design
-      and WordPress.
-    </li>
-    <li>
-      Then I dropped everything to move to São Paulo and work at StartSe, an
-      education startup, building basic landing pages with HTML, CSS,
-      JavaScript, and Bootstrap.
-    </li>
-    <li>
-      I visited Silicon Valley for the first time and took business courses
-      while helping at a tech event.
-    </li>
-    <li>
-      I worked across departments (sales, marketing, design, and video editing)
-      until I eventually led a squad and became a partner in the company.
-    </li>
-    <li>
-      I helped build a custom online events platform using React and Next.js,
-      which became critical during the pandemic.
-    </li>
-    <li>
-      I taught myself English from scratch through online courses and 500+ hours
-      on Cambly.
-    </li>
-    <li>
-      I attended over 60 tech events and meetups in Brazil and built meaningful
-      connections in the dev community.
-    </li>
-  </ul>
+    <section class="about__contact">
+      <h2>Get in touch</h2>
+      <p>
+        Email <a href="mailto:ederchristian92+website@gmail.com">ederchristian92+website@gmail.com</a> or DM me on <a href="https://x.com/ederchristian" target="_blank" rel="noopener noreferrer">X</a>.
+      </p>
+    </section>
 
-  <p>
-    In 2022, I joined <a
-      href="https://automatiq.com/"
-      target="_blank"
-      rel="noopener noreferrer">Automatiq</a
-    >, a U.S. based company in New York, where I work remotely as a developer.
-    We build automation tools for ticket brokers, covering pricing, invoicing,
-    and more across multiple vendors.
-  </p>
-
-  <p>
-    That same year, I created the official website for Padre Fábio de Melo, one
-    of Brazil's most influential Catholic figures, and became responsible for
-    his entire tech stack — including platforms like YouTube, Spotify, Apple
-    Music, and Deezer.
-  </p>
-
-  <p>
-    In March 2024, I launched my first course (in Portuguese) about productivity
-    with AI, sharing the systems and tools that helped me get here.
-  </p>
-
-  <p>
-    I'm excited for what's next — building with code, intention, and clarity.
-  </p>
-
-  <div class="content-pillars">
-    <h2>Content Pillars</h2>
-
-    <div class="pillars-grid">
-      <div class="pillar-card">
-        <h3>Build Internally</h3>
-        <p class="pillar-subtitle">Discipline. Focus. Intention.</p>
-        <p>
-          Quiet reflections on building yourself before building anything else.
-          For devs who think deeply, live simply, and code with purpose.
-        </p>
-      </div>
-
-      <div class="pillar-card">
-        <h3>Code & Learn</h3>
-        <p class="pillar-subtitle">
-          Real lessons from a self-taught developer.
-        </p>
-        <p>
-          React, TypeScript, tools I actually use, and how I keep learning
-          without the noise. Practical. Raw. No hype.
-        </p>
-      </div>
-
-      <div class="pillar-card">
-        <h3>Work Remotely, Live Intentionally</h3>
-        <p class="pillar-subtitle">
-          Remote dev life from Brazil, working for a U.S. company.
-        </p>
-        <p>
-          Productivity, systems, and routines that actually work. Real habits,
-          not aesthetic ones.
-        </p>
-      </div>
-
-      <div class="pillar-card">
-        <h3>Stories that Shaped Me</h3>
-        <p class="pillar-subtitle">
-          Moments, people, and decisions that defined my path.
-        </p>
-        <p>
-          From buying a MacBook instead of a driver's license to sleeping on the
-          floor in São Paulo. Short stories. Clear message. Because they matter.
-        </p>
-      </div>
-    </div>
-  </div>
+    <footer class="about__foot">
+      <p>I'm Brazilian and bilingual, but I write in English to reach the audience I'm building for.</p>
+    </footer>
+  </article>
 </PageLayout>
+
+<style>
+  .about {
+    padding-top: 64px;
+    padding-bottom: 32px;
+  }
+  .about__head {
+    margin: 0 0 32px;
+  }
+  .about__head h1 {
+    font-family: var(--font-serif);
+    font-size: var(--fs-h1);
+    font-weight: 400;
+    color: var(--text-primary);
+    margin: 0;
+    line-height: var(--lh-heading);
+  }
+  .about__body p {
+    font-size: var(--fs-body);
+    line-height: var(--lh-base);
+    color: var(--text-primary);
+    margin: 0 0 18px;
+  }
+  .about__body p:first-child {
+    font-size: var(--fs-lede);
+    line-height: 1.5;
+    color: var(--text-primary);
+    margin-bottom: 24px;
+    font-weight: 500;
+  }
+  .about__body strong {
+    color: var(--accent);
+    font-weight: 500;
+  }
+  .about__contact {
+    margin-top: 56px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border-subtle);
+  }
+  .about__contact h2 {
+    font-family: var(--font-mono);
+    font-size: var(--fs-eyebrow);
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-wide);
+    color: var(--text-secondary);
+    margin: 0 0 12px;
+    font-weight: 500;
+  }
+  .about__contact p {
+    color: var(--text-primary);
+    font-size: var(--fs-body);
+    line-height: var(--lh-base);
+    margin: 0;
+  }
+  .about__contact a {
+    color: var(--accent);
+  }
+  .about__foot {
+    margin-top: 56px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border-subtle);
+    color: var(--text-tertiary);
+    font-size: var(--fs-meta);
+    font-style: italic;
+  }
+</style>
