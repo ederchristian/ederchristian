@@ -1,0 +1,51 @@
+---
+import { GARDEN_THEMES } from "../lib/themes"
+
+interface Props {
+  activeTheme?: string
+}
+
+const { activeTheme } = Astro.props
+const themes = GARDEN_THEMES.filter((t) => t.slug !== "uses")
+---
+
+<nav class="garden-nav" aria-label="Garden themes">
+  <a href="/garden" class:list={["garden-nav__link", { "is-active": !activeTheme }]}>All</a>
+  {
+    themes.map((theme) => (
+      <a
+        href={theme.href}
+        class:list={["garden-nav__link", { "is-active": activeTheme === theme.slug }]}
+      >
+        {theme.name}
+      </a>
+    ))
+  }
+</nav>
+
+<style>
+  .garden-nav {
+    display: flex;
+    gap: 4px;
+    flex-wrap: wrap;
+    padding: 8px 0 16px;
+    margin: 0 0 24px;
+    border-bottom: 1px solid var(--border-subtle);
+  }
+  .garden-nav__link {
+    font-size: var(--fs-meta);
+    color: var(--text-secondary);
+    padding: 6px 12px;
+    border-radius: 999px;
+    border: 1px solid transparent;
+    transition: color 200ms ease, border-color 200ms ease;
+  }
+  .garden-nav__link:hover {
+    color: var(--text-primary);
+  }
+  .garden-nav__link.is-active {
+    color: var(--accent);
+    border-color: rgba(0, 213, 159, 0.4);
+    background: rgba(0, 213, 159, 0.06);
+  }
+</style>

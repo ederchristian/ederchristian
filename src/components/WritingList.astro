@@ -1,0 +1,107 @@
+---
+import type { WritingEntry } from "../lib/content"
+import { entryHref } from "../lib/content"
+
+interface Props {
+  posts: WritingEntry[]
+  fromPage?: number
+}
+
+const { posts, fromPage } = Astro.props
+
+const formatDate = (date: Date) =>
+  date.toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric" })
+
+const byYear = posts.reduce<Record<string, WritingEntry[]>>((acc, post) => {
+  const year = new Date(post.data.date).getFullYear().toString()
+  acc[year] = acc[year] ?? []
+  acc[year].push(post)
+  return acc
+}, {})
+
+const years = Object.keys(byYear).sort((a, b) => Number(b) - Number(a))
+
+const linkHref = (post: WritingEntry) => {
+  const base = entryHref(post)
+  return fromPage && fromPage > 1 ? `${base}?fromPage=${fromPage}` : base
+}
+---
+
+{
+  years.map((year) => (
+    <section class="year">
+      <h2 class="year__label">{year}</h2>
+      <ul class="year__list">
+        {byYear[year].map((post) => (
+          <li>
+            <a href={linkHref(post)} data-pagefind-filter="type:writing" class="row">
+              <span class="row__main">
+                <span class="row__title">{post.data.title}</span>
+                {post.data.description ? <span class="row__desc">{post.data.description}</span> : null}
+              </span>
+              <span class="row__date">{formatDate(new Date(post.data.date))}</span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </section>
+  ))
+}
+
+<style>
+  .year {
+    margin-bottom: 40px;
+  }
+  .year__label {
+    font-family: var(--font-mono);
+    font-size: var(--fs-eyebrow);
+    color: var(--text-tertiary);
+    margin: 0 0 12px;
+    font-weight: 400;
+    letter-spacing: var(--tracking-wide);
+  }
+  .year__list {
+    list-style: none;
+    padding: 0;
+  }
+  .year__list li {
+    border-top: 1px solid var(--border-subtle);
+  }
+  .year__list li:last-child {
+    border-bottom: 1px solid var(--border-subtle);
+  }
+  .row {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 16px 0;
+    color: inherit;
+  }
+  .row__main {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 0;
+  }
+  .row__title {
+    color: var(--text-primary);
+    font-size: var(--fs-body);
+    font-weight: 500;
+    transition: color 200ms ease;
+  }
+  .row:hover .row__title {
+    color: var(--accent);
+  }
+  .row__desc {
+    color: var(--text-secondary);
+    font-size: var(--fs-meta);
+    line-height: 1.55;
+  }
+  .row__date {
+    font-family: var(--font-mono);
+    font-size: var(--fs-eyebrow);
+    color: var(--text-tertiary);
+    white-space: nowrap;
+  }
+</style>

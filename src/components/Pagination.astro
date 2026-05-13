@@ -1,0 +1,83 @@
+---
+import { ArrowLeft, ArrowRight } from "lucide-astro"
+
+interface Props {
+  current: number
+  total: number
+  baseHref?: string
+}
+
+const { current, total, baseHref = "/writing" } = Astro.props
+
+const pageHref = (n: number) => (n === 1 ? baseHref : `${baseHref}/page/${n}`)
+const prev = current > 1 ? pageHref(current - 1) : null
+const next = current < total ? pageHref(current + 1) : null
+const show = total > 1
+---
+
+{
+  show ? (
+    <nav class="pagination" aria-label="Pagination">
+      {prev ? (
+        <a href={prev} class="pagination__link" rel="prev">
+          <ArrowLeft size={14} /> Previous
+        </a>
+      ) : (
+        <span class="pagination__link is-disabled" aria-disabled="true">
+          <ArrowLeft size={14} /> Previous
+        </span>
+      )}
+      <span class="pagination__count">
+        Page <span class="pagination__current">{current}</span> of {total}
+      </span>
+      {next ? (
+        <a href={next} class="pagination__link" rel="next">
+          Next <ArrowRight size={14} />
+        </a>
+      ) : (
+        <span class="pagination__link is-disabled" aria-disabled="true">
+          Next <ArrowRight size={14} />
+        </span>
+      )}
+    </nav>
+  ) : null
+}
+
+<style>
+  .pagination {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-top: 48px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border-subtle);
+  }
+  .pagination__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: var(--fs-meta);
+    color: var(--text-secondary);
+    padding: 6px 10px;
+    border-radius: 6px;
+    transition: color 200ms ease, background 200ms ease;
+  }
+  .pagination__link:hover {
+    color: var(--accent);
+    background: rgba(255, 255, 255, 0.04);
+  }
+  .pagination__link.is-disabled {
+    color: var(--text-tertiary);
+    opacity: 0.5;
+    pointer-events: none;
+  }
+  .pagination__count {
+    font-family: var(--font-mono);
+    font-size: var(--fs-eyebrow);
+    color: var(--text-tertiary);
+  }
+  .pagination__current {
+    color: var(--text-primary);
+  }
+</style>
