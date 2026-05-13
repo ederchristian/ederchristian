@@ -1,0 +1,71 @@
+---
+import PageLayout from "../layouts/PageLayout.astro"
+---
+
+<PageLayout title="Legal" description="Business and legal information." noIndex={true}>
+  <div class="container legal">
+    <h1>Legal</h1>
+    <dl>
+      <dt>Operator</dt>
+      <dd>AVANTI CODER LTDA</dd>
+
+      <dt>CNPJ</dt>
+      <dd>44.271.549/0001-96</dd>
+
+      <dt>Address</dt>
+      <dd>
+        Av. Engenheiro Luís Carlos Berrini, 1748, Conjunto 1710<br />
+        Cidade Monções, São Paulo, SP<br />
+        CEP: 04571-000
+      </dd>
+
+      <dt>Trading as</dt>
+      <dd>WheyDev LLC (US)</dd>
+
+      <dt>Contact</dt>
+      <dd><a href="mailto:ederchristian92+website@gmail.com">ederchristian92+website@gmail.com</a></dd>
+    </dl>
+  </div>
+</PageLayout>
+
+<style>
+  .legal {
+    padding-top: 64px;
+    padding-bottom: 32px;
+  }
+  h1 {
+    font-family: var(--font-serif);
+    font-size: var(--fs-h1);
+    font-weight: 400;
+    color: var(--text-primary);
+    margin: 0 0 32px;
+    line-height: var(--lh-heading);
+  }
+  dl {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 16px 24px;
+    margin: 0;
+  }
+  dt {
+    font-family: var(--font-mono);
+    font-size: var(--fs-eyebrow);
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-wide);
+    color: var(--text-secondary);
+    margin: 0;
+  }
+  dd {
+    margin: 0;
+    color: var(--text-primary);
+    line-height: var(--lh-base);
+    font-size: var(--fs-body);
+  }
+  dd a {
+    color: var(--accent);
+  }
+  @media (max-width: 520px) {
+    dl { grid-template-columns: 1fr; gap: 4px 0; }
+    dt { margin-top: 16px; }
+  }
+</style>
