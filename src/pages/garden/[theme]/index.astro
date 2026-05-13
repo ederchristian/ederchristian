@@ -1,0 +1,147 @@
+---
+import PageLayout from "../../../layouts/PageLayout.astro"
+import GardenNav from "../../../components/GardenNav.astro"
+import { GARDEN_THEMES, getThemeBySlug } from "../../../lib/themes"
+import { getGardenNotes } from "../../../lib/content"
+
+export async function getStaticPaths() {
+  return GARDEN_THEMES.filter((t) => t.slug !== "uses").map((t) => ({
+    params: { theme: t.slug },
+  }))
+}
+
+const { theme: themeSlug } = Astro.params
+const theme = getThemeBySlug(themeSlug ?? "")
+if (!theme) {
+  return Astro.redirect("/garden")
+}
+const notes = await getGardenNotes(theme.slug)
+
+const formatDate = (date: Date) =>
+  date.toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric" })
+---
+
+<PageLayout
+  title={`Garden / ${theme.name}`}
+  description={theme.description}
+>
+  <div class="container theme-page" data-pagefind-body data-pagefind-filter={`type:garden,theme:${theme.slug}`}>
+    <header class="theme-page__head">
+      <p class="theme-page__crumb"><a href="/garden">Garden</a></p>
+      <h1>{theme.name}</h1>
+      <p class="theme-page__desc">{theme.description}</p>
+    </header>
+
+    <GardenNav activeTheme={theme.slug} />
+
+    {
+      notes.length === 0 ? (
+        <p class="empty">No notes yet in this theme. Soon.</p>
+      ) : (
+        <ul class="note-list">
+          {notes.map((n) => (
+            <li>
+              <a href={`/garden/${theme.slug}/${n.slug}`}>
+                <span class="note-list__row">
+                  <span class={`state state--${n.data.state}`} aria-hidden="true" />
+                  <span class="note-list__title">{n.data.title}</span>
+                  <span class="note-list__date">{formatDate(new Date(n.data.date))}</span>
+                </span>
+                <span class="note-list__desc">{n.data.description}</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      )
+    }
+  </div>
+</PageLayout>
+
+<style>
+  .theme-page {
+    padding-top: 56px;
+    padding-bottom: 32px;
+  }
+  .theme-page__head {
+    margin: 0 0 24px;
+  }
+  .theme-page__crumb {
+    font-family: var(--font-mono);
+    font-size: var(--fs-eyebrow);
+    color: var(--text-tertiary);
+    margin: 0 0 8px;
+  }
+  .theme-page__crumb a {
+    color: var(--text-secondary);
+  }
+  .theme-page__crumb a:hover {
+    color: var(--accent);
+  }
+  .theme-page__head h1 {
+    font-family: var(--font-serif);
+    font-size: var(--fs-h1);
+    font-weight: 400;
+    color: var(--text-primary);
+    margin: 0 0 8px;
+    line-height: var(--lh-heading);
+  }
+  .theme-page__desc {
+    color: var(--text-secondary);
+    margin: 0;
+    font-size: var(--fs-body);
+  }
+  .note-list {
+    list-style: none;
+    padding: 0;
+  }
+  .note-list li {
+    border-top: 1px solid var(--border-subtle);
+  }
+  .note-list li:last-child {
+    border-bottom: 1px solid var(--border-subtle);
+  }
+  .note-list a {
+    display: block;
+    padding: 16px 0;
+  }
+  .note-list__row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .note-list__title {
+    color: var(--text-primary);
+    flex: 1;
+    font-size: var(--fs-body);
+    font-weight: 500;
+    transition: color 200ms ease;
+  }
+  .note-list a:hover .note-list__title {
+    color: var(--accent);
+  }
+  .note-list__date {
+    font-family: var(--font-mono);
+    font-size: var(--fs-eyebrow);
+    color: var(--text-tertiary);
+  }
+  .note-list__desc {
+    display: block;
+    color: var(--text-secondary);
+    font-size: var(--fs-meta);
+    margin-top: 4px;
+    padding-left: 18px;
+  }
+  .state {
+    width: 8px;
+    height: 8px;
+    border-radius: 999px;
+    border: 1px solid var(--accent);
+    flex-shrink: 0;
+  }
+  .state--seedling { background: transparent; }
+  .state--budding { background: linear-gradient(to right, var(--accent) 0%, var(--accent) 50%, transparent 50%); }
+  .state--evergreen { background: var(--accent); }
+  .empty {
+    color: var(--text-tertiary);
+  }
+</style>

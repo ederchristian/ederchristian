@@ -1,0 +1,180 @@
+---
+import PageLayout from "../../layouts/PageLayout.astro"
+import GardenNav from "../../components/GardenNav.astro"
+import { GARDEN_THEMES } from "../../lib/themes"
+import { getGardenNotes } from "../../lib/content"
+
+const notes = await getGardenNotes()
+const themeData = GARDEN_THEMES.filter((t) => t.slug !== "uses").map((theme) => {
+  const themeNotes = notes.filter((n) => n.data.theme === theme.slug)
+  const lastUpdated = themeNotes
+    .map((n) => new Date(n.data.updatedDate ?? n.data.date).getTime())
+    .reduce((acc, t) => Math.max(acc, t), 0)
+  return {
+    theme,
+    notes: themeNotes,
+    lastUpdated: lastUpdated > 0 ? new Date(lastUpdated) : null,
+  }
+})
+
+const formatDate = (date: Date) =>
+  date.toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric" })
+---
+
+<PageLayout
+  title="Garden"
+  description="A public second brain. Notes that grow over time, sorted by theme."
+>
+  <div class="container garden-page">
+    <header class="garden-page__head">
+      <h1>Garden</h1>
+      <p>
+        A digital garden is a public second brain. Notes here grow over time: seedlings turn into budding ideas, and a few become evergreens. Less polished than essays, more honest than tweets.
+      </p>
+    </header>
+
+    <GardenNav />
+
+    <div class="theme-list">
+      {
+        themeData.map(({ theme, notes: tnotes, lastUpdated }) => {
+          const Icon = theme.icon
+          const recentTitles = tnotes.slice(0, 3)
+          return (
+            <article class="theme-row">
+              <header class="theme-row__head">
+                <a href={theme.href} class="theme-row__title">
+                  <Icon size={18} />
+                  <h2>{theme.name}</h2>
+                </a>
+                <span class="theme-row__meta">
+                  {tnotes.length} {tnotes.length === 1 ? "note" : "notes"}
+                  {lastUpdated ? <> · updated {formatDate(lastUpdated)}</> : null}
+                </span>
+              </header>
+              <p class="theme-row__desc">{theme.description}</p>
+              {
+                recentTitles.length > 0 ? (
+                  <ul class="theme-row__recent">
+                    {recentTitles.map((n) => (
+                      <li>
+                        <a href={`/garden/${theme.slug}/${n.slug}`}>
+                          <span class={`state state--${n.data.state}`} aria-hidden="true" />
+                          {n.data.title}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                ) : (
+                  <p class="theme-row__empty">No notes yet.</p>
+                )
+              }
+            </article>
+          )
+        })
+      }
+    </div>
+  </div>
+</PageLayout>
+
+<style>
+  .garden-page {
+    padding-top: 64px;
+    padding-bottom: 32px;
+  }
+  .garden-page__head {
+    margin: 0 0 32px;
+  }
+  .garden-page__head h1 {
+    font-family: var(--font-serif);
+    font-size: var(--fs-h1);
+    font-weight: 400;
+    color: var(--text-primary);
+    margin: 0 0 12px;
+    line-height: var(--lh-heading);
+  }
+  .garden-page__head p {
+    color: var(--text-secondary);
+    line-height: var(--lh-base);
+    margin: 0;
+    font-size: var(--fs-body);
+  }
+  .theme-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .theme-row {
+    border: 1px solid var(--border-subtle);
+    border-radius: 12px;
+    padding: 20px;
+    transition: border-color 200ms ease;
+  }
+  .theme-row:hover {
+    border-color: var(--border-emphasis);
+  }
+  .theme-row__head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .theme-row__title {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .theme-row__title h2 {
+    margin: 0;
+    color: var(--text-primary);
+    font-size: var(--fs-h3);
+    font-weight: 500;
+  }
+  .theme-row__title:hover h2 {
+    color: var(--accent);
+  }
+  .theme-row__meta {
+    color: var(--text-tertiary);
+    font-size: var(--fs-eyebrow);
+    font-family: var(--font-mono);
+  }
+  .theme-row__desc {
+    color: var(--text-secondary);
+    font-size: var(--fs-meta);
+    line-height: var(--lh-base);
+    margin: 10px 0 14px;
+  }
+  .theme-row__recent {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .theme-row__recent a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-primary);
+    font-size: var(--fs-meta);
+  }
+  .theme-row__recent a:hover {
+    color: var(--accent);
+  }
+  .theme-row__empty {
+    color: var(--text-tertiary);
+    font-size: var(--fs-meta);
+    margin: 0;
+  }
+  .state {
+    width: 8px;
+    height: 8px;
+    border-radius: 999px;
+    border: 1px solid var(--accent);
+    flex-shrink: 0;
+  }
+  .state--seedling { background: transparent; }
+  .state--budding { background: linear-gradient(to right, var(--accent) 0%, var(--accent) 50%, transparent 50%); }
+  .state--evergreen { background: var(--accent); }
+</style>
