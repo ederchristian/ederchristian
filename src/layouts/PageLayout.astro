@@ -3,16 +3,29 @@ import Header from "../components/Header.astro"
 import Footer from "../components/Footer.astro"
 import BaseHead from "../components/BaseHead.astro"
 
-const { titleTag, title, description, date, imageAlt } = Astro.props
+interface Props {
+  titleTag?: string
+  title: string
+  description: string
+  image?: string
+  noIndex?: boolean
+}
+
+const { titleTag, title, description, image, noIndex } = Astro.props
 ---
 
-<html>
+<html lang="en">
   <head>
-    <BaseHead title={titleTag ?? title} description={description} />
+    <BaseHead
+      title={titleTag ?? `${title} | Eder Christian`}
+      description={description}
+      image={image}
+      noIndex={noIndex}
+    />
   </head>
   <body>
     <Header />
-    <main>
+    <main transition:animate="fade">
       <slot />
     </main>
     <Footer />
