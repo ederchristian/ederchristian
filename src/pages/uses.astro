@@ -1,0 +1,144 @@
+---
+import PageLayout from "../layouts/PageLayout.astro"
+
+const sections: { title: string; items: { name: string; href?: string; desc: string }[] }[] = [
+  {
+    title: "Hardware",
+    items: [
+      { name: "MacBook Pro", desc: "Daily driver." },
+      { name: "External monitor", desc: "Workspace surface." },
+      { name: "Mechanical keyboard", desc: "Tactile." },
+    ],
+  },
+  {
+    title: "Editor and terminal",
+    items: [
+      { name: "VS Code", href: "https://code.visualstudio.com", desc: "Primary editor." },
+      { name: "Ghostty", href: "https://ghostty.org", desc: "Terminal." },
+      { name: "Zed", href: "https://zed.dev", desc: "Sometimes." },
+    ],
+  },
+  {
+    title: "CLI and dev tools",
+    items: [
+      { name: "git", desc: "Version control." },
+      { name: "fnm", desc: "Node version manager." },
+      { name: "Claude Code", href: "https://claude.com/claude-code", desc: "Pair programming." },
+    ],
+  },
+  {
+    title: "Apps I live in",
+    items: [
+      { name: "Raycast", href: "https://raycast.com", desc: "Launcher and clipboard." },
+      { name: "Things", href: "https://culturedcode.com/things/", desc: "Tasks." },
+      { name: "Obsidian", href: "https://obsidian.md", desc: "Notes that don't ship." },
+    ],
+  },
+  {
+    title: "Audio/video",
+    items: [
+      { name: "Microphone", desc: "Setup placeholder." },
+      { name: "Camera", desc: "Setup placeholder." },
+    ],
+  },
+  {
+    title: "Browser",
+    items: [
+      { name: "Arc", href: "https://arc.net", desc: "Primary." },
+      { name: "Safari", desc: "Personal." },
+    ],
+  },
+]
+---
+
+<PageLayout title="Uses" description="Hardware, editor, terminal, CLI, apps, audio, browser. Updated as I rotate tools.">
+  <div class="container uses">
+    <header class="uses__head">
+      <h1>Uses</h1>
+      <p>What I use day to day. Updated when something changes.</p>
+    </header>
+    {
+      sections.map((section) => (
+        <section class="uses-section">
+          <h2>{section.title}</h2>
+          <ul class="uses-list">
+            {section.items.map((item) => (
+              <li>
+                <span class="uses-list__name">
+                  {item.href ? (
+                    <a href={item.href} target="_blank" rel="noopener noreferrer">
+                      {item.name}
+                    </a>
+                  ) : (
+                    item.name
+                  )}
+                </span>
+                <span class="uses-list__desc">{item.desc}</span>
+              </li>
+            ))}
+          </ul>
+        </section>
+      ))
+    }
+  </div>
+</PageLayout>
+
+<style>
+  .uses {
+    padding-top: 64px;
+    padding-bottom: 32px;
+  }
+  .uses__head {
+    margin: 0 0 40px;
+  }
+  .uses__head h1 {
+    font-family: var(--font-serif);
+    font-size: var(--fs-h1);
+    font-weight: 400;
+    color: var(--text-primary);
+    margin: 0 0 8px;
+    line-height: var(--lh-heading);
+  }
+  .uses__head p {
+    color: var(--text-secondary);
+    margin: 0;
+    font-size: var(--fs-body);
+  }
+  .uses-section {
+    margin-bottom: 40px;
+  }
+  .uses-section h2 {
+    font-size: var(--fs-h3);
+    font-weight: 500;
+    color: var(--text-primary);
+    margin: 0 0 12px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border-subtle);
+  }
+  .uses-list {
+    list-style: none;
+    padding: 0;
+  }
+  .uses-list li {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 16px;
+    padding: 8px 0;
+    align-items: baseline;
+  }
+  .uses-list__name {
+    color: var(--text-primary);
+    font-weight: 500;
+    font-size: var(--fs-body);
+  }
+  .uses-list__name a:hover {
+    color: var(--accent);
+  }
+  .uses-list__desc {
+    color: var(--text-secondary);
+    font-size: var(--fs-body);
+  }
+  @media (max-width: 560px) {
+    .uses-list li { grid-template-columns: 1fr; gap: 4px; }
+  }
+</style>
