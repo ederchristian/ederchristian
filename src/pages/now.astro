@@ -1,0 +1,123 @@
+---
+import PageLayout from "../layouts/PageLayout.astro"
+import { NOW_LAST_UPDATED } from "../consts"
+
+const sections = [
+  {
+    title: "Work",
+    body: "At Automatiq, leading dark mode rollout and order-draft flows. Pushing toward Senior Frontend, then Product Engineer. The work is dense and the team is small enough that scope follows craft.",
+  },
+  {
+    title: "Writing",
+    body: "Weekly at Inner Commit on Substack. Plus longer essays here on what it takes to build a global career from outside the bubble.",
+  },
+  {
+    title: "Building",
+    body: "Perspion: YouTube comment intelligence for creators. Beta. Currently designing the digest flow and dialing in the AI cost ceiling.",
+  },
+  {
+    title: "Reading",
+    body: "Engineering leadership (Larson, Skelton). Sivers on saying yes only when it's a hell yes. A few Brazilian novels in parallel.",
+  },
+  {
+    title: "Training",
+    body: "BJJ twice a week. Walks daily. Slow, deliberate volume.",
+  },
+  {
+    title: "Family",
+    body: "Married to Natalia. We're in Londrina, Brazil, planning the next move.",
+  },
+]
+
+const formatDate = (date: Date) =>
+  date.toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })
+---
+
+<PageLayout title="Now" description="What I'm focused on right now. Updated monthly.">
+  <div class="container now-page">
+    <header class="now-page__head">
+      <p class="now-page__eyebrow">Updated {formatDate(new Date(NOW_LAST_UPDATED))}</p>
+      <h1>What I'm doing now</h1>
+      <p class="now-page__lede">A snapshot, not a manifesto. Refreshed roughly once a month.</p>
+    </header>
+
+    {
+      sections.map((s) => (
+        <section class="now-section">
+          <h2>{s.title}</h2>
+          <p>{s.body}</p>
+        </section>
+      ))
+    }
+
+    <footer class="now-page__foot">
+      <p>
+        This page is part of the <a href="https://nownownow.com" target="_blank" rel="noopener noreferrer">/now movement</a>, started by Derek Sivers.
+      </p>
+    </footer>
+  </div>
+</PageLayout>
+
+<style>
+  .now-page {
+    padding-top: 64px;
+    padding-bottom: 32px;
+  }
+  .now-page__head {
+    margin: 0 0 40px;
+  }
+  .now-page__eyebrow {
+    font-family: var(--font-mono);
+    font-size: var(--fs-eyebrow);
+    color: var(--text-tertiary);
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-wide);
+    margin: 0 0 16px;
+  }
+  .now-page__head h1 {
+    font-family: var(--font-serif);
+    font-size: var(--fs-h1);
+    font-weight: 400;
+    color: var(--text-primary);
+    margin: 0 0 12px;
+    line-height: var(--lh-heading);
+  }
+  .now-page__lede {
+    color: var(--text-secondary);
+    margin: 0;
+    font-size: var(--fs-body);
+  }
+  .now-section {
+    margin-bottom: 24px;
+  }
+  .now-section h2 {
+    font-size: var(--fs-eyebrow);
+    font-weight: 500;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-wide);
+    font-family: var(--font-mono);
+    margin: 0 0 8px;
+  }
+  .now-section p {
+    color: var(--text-primary);
+    line-height: var(--lh-base);
+    margin: 0;
+    font-size: var(--fs-body);
+  }
+  .now-page__foot {
+    margin-top: 48px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border-subtle);
+    color: var(--text-tertiary);
+    font-size: var(--fs-meta);
+  }
+  .now-page__foot a {
+    color: var(--text-tertiary);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  .now-page__foot a:hover {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+  }
+</style>
