@@ -1,5 +1,6 @@
 ---
 import PageLayout from "../layouts/PageLayout.astro"
+import PageHeader from "../components/PageHeader.astro"
 import { NOW_LAST_UPDATED } from "../consts"
 
 const sections = [
@@ -30,16 +31,12 @@ const sections = [
 ]
 
 const formatDate = (date: Date) =>
-  date.toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })
+  date.toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric", timeZone: "UTC" })
 ---
 
-<PageLayout title="Now" description="What I'm focused on right now. Updated monthly.">
+<PageLayout title="Now" description="What I'm focused on right now.">
   <div class="container now-page">
-    <header class="now-page__head">
-      <p class="now-page__eyebrow">Updated {formatDate(new Date(NOW_LAST_UPDATED))}</p>
-      <h1>What I'm doing now</h1>
-      <p class="now-page__lede">A snapshot, not a manifesto. Refreshed roughly once a month.</p>
-    </header>
+    <PageHeader title="Now" subtitle="What I'm focused on right now." />
 
     {
       sections.map((s) => (
@@ -51,6 +48,7 @@ const formatDate = (date: Date) =>
     }
 
     <footer class="now-page__foot">
+      <p class="now-page__updated">Updated {formatDate(new Date(NOW_LAST_UPDATED))}</p>
       <p>
         This page is part of the <a href="https://nownownow.com" target="_blank" rel="noopener noreferrer">/now movement</a>, started by Derek Sivers.
       </p>
@@ -62,30 +60,6 @@ const formatDate = (date: Date) =>
   .now-page {
     padding-top: 64px;
     padding-bottom: 32px;
-  }
-  .now-page__head {
-    margin: 0 0 40px;
-  }
-  .now-page__eyebrow {
-    font-family: var(--font-mono);
-    font-size: var(--fs-eyebrow);
-    color: var(--text-tertiary);
-    text-transform: uppercase;
-    letter-spacing: var(--tracking-wide);
-    margin: 0 0 16px;
-  }
-  .now-page__head h1 {
-    font-family: var(--font-serif);
-    font-size: var(--fs-h1);
-    font-weight: 400;
-    color: var(--text-primary);
-    margin: 0 0 12px;
-    line-height: var(--lh-heading);
-  }
-  .now-page__lede {
-    color: var(--text-secondary);
-    margin: 0;
-    font-size: var(--fs-body);
   }
   .now-section {
     margin-bottom: 24px;
@@ -111,6 +85,18 @@ const formatDate = (date: Date) =>
     border-top: 1px solid var(--border-subtle);
     color: var(--text-tertiary);
     font-size: var(--fs-meta);
+  }
+  .now-page__foot p {
+    margin: 0 0 8px;
+  }
+  .now-page__foot p:last-child {
+    margin-bottom: 0;
+  }
+  .now-page__updated {
+    font-family: var(--font-mono);
+    font-size: var(--fs-eyebrow);
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-wide);
   }
   .now-page__foot a {
     color: var(--text-tertiary);
