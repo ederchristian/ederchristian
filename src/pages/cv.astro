@@ -1,14 +1,15 @@
 ---
 import PageLayout from "../layouts/PageLayout.astro"
+import PageHeader from "../components/PageHeader.astro"
 ---
 
 <PageLayout
   titleTag="CV | Eder Christian"
-  title="My CV"
+  title="CV"
   description="The career timeline of Eder Christian, frontend engineer."
 >
   <div class="container cv">
-    <h1>Software Engineer, Remote Contractor, Self-Taught Builder</h1>
+    <PageHeader title="CV" subtitle="Software Engineer. Remote Contractor. Self-Taught Builder." />
 
     <h2>2025</h2>
     <ul>
@@ -185,19 +186,11 @@ import PageLayout from "../layouts/PageLayout.astro"
 
 <style>
   .cv {
-    padding-top: 56px;
+    padding-top: 64px;
     padding-bottom: 32px;
     font-size: var(--fs-body);
     line-height: var(--lh-base);
     color: var(--text-primary);
-  }
-  .cv h1 {
-    font-family: var(--font-serif);
-    color: var(--text-primary);
-    font-size: var(--fs-h1);
-    font-weight: 400;
-    line-height: var(--lh-heading);
-    margin: 0 0 32px;
   }
   .cv h2 {
     font-family: var(--font-mono);

@@ -1,10 +1,11 @@
 ---
 import PageLayout from "../layouts/PageLayout.astro"
+import PageHeader from "../components/PageHeader.astro"
 ---
 
 <PageLayout title="Legal" description="Business and legal information." noIndex={true}>
   <div class="container legal">
-    <h1>Legal</h1>
+    <PageHeader title="Legal" subtitle="Business and legal information." />
     <dl>
       <dt>Operator</dt>
       <dd>AVANTI CODER LTDA</dd>
@@ -32,14 +33,6 @@ import PageLayout from "../layouts/PageLayout.astro"
   .legal {
     padding-top: 64px;
     padding-bottom: 32px;
-  }
-  h1 {
-    font-family: var(--font-serif);
-    font-size: var(--fs-h1);
-    font-weight: 400;
-    color: var(--text-primary);
-    margin: 0 0 32px;
-    line-height: var(--lh-heading);
   }
   dl {
     display: grid;

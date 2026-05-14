@@ -1,5 +1,6 @@
 ---
 import PageLayout from "../../layouts/PageLayout.astro"
+import PageHeader from "../../components/PageHeader.astro"
 import GardenNav from "../../components/GardenNav.astro"
 import { GARDEN_THEMES } from "../../lib/themes"
 import { getGardenNotes } from "../../lib/content"
@@ -23,15 +24,10 @@ const formatDate = (date: Date) =>
 
 <PageLayout
   title="Garden"
-  description="A public second brain. Notes that grow over time, sorted by theme."
+  description="My public second brain. Notes that grow over time."
 >
   <div class="container garden-page">
-    <header class="garden-page__head">
-      <h1>Garden</h1>
-      <p>
-        A digital garden is a public second brain. Notes here grow over time: seedlings turn into budding ideas, and a few become evergreens. Less polished than essays, more honest than tweets.
-      </p>
-    </header>
+    <PageHeader title="Garden" subtitle="My public second brain. Notes that grow over time." />
 
     <GardenNav />
 
@@ -81,23 +77,6 @@ const formatDate = (date: Date) =>
   .garden-page {
     padding-top: 64px;
     padding-bottom: 32px;
-  }
-  .garden-page__head {
-    margin: 0 0 32px;
-  }
-  .garden-page__head h1 {
-    font-family: var(--font-serif);
-    font-size: var(--fs-h1);
-    font-weight: 400;
-    color: var(--text-primary);
-    margin: 0 0 12px;
-    line-height: var(--lh-heading);
-  }
-  .garden-page__head p {
-    color: var(--text-secondary);
-    line-height: var(--lh-base);
-    margin: 0;
-    font-size: var(--fs-body);
   }
   .theme-list {
     display: flex;

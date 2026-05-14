@@ -1,5 +1,6 @@
 ---
 import PageLayout from "../../layouts/PageLayout.astro"
+import PageHeader from "../../components/PageHeader.astro"
 import WritingList from "../../components/WritingList.astro"
 import Pagination from "../../components/Pagination.astro"
 import { getAllWriting } from "../../lib/content"
@@ -13,13 +14,10 @@ const posts = all.slice(0, POSTS_PER_PAGE)
 
 <PageLayout
   title="Writing"
-  description="Long-form essays on building a career from outside the bubble, frontend craft, and the road from Brazil to the US."
+  description="Essays on building a career from outside the bubble, frontend craft, and the road from Brazil to the US."
 >
   <div class="container writing" data-pagefind-body>
-    <header class="writing__head">
-      <h1>Writing</h1>
-      <p>Essays. Long-form. Honest.</p>
-    </header>
+    <PageHeader title="Writing" subtitle="Essays. Honest. Sometimes long." />
 
     <WritingList posts={posts} fromPage={1} />
 
@@ -31,21 +29,5 @@ const posts = all.slice(0, POSTS_PER_PAGE)
   .writing {
     padding-top: 64px;
     padding-bottom: 32px;
-  }
-  .writing__head {
-    margin: 0 0 48px;
-  }
-  .writing__head h1 {
-    font-family: var(--font-serif);
-    font-size: var(--fs-h1);
-    font-weight: 400;
-    color: var(--text-primary);
-    margin: 0 0 8px;
-    line-height: var(--lh-heading);
-  }
-  .writing__head p {
-    color: var(--text-secondary);
-    margin: 0;
-    font-size: var(--fs-body);
   }
 </style>
