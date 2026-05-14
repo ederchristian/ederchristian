@@ -1,5 +1,6 @@
 ---
 import PageLayout from "../layouts/PageLayout.astro"
+import PageHeader from "../components/PageHeader.astro"
 ---
 
 <PageLayout
@@ -7,9 +8,7 @@ import PageLayout from "../layouts/PageLayout.astro"
   description="Self-taught frontend engineer from Brazil. Building a life shaped by code, clarity, and intention."
 >
   <article class="about container">
-    <header class="about__head">
-      <h1>About</h1>
-    </header>
+    <PageHeader title="About" subtitle="Self-taught. Brazilian. Building from the inside out." />
 
     <section class="about__body">
       <p>I came from outside the tech bubble.</p>
@@ -34,9 +33,36 @@ import PageLayout from "../layouts/PageLayout.astro"
     <section class="about__contact">
       <h2>Get in touch</h2>
       <p>
-        Email <a href="mailto:ederchristian92+website@gmail.com">ederchristian92+website@gmail.com</a> or DM me on <a href="https://x.com/ederchristian" target="_blank" rel="noopener noreferrer">X</a>.
+        Email <a
+          id="contact-email"
+          href="#"
+          data-user="me"
+          data-domain="ederchristian.com"
+          aria-label="Email address (revealed on click)"
+        ><span class="email-text">me <span class="email-sep">[at]</span> ederchristian <span class="email-sep">[dot]</span> com</span></a> or DM me on <a href="https://x.com/ederchristian" target="_blank" rel="noopener noreferrer">X</a>.
       </p>
     </section>
+
+    <script>
+      function wireEmail() {
+        const link = document.getElementById("contact-email") as HTMLAnchorElement | null
+        if (!link) return
+        const user = link.dataset.user
+        const domain = link.dataset.domain
+        if (!user || !domain) return
+        const address = `${user}@${domain}`
+        link.setAttribute("href", `mailto:${address}`)
+        const reveal = () => {
+          const text = link.querySelector(".email-text")
+          if (text) text.textContent = address
+        }
+        link.addEventListener("mouseenter", reveal, { once: true })
+        link.addEventListener("focus", reveal, { once: true })
+        link.addEventListener("click", reveal, { once: true })
+      }
+      wireEmail()
+      document.addEventListener("astro:after-swap", wireEmail)
+    </script>
 
     <footer class="about__foot">
       <p>I'm Brazilian and bilingual, but I write in English to reach the audience I'm building for.</p>
@@ -48,17 +74,6 @@ import PageLayout from "../layouts/PageLayout.astro"
   .about {
     padding-top: 64px;
     padding-bottom: 32px;
-  }
-  .about__head {
-    margin: 0 0 32px;
-  }
-  .about__head h1 {
-    font-family: var(--font-serif);
-    font-size: var(--fs-h1);
-    font-weight: 400;
-    color: var(--text-primary);
-    margin: 0;
-    line-height: var(--lh-heading);
   }
   .about__body p {
     font-size: var(--fs-body);
@@ -99,6 +114,9 @@ import PageLayout from "../layouts/PageLayout.astro"
   }
   .about__contact a {
     color: var(--accent);
+  }
+  .email-sep {
+    color: var(--text-tertiary);
   }
   .about__foot {
     margin-top: 56px;
