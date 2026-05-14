@@ -7,6 +7,12 @@ import partytown from "@astrojs/partytown"
 import icon from "astro-icon"
 import remarkWikiLink from "remark-wiki-link"
 import { visit } from "unist-util-visit"
+import { readFileSync } from "node:fs"
+import { fileURLToPath } from "node:url"
+
+const draculaPro = JSON.parse(
+  readFileSync(fileURLToPath(new URL("./src/styles/dracula-pro.json", import.meta.url)), "utf-8"),
+)
 
 function rehypeWideImages() {
   return (tree) => {
@@ -51,7 +57,7 @@ export default defineConfig({
   ],
   markdown: {
     shikiConfig: {
-      theme: "github-dark-default",
+      theme: draculaPro,
     },
     remarkPlugins: [
       [
