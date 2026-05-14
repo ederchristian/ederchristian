@@ -3,13 +3,13 @@ import { Icon } from "astro-icon/components"
 
 const year = new Date().getFullYear()
 
-const social: { href: string; label: string; icon?: string; render?: "x" }[] = [
+const social: { href: string; label: string; icon?: string; render?: "x"; id?: string; dataUser?: string; dataDomain?: string }[] = [
   { href: "https://x.com/ederchristian", label: "X", render: "x" },
   { href: "https://github.com/ederchristian", label: "GitHub", icon: "mdi:github" },
   { href: "https://linkedin.com/in/ederchristian92", label: "LinkedIn", icon: "mdi:linkedin" },
   { href: "https://instagram.com/ederchristian", label: "Instagram", icon: "mdi:instagram" },
   { href: "https://youtube.com/@ederchristian", label: "YouTube", icon: "mdi:youtube" },
-  { href: "mailto:ederchristian92+website@gmail.com", label: "Email", icon: "mdi:email-outline" },
+  { href: "#", label: "Email", icon: "mdi:email-outline", id: "footer-email", dataUser: "me", dataDomain: "ederchristian.com" },
   { href: "/rss.xml", label: "RSS", icon: "mdi:rss" },
 ]
 ---
@@ -30,6 +30,9 @@ const social: { href: string; label: string; icon?: string; render?: "x" }[] = [
                 rel="noopener noreferrer"
                 aria-label={item.label}
                 title={item.label}
+                id={item.id}
+                data-user={item.dataUser}
+                data-domain={item.dataDomain}
               >
                 {
                   item.render === "x" ? (
@@ -48,6 +51,19 @@ const social: { href: string; label: string; icon?: string; render?: "x" }[] = [
     </div>
   </div>
 </footer>
+
+<script>
+  function wireFooterEmail() {
+    const link = document.getElementById("footer-email") as HTMLAnchorElement | null
+    if (!link) return
+    const user = link.dataset.user
+    const domain = link.dataset.domain
+    if (!user || !domain) return
+    link.setAttribute("href", `mailto:${user}@${domain}`)
+  }
+  wireFooterEmail()
+  document.addEventListener("astro:after-swap", wireFooterEmail)
+</script>
 
 <style>
   .site-footer {
