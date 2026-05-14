@@ -24,7 +24,7 @@
   --fs-h2: 20px;             /* section heads */
   --fs-h3: 17px;             /* subheads */
   --fs-lede: 17px;           /* intro paragraph */
-  --fs-body: 15px;           /* default body, everywhere */
+  --fs-body: 16px;           /* default body, everywhere */
   --fs-meta: 13px;           /* descriptions, captions */
   --fs-eyebrow: 12px;        /* mono labels, dates */
   --fs-tiny: 11px;           /* pills, badges */
@@ -240,10 +240,16 @@ strong, b {
   border-left: 2px solid var(--accent);
   padding: 0 0 0 20px;
   margin: 1.5em 0;
-  font-family: var(--font-serif);
-  font-style: italic;
-  font-size: 22px;
-  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-style: normal;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+.prose blockquote p {
+  color: inherit;
 }
 
 .prose code:not(pre code) {
@@ -257,7 +263,7 @@ strong, b {
 }
 
 .prose pre {
-  background: #0a0a0a;
+  background: #22212C !important;
   border: 1px solid var(--border-subtle);
   border-radius: 8px;
   padding: 1.25em 1.5em;
