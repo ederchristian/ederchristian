@@ -1,10 +1,10 @@
 ---
-import PageLayout from "../layouts/PageLayout.astro"
-import NewsletterForm from "../components/NewsletterForm.astro"
-import { getRecentWriting, getGardenNotes } from "../lib/content"
-import { GARDEN_THEMES } from "../lib/themes"
-import { SITE_DESCRIPTION, NOW_LAST_UPDATED } from "../consts"
 import { ArrowRight, ArrowUpRight } from "lucide-astro"
+import NewsletterForm from "../components/NewsletterForm.astro"
+import { NOW_LAST_UPDATED, SITE_DESCRIPTION } from "../consts"
+import PageLayout from "../layouts/PageLayout.astro"
+import { getGardenNotes, getRecentWriting } from "../lib/content"
+import { GARDEN_THEMES } from "../lib/themes"
 
 const recent = await getRecentWriting(3)
 const gardenNotes = await getGardenNotes()
@@ -43,14 +43,13 @@ const nowBullets = [
     <article class="product">
       <div class="product__head">
         <h3>Perspion</h3>
-        <span class="product__badge">Beta</span>
+        <span class="product__badge">MVP</span>
       </div>
-      <p class="product__desc">YouTube comment intelligence for creators who want signal, not noise.</p>
+      <p class="product__desc">Mines YouTube comments for content ideas, questions, and sentiment.</p>
       <div class="product__stack">
         <span>Next.js</span>
         <span>TypeScript</span>
-        <span>OpenAI</span>
-        <span>Supabase</span>
+        <span>Gemini</span>
       </div>
       <a class="product__link" href="https://perspion.whey.dev" target="_blank" rel="noopener noreferrer">
         perspion.whey.dev <ArrowUpRight size={14} />
