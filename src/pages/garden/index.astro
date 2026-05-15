@@ -1,9 +1,9 @@
 ---
-import PageLayout from "../../layouts/PageLayout.astro"
-import PageHeader from "../../components/PageHeader.astro"
 import GardenNav from "../../components/GardenNav.astro"
-import { GARDEN_THEMES } from "../../lib/themes"
+import PageHeader from "../../components/PageHeader.astro"
+import PageLayout from "../../layouts/PageLayout.astro"
 import { getGardenNotes } from "../../lib/content"
+import { GARDEN_THEMES } from "../../lib/themes"
 
 const notes = await getGardenNotes()
 const themeData = GARDEN_THEMES.filter((t) => t.slug !== "uses").map((theme) => {

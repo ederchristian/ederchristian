@@ -1,12 +1,12 @@
 ---
 import { Image } from "astro:assets"
-import { getCollection, type CollectionEntry } from "astro:content"
-import PageLayout from "../../layouts/PageLayout.astro"
-import NewsletterForm from "../../components/NewsletterForm.astro"
+import { type CollectionEntry, getCollection } from "astro:content"
+import { ArrowLeft, ArrowRight } from "lucide-astro"
 import BackLink from "../../components/BackLink.astro"
+import NewsletterForm from "../../components/NewsletterForm.astro"
+import PageLayout from "../../layouts/PageLayout.astro"
 import { getBacklinksFor } from "../../lib/backlinks"
 import { computeReadingTime } from "../../lib/readingTime"
-import { ArrowLeft, ArrowRight } from "lucide-astro"
 
 export async function getStaticPaths() {
   const [writing, blog] = await Promise.all([

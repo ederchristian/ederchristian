@@ -1,8 +1,8 @@
 ---
-import PageLayout from "../../../layouts/PageLayout.astro"
 import GardenNav from "../../../components/GardenNav.astro"
-import { GARDEN_THEMES, getThemeBySlug } from "../../../lib/themes"
+import PageLayout from "../../../layouts/PageLayout.astro"
 import { getGardenNotes } from "../../../lib/content"
+import { GARDEN_THEMES, getThemeBySlug } from "../../../lib/themes"
 
 export async function getStaticPaths() {
   return GARDEN_THEMES.filter((t) => t.slug !== "uses").map((t) => ({

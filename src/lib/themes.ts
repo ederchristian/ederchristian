@@ -1,5 +1,5 @@
-import { Code2, Compass, BookOpen, Music, Wrench } from "lucide-astro"
 import type { AstroComponentFactory } from "astro/runtime/server/index.js"
+import { BookOpen, Code2, Compass, Music, Wrench } from "lucide-astro"
 
 export type ThemeSlug = "engineering" | "career" | "books" | "music" | "uses"
 

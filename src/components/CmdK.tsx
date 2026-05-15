@@ -1,6 +1,6 @@
-import { useCallback, useEffect, useRef, useState } from "react"
 import * as Dialog from "@radix-ui/react-dialog"
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden"
+import { useCallback, useEffect, useRef, useState } from "react"
 
 type PagefindSubResult = {
   url: string
