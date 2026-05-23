@@ -26,8 +26,66 @@ import PageLayout from "../layouts/PageLayout.astro"
       </p>
 
       <p>
-        This is my <strong>inner commit</strong>: to keep building a life that makes sense, from the inside out.
+        This is my inner commit: to keep building a life that makes sense, from the inside out.
       </p>
+    </section>
+
+    <section class="about__pillars">
+      <h2>The three things</h2>
+      <div class="about__pillars-list">
+        <article>
+          <h3>The Craft</h3>
+          <p>Frontend, AI tooling, and the work of writing code well. What I learn from building, day after day.</p>
+        </article>
+        <article>
+          <h3>The Remote Operator</h3>
+          <p>Building an international career from Brazil. The systems and decisions behind working remotely for the long term.</p>
+        </article>
+        <article>
+          <h3>Inner Commit</h3>
+          <p>The quiet work behind the visible career. Marriage, training, moving cities, the small disciplines that compound.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="about__more">
+      <details>
+        <summary>
+          <span>Read the long version</span>
+          <span class="about__more-icon" aria-hidden="true"></span>
+        </summary>
+        <div class="about__more-body">
+          <p>I'm from Lorena, a small city in the State of São Paulo, Brazil.</p>
+          <p>
+            I've been curious about computers since I was a kid. At 17, I earned a technical certificate in computing. Three years later, I enrolled in a public college to study Information Technology Management.
+          </p>
+          <p>
+            At that point, we still didn't have a computer at home. My first one came through a local NGO, an old and simple PC from a City Hall project. Years later, I used my savings to buy a used MacBook Air. That's when I fell in love with Apple and decided I wanted to learn how to code. I considered Swift and Objective-C, but after some research, I chose web development and found my place in front-end.
+          </p>
+          <p>
+            In 2015, I completed a postgrad certificate in Web Application Development. That's when I consider my real career to have started, even though I barely knew how to program at the time.
+          </p>
+          <p>
+            Most of what I truly learned came through doing: working on real projects, attending events, studying on my own, and asking more experienced developers the right questions. I built my skills outside the classroom, not in it.
+          </p>
+          <p>Over the next five years, everything changed:</p>
+          <ul>
+            <li>I started at a small marketing agency in my hometown, working with design and WordPress.</li>
+            <li>I dropped everything to move to São Paulo and work at StartSe, an education startup, building basic landing pages with HTML, CSS, JavaScript, and Bootstrap.</li>
+            <li>I worked across departments (sales, marketing, design, and video editing) until I eventually led a squad and became a partner in the company.</li>
+            <li>I helped build a custom online events platform using React and Next.js, which became critical during the pandemic.</li>
+            <li>I taught myself English from scratch through online courses and 500+ hours on Cambly.</li>
+            <li>I attended over 60 tech events and meetups in Brazil and built meaningful connections in the dev community.</li>
+          </ul>
+          <p>
+            In 2022, I joined Automatiq, a U.S.-based company in New York, where I work remotely as a developer. We build automation tools for ticket brokers, covering pricing, invoicing, and more across multiple vendors.
+          </p>
+          <p>
+            That same year, I created the official website for Padre Fábio de Melo, one of Brazil's most influential Catholic figures, and became responsible for his entire tech stack, including platforms like YouTube, Spotify, Apple Music, and Deezer.
+          </p>
+          <p>I'm excited for what's next, building with code, intention, and clarity.</p>
+        </div>
+      </details>
     </section>
 
     <section class="about__contact">
@@ -88,9 +146,132 @@ import PageLayout from "../layouts/PageLayout.astro"
     margin-bottom: 24px;
     font-weight: 500;
   }
-  .about__body strong {
-    color: var(--accent);
+  .about__pillars {
+    margin-top: 56px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border-subtle);
+  }
+  .about__pillars h2 {
+    font-family: var(--font-mono);
+    font-size: var(--fs-eyebrow);
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-wide);
+    color: var(--text-secondary);
+    margin: 0 0 24px;
     font-weight: 500;
+  }
+  .about__pillars-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  .about__pillars-list article {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .about__pillars-list h3 {
+    font-size: var(--fs-h3);
+    font-weight: 500;
+    color: var(--text-primary);
+    margin: 0;
+  }
+  .about__pillars-list p {
+    color: var(--text-secondary);
+    font-size: var(--fs-body);
+    line-height: var(--lh-base);
+    margin: 0;
+  }
+  .about__more {
+    margin-top: 56px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border-subtle);
+  }
+  .about__more details {
+    margin: 0;
+  }
+  .about__more summary {
+    list-style: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    font-family: var(--font-mono);
+    font-size: var(--fs-eyebrow);
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-wide);
+    color: var(--text-secondary);
+    font-weight: 500;
+    transition: color 200ms ease;
+  }
+  .about__more summary::-webkit-details-marker {
+    display: none;
+  }
+  .about__more summary:hover {
+    color: var(--accent);
+  }
+  .about__more-icon {
+    width: 12px;
+    height: 12px;
+    position: relative;
+    flex-shrink: 0;
+  }
+  .about__more-icon::before,
+  .about__more-icon::after {
+    content: "";
+    position: absolute;
+    background: currentColor;
+    top: 50%;
+    left: 50%;
+    transition: transform 200ms ease;
+  }
+  .about__more-icon::before {
+    width: 12px;
+    height: 1px;
+    transform: translate(-50%, -50%);
+  }
+  .about__more-icon::after {
+    width: 1px;
+    height: 12px;
+    transform: translate(-50%, -50%);
+  }
+  .about__more details[open] .about__more-icon::after {
+    transform: translate(-50%, -50%) scaleY(0);
+  }
+  .about__more-body {
+    margin-top: 24px;
+  }
+  .about__more-body p {
+    font-size: var(--fs-body);
+    line-height: var(--lh-base);
+    color: var(--text-primary);
+    margin: 0 0 18px;
+  }
+  .about__more-body ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .about__more-body li {
+    color: var(--text-primary);
+    font-size: var(--fs-body);
+    line-height: var(--lh-base);
+    padding-left: 20px;
+    position: relative;
+  }
+  .about__more-body li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.65em;
+    width: 6px;
+    height: 6px;
+    border-radius: 999px;
+    background: var(--accent);
   }
   .about__contact {
     margin-top: 56px;
