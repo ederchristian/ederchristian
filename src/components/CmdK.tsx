@@ -39,6 +39,15 @@ const filterChoices = [
   { value: "notes", label: "Notes" },
 ]
 
+const ALLOWED_TYPES = new Set(["writing", "notes"])
+const VALID_URL = /^\/(writing|notes)\//
+
+const normalizeType = (raw?: string): string => {
+  if (!raw) return ""
+  const first = raw.split(",")[0]?.split(":").pop()?.trim().toLowerCase() ?? ""
+  return ALLOWED_TYPES.has(first) ? first : ""
+}
+
 export default function CmdK() {
   const [open, setOpen] = useState(false)
   const [query, setQuery] = useState("")
@@ -96,12 +105,14 @@ export default function CmdK() {
       const top = await Promise.all(res.results.slice(0, 10).map((r) => r.data()))
       if (cancelled) return
       setHits(
-        top.map((d) => ({
-          url: d.url,
-          title: d.meta?.title ?? d.url,
-          excerpt: d.excerpt,
-          type: d.filters?.type?.[0] ?? "page",
-        })),
+        top
+          .map((d) => ({
+            url: d.url,
+            title: d.meta?.title ?? d.url,
+            excerpt: d.excerpt,
+            type: normalizeType(d.filters?.type?.[0]),
+          }))
+          .filter((h) => h.type && VALID_URL.test(h.url)),
       )
       setLoading(false)
     }
@@ -300,10 +311,9 @@ const styles = `
   padding: 0;
 }
 .cmdk-results li a {
-  display: grid;
-  grid-template-columns: 76px 1fr;
-  grid-template-rows: auto auto;
-  gap: 4px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
   padding: 14px;
   border-radius: 8px;
   color: inherit;
@@ -314,13 +324,10 @@ const styles = `
 }
 .cmdk-type {
   font-family: ${FONT_MONO};
-  font-size: 11px;
+  font-size: 10px;
   color: #6B6B6B;
   text-transform: uppercase;
-  letter-spacing: 0.06em;
-  grid-column: 1;
-  grid-row: 1 / span 2;
-  align-self: center;
+  letter-spacing: 0.08em;
 }
 .cmdk-title {
   color: #EDEDED;

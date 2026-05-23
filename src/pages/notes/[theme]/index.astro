@@ -25,7 +25,7 @@ const formatDate = (date: Date) =>
   title={`Notes / ${theme.name}`}
   description={theme.description}
 >
-  <div class="container theme-page" data-pagefind-body data-pagefind-filter={`type:notes,theme:${theme.slug}`}>
+  <div class="container theme-page" data-pagefind-body data-pagefind-filter="type:notes">
     <header class="theme-page__head">
       <p class="theme-page__crumb"><a href="/notes">Notes</a></p>
       <h1>{theme.name}</h1>
