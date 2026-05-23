@@ -1,7 +1,7 @@
 import type { AstroComponentFactory } from "astro/runtime/server/index.js"
-import { BookOpen, Code2, Compass, Music, Wrench } from "lucide-astro"
+import { BookOpen, Code2, Compass, Wrench } from "lucide-astro"
 
-export type ThemeSlug = "engineering" | "career" | "books" | "music" | "uses"
+export type ThemeSlug = "engineering" | "career" | "books" | "uses"
 
 export type NoteTheme = {
   slug: ThemeSlug
@@ -33,13 +33,6 @@ export const NOTE_THEMES: NoteTheme[] = [
     description: "What I'm reading and what stuck.",
     icon: BookOpen,
     href: "/notes/books",
-  },
-  {
-    slug: "music",
-    name: "Music",
-    description: "Listening notes and writing soundtracks.",
-    icon: Music,
-    href: "/notes/music",
   },
   {
     slug: "uses",
