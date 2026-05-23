@@ -1,146 +1,232 @@
 ---
-import { Image } from "astro:assets"
-import { Icon } from "astro-icon/components"
-
-import HeaderLink from "./HeaderLink.astro"
-
-import logoEderChristian from "../../public/logo-eder-christian.svg"
+import CmdK from "./CmdK"
+import Logo from "./Logo.astro"
 
 const path = Astro.url.pathname
-const isPortuguese = path.startsWith("/pt")
-const isBlog = path.startsWith("/blog")
-const isCv = path.startsWith("/cv")
 
-type LocalePathMap = {
-  [key: string]: string
-}
+const navItems = [
+  { href: "/writing", label: "Writing", match: "/writing" },
+  { href: "/notes", label: "Notes", match: "/notes" },
+  { href: "/uses", label: "Uses", match: "/uses" },
+  { href: "/now", label: "Now", match: "/now" },
+  { href: "/about", label: "About", match: "/about" },
+  { href: "/cv", label: "CV", match: "/cv" },
+]
 
-function getLocalizedPath(
-  currentPath: string,
-  toPortuguese: boolean,
-  pathMap: LocalePathMap
-): string {
-  return toPortuguese
-    ? pathMap[currentPath] || "/pt/"
-    : pathMap[currentPath] || "/"
-}
-
-const pathMap: LocalePathMap = {
-  "/": "/pt/",
-  "/about": "/pt/sobre",
-  "/pt/": "/",
-  "/pt/sobre": "/about",
-}
+const isActive = (match: string) =>
+  match === "/" ? path === "/" : path === match || path.startsWith(`${match}/`)
 ---
 
-<header>
-  <nav>
-    <HeaderLink href={isPortuguese ? "/pt/" : "/"}>
-      <Image src={logoEderChristian} alt="Logo Eder Christian" />
-    </HeaderLink>
+<header class="site-header" data-scrolled="false">
+  <div class="site-header__inner">
+    <a href="/" class="site-header__logo" aria-label="Home">
+      <Logo size={22} />
+    </a>
 
-    <div class="nav-links">
-      <HeaderLink href="/cv">CV</HeaderLink>
-      <HeaderLink href="/blog">Blog</HeaderLink>
-      <HeaderLink href={isPortuguese ? "/pt/sobre" : "/about"}
-        >{isPortuguese ? "Sobre" : "About"}</HeaderLink
-      >
+    <nav class="site-header__nav" aria-label="Primary">
       {
-        !isBlog && !isCv ? (
-          <div class="switch-container">
-            <Icon
-              name="openmoji:flag-united-states"
-              size={28}
-              class={`flag flag-us ${!isPortuguese ? "active" : ""}`}
-            />
-            <a
-              href={getLocalizedPath(
-                path,
-                isPortuguese ? true : false,
-                pathMap
-              )}
-              class="language-switch"
-              aria-label={
-                isPortuguese ? "Switch to English" : "Mudar para Português"
-              }
-            >
-              <div class="switch">
-                <div class={`switch-slider ${isPortuguese ? "active" : ""}`} />
-              </div>
-            </a>
-            <Icon
-              name="openmoji:flag-brazil"
-              size={30}
-              class={`flag flag-br ${isPortuguese ? "active" : ""}`}
-            />
-          </div>
-        ) : null
+        navItems.map((item) => (
+          <a
+            href={item.href}
+            class:list={["site-header__link", { "is-active": isActive(item.match) }]}
+          >
+            {item.label}
+          </a>
+        ))
       }
+    </nav>
+
+    <div class="site-header__actions">
+      <CmdK client:load />
+      <button class="site-header__menu" aria-label="Open menu" data-mobile-menu-trigger>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <line x1="4" y1="8" x2="20" y2="8" />
+          <line x1="4" y1="16" x2="20" y2="16" />
+        </svg>
+      </button>
     </div>
-  </nav>
+  </div>
 </header>
+
+<div class="mobile-menu" data-mobile-menu hidden>
+  <button class="mobile-menu__close" aria-label="Close menu" data-mobile-menu-close>
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+      <line x1="6" y1="6" x2="18" y2="18" />
+      <line x1="18" y1="6" x2="6" y2="18" />
+    </svg>
+  </button>
+  <nav class="mobile-menu__nav" aria-label="Mobile">
+    {
+      navItems.map((item) => (
+        <a
+          href={item.href}
+          class:list={["mobile-menu__link", { "is-active": isActive(item.match) }]}
+        >
+          {item.label}
+        </a>
+      ))
+    }
+  </nav>
+</div>
+
 <style>
-  .nav-links {
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    width: 100%;
+    background: transparent;
+    transition: background 200ms ease, border-color 200ms ease;
+    border-bottom: 1px solid transparent;
+  }
+
+  .site-header[data-scrolled="true"] {
+    background: rgba(18, 18, 18, 0.72);
+    backdrop-filter: saturate(180%) blur(12px);
+    -webkit-backdrop-filter: saturate(180%) blur(12px);
+    border-bottom-color: var(--border-subtle);
+  }
+
+  .site-header__inner {
+    max-width: var(--content-width);
+    margin: 0 auto;
+    padding: 16px 24px;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
-    gap: 12px;
-    min-width: 70px;
+    justify-content: space-between;
+    gap: 16px;
   }
-  .nav-links a {
+
+  .site-header__logo {
+    display: inline-flex;
+    align-items: center;
+    color: var(--text-primary);
+  }
+
+  .site-header__nav {
+    display: flex;
+    gap: 2px;
+    align-items: center;
+  }
+
+  .site-header__link {
+    color: var(--text-secondary);
+    font-size: 14px;
+    font-weight: 400;
+    padding: 6px 10px;
+    border-radius: 4px;
+    transition: color 200ms ease;
     text-decoration: none;
-    padding: 1em 0.5em;
-    color: var(--white-primary);
-    border-bottom: 2px solid transparent;
-    text-decoration: none;
-  }
-  .nav-links--i11n {
-    margin-top: 0.4em;
   }
 
-  .switch-container {
+  .site-header__link:hover {
+    color: var(--text-primary);
+  }
+
+  .site-header__link.is-active {
+    color: var(--text-primary);
+  }
+
+  .site-header__actions {
     display: flex;
     align-items: center;
-    margin-left: 10px;
+    gap: 8px;
   }
 
-  .language-switch {
-    display: flex;
-    align-items: center;
-  }
-
-  .flag {
-    opacity: 0.5;
-    transition: opacity 0.2s ease;
-  }
-
-  .flag.active {
-    opacity: 1;
-  }
-
-  .switch {
-    position: relative;
-    width: 44px;
-    height: 22px;
-    background-color: rgba(255, 255, 255, 0.2);
-    border-radius: 12px;
+  .site-header__menu {
+    display: none;
+    background: transparent;
+    border: 1px solid var(--border-subtle);
+    color: var(--text-primary);
+    border-radius: 4px;
+    padding: 6px;
     cursor: pointer;
-    transition: background-color 0.2s ease;
   }
 
-  .switch-slider {
-    position: absolute;
-    top: 2px;
-    left: 2px;
-    width: 18px;
-    height: 18px;
-    background-color: var(--green-brand);
-    border-radius: 50%;
-    transition: transform 0.2s ease;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  @media (max-width: 720px) {
+    .site-header__nav {
+      display: none;
+    }
+    .site-header__menu {
+      display: inline-flex;
+    }
   }
 
-  .switch-slider.active {
-    transform: translateX(20px);
+  .mobile-menu {
+    position: fixed;
+    inset: 0;
+    z-index: 80;
+    background: var(--bg);
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+  }
+  .mobile-menu[hidden] {
+    display: none;
+  }
+  .mobile-menu__close {
+    align-self: flex-end;
+    background: transparent;
+    border: 1px solid var(--border-subtle);
+    color: var(--text-primary);
+    border-radius: 4px;
+    padding: 6px;
+    cursor: pointer;
+  }
+  .mobile-menu__nav {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 48px;
+  }
+  .mobile-menu__link {
+    color: var(--text-primary);
+    font-family: var(--font-serif);
+    font-size: 32px;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--border-subtle);
+  }
+  .mobile-menu__link.is-active {
+    color: var(--accent);
   }
 </style>
+
+<script>
+  function bindScroll() {
+    const header = document.querySelector<HTMLElement>(".site-header")
+    if (!header) return
+    const onScroll = () => {
+      header.dataset.scrolled = window.scrollY > 12 ? "true" : "false"
+    }
+    onScroll()
+    window.addEventListener("scroll", onScroll, { passive: true })
+  }
+
+  function bindMobileMenu() {
+    const trigger = document.querySelector<HTMLButtonElement>("[data-mobile-menu-trigger]")
+    const close = document.querySelector<HTMLButtonElement>("[data-mobile-menu-close]")
+    const menu = document.querySelector<HTMLDivElement>("[data-mobile-menu]")
+    if (!trigger || !close || !menu) return
+    const open = () => {
+      menu.hidden = false
+      document.body.style.overflow = "hidden"
+    }
+    const shut = () => {
+      menu.hidden = true
+      document.body.style.overflow = ""
+    }
+    trigger.addEventListener("click", open)
+    close.addEventListener("click", shut)
+    menu.querySelectorAll("a").forEach((a) => a.addEventListener("click", shut))
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") shut()
+    })
+  }
+
+  bindScroll()
+  bindMobileMenu()
+  document.addEventListener("astro:after-swap", () => {
+    bindScroll()
+    bindMobileMenu()
+  })
+</script>

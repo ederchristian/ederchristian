@@ -1,0 +1,18 @@
+---
+import { Image } from "astro:assets"
+import logoEderChristian from "../../public/logo-eder-christian.svg"
+
+interface Props {
+  size?: number
+}
+
+const { size = 24 } = Astro.props
+---
+
+<Image
+  src={logoEderChristian}
+  alt="Eder Christian"
+  width={size}
+  height={size}
+  loading="eager"
+/>

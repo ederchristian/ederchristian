@@ -1,0 +1,72 @@
+---
+import Pagination from "../../../components/Pagination.astro"
+import WritingList from "../../../components/WritingList.astro"
+import PageLayout from "../../../layouts/PageLayout.astro"
+import { getAllWriting, type WritingEntry } from "../../../lib/content"
+
+export async function getStaticPaths() {
+  const POSTS_PER_PAGE = 10
+  const all = await getAllWriting()
+  const total = Math.max(1, Math.ceil(all.length / POSTS_PER_PAGE))
+  return Array.from({ length: total }, (_, i) => i + 1)
+    .filter((page) => page > 1)
+    .map((page) => {
+      const start = (page - 1) * POSTS_PER_PAGE
+      return {
+        params: { page: String(page) },
+        props: {
+          page,
+          total,
+          posts: all.slice(start, start + POSTS_PER_PAGE),
+        },
+      }
+    })
+}
+
+interface Props {
+  page: number
+  total: number
+  posts: WritingEntry[]
+}
+
+const { page, total, posts } = Astro.props as Props
+---
+
+<PageLayout
+  title={`Writing · page ${page}`}
+  description="Long-form essays on building a career from outside the bubble, frontend craft, and the road from Brazil to the US."
+>
+  <div class="container writing" data-pagefind-body>
+    <header class="writing__head">
+      <h1>Writing</h1>
+      <p>Essays. Long-form. Honest.</p>
+    </header>
+
+    <WritingList posts={posts} fromPage={page} />
+
+    <Pagination current={page} total={total} />
+  </div>
+</PageLayout>
+
+<style>
+  .writing {
+    padding-top: 64px;
+    padding-bottom: 32px;
+  }
+  .writing__head {
+    margin: 0 0 48px;
+  }
+  .writing__head h1 {
+    font-family: var(--font-serif);
+    font-size: var(--fs-h1);
+    font-weight: 400;
+    color: var(--text-primary);
+    margin: 0 0 8px;
+    line-height: var(--lh-heading);
+  }
+  .writing__head p {
+    color: var(--text-secondary);
+    margin: 0;
+    font-size: var(--fs-body);
+  }
+</style>

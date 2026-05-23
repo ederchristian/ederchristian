@@ -1,0 +1,99 @@
+---
+import { NEWSLETTER_URL } from "../consts"
+
+interface Props {
+  variant?: "inline" | "card"
+}
+
+const { variant = "inline" } = Astro.props
+---
+
+<form
+  class:list={["newsletter", variant === "card" ? "newsletter--card" : "newsletter--inline"]}
+  action={NEWSLETTER_URL}
+  method="get"
+  target="_blank"
+  rel="noopener"
+>
+  {
+    variant === "card" ? (
+      <div class="newsletter__copy">
+        <h3>Inner Commit</h3>
+        <p>Short, honest notes on building a global career from outside the bubble. One email a week.</p>
+      </div>
+    ) : null
+  }
+  <div class="newsletter__row">
+    <input
+      type="email"
+      name="email"
+      required
+      placeholder="you@domain.com"
+      aria-label="Email address"
+    />
+    <button type="submit">Join Inner Commit</button>
+  </div>
+  <p class="newsletter__hint">You'll confirm on Substack. No spam, unsubscribe anytime.</p>
+</form>
+
+<style>
+  .newsletter__row {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .newsletter input {
+    flex: 1;
+    min-width: 220px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: #EDEDED;
+    padding: 10px 14px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-family: inherit;
+    transition: border-color 200ms ease;
+  }
+  .newsletter input:focus {
+    outline: none;
+    border-color: #00D59F;
+  }
+  .newsletter button {
+    background: #00D59F;
+    color: #121212;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: inherit;
+    cursor: pointer;
+    transition: transform 150ms ease, background 200ms ease;
+  }
+  .newsletter button:hover {
+    background: #00e2a9;
+  }
+  .newsletter__hint {
+    margin: 8px 0 0;
+    font-size: 12px;
+    color: #5C5C5C;
+  }
+  .newsletter--card {
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    padding: 24px;
+    background: rgba(255, 255, 255, 0.02);
+  }
+  .newsletter__copy h3 {
+    margin: 0 0 8px;
+    color: #EDEDED;
+    font-size: 18px;
+    font-weight: 500;
+  }
+  .newsletter__copy p {
+    margin: 0 0 16px;
+    color: #8F8F8F;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+</style>

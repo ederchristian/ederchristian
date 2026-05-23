@@ -1,89 +1,112 @@
 ---
 import { Icon } from "astro-icon/components"
 
-const today = new Date()
+const year = new Date().getFullYear()
 
-const defaultUsername = "ederchristian"
+const social: { href: string; label: string; icon?: string; render?: "x"; id?: string; dataUser?: string; dataDomain?: string }[] = [
+  { href: "https://x.com/ederchristian", label: "X", render: "x" },
+  { href: "https://github.com/ederchristian", label: "GitHub", icon: "mdi:github" },
+  { href: "https://linkedin.com/in/ederchristian92", label: "LinkedIn", icon: "mdi:linkedin" },
+  { href: "https://instagram.com/ederchristian", label: "Instagram", icon: "mdi:instagram" },
+  { href: "https://youtube.com/@ederchristian", label: "YouTube", icon: "mdi:youtube" },
+  { href: "#", label: "Email", icon: "mdi:email-outline", id: "footer-email", dataUser: "me", dataDomain: "ederchristian.com" },
+  { href: "/rss.xml", label: "RSS", icon: "mdi:rss" },
+]
 ---
 
-<footer>
-  <div class="footer-container">
-    <div class="footer-container--wrapper">
-      <span style="padding-bottom: 2em;">
-        &copy; {today.getFullYear()} Eder Christian. All rights reserved.
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <div class="site-footer__row">
+      <span class="site-footer__copy">
+        © {year} Eder Christian · Operated by <a href="https://whey.dev" target="_blank" rel="noopener noreferrer">WheyDev LLC</a>
       </span>
-      <span>AVANTI CODER LTDA | 44.271.549/0001-96</span>
-      <span>Av. Engenheiro Luís Carlos Berrini, 1748 - Conjunto 1710</span>
-      <span>Cidade Monções, São Paulo - SP</span>
-      <span>CEP: 04571-000</span>
-      <div class="social-links">
-        <a
-          href={`https://youtube.com/@${defaultUsername}`}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Icon name="mdi:youtube" size={22} />
-        </a>
-        <a
-          href={`https://instagram.com/${defaultUsername}`}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Icon name="mdi:instagram" size={22} />
-        </a>
-        <a
-          href={`https://x.com/${defaultUsername}`}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Icon name="pajamas:twitter" size={22} />
-        </a>
-        <a
-          href={`https://github.com/${defaultUsername}`}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Icon name="pajamas:github" size={22} />
-        </a>
-        <a
-          href="mailto:ederchristian92+website@gmail.com"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <Icon name="mdi:email-outline" size={22} />
-        </a>
-      </div>
+      <ul class="site-footer__social" aria-label="Social links">
+        {
+          social.map((item) => (
+            <li>
+              <a
+                href={item.href}
+                target={item.href.startsWith("http") ? "_blank" : "_self"}
+                rel="noopener noreferrer"
+                aria-label={item.label}
+                title={item.label}
+                id={item.id}
+                data-user={item.dataUser}
+                data-domain={item.dataDomain}
+              >
+                {
+                  item.render === "x" ? (
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                    </svg>
+                  ) : (
+                    <Icon name={item.icon!} size={18} />
+                  )
+                }
+              </a>
+            </li>
+          ))
+        }
+      </ul>
     </div>
   </div>
 </footer>
+
+<script>
+  function wireFooterEmail() {
+    const link = document.getElementById("footer-email") as HTMLAnchorElement | null
+    if (!link) return
+    const user = link.dataset.user
+    const domain = link.dataset.domain
+    if (!user || !domain) return
+    link.setAttribute("href", `mailto:${user}@${domain}`)
+  }
+  wireFooterEmail()
+  document.addEventListener("astro:after-swap", wireFooterEmail)
+</script>
+
 <style>
-  footer {
+  .site-footer {
     width: 100%;
-    padding: 0 1em;
-    box-sizing: border-box;
+    border-top: 1px solid var(--border-subtle);
+    margin-top: 96px;
   }
-  .footer-container {
-    max-width: 720px;
-    margin: 64px auto 0;
-    font-size: 12px;
-    padding-bottom: 4em;
+  .site-footer__inner {
+    max-width: var(--content-width);
+    margin: 0 auto;
+    padding: 32px 24px 48px;
   }
-  .footer-container--wrapper {
+  .site-footer__row {
     display: flex;
-    flex-direction: column;
-    border-top: 1px solid rgb(var(--gray-light));
-    padding: 8em 0 4em;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    flex-wrap: wrap;
   }
-  .social-links {
+  .site-footer__copy {
+    font-size: var(--fs-meta);
+    color: var(--text-secondary);
+  }
+  .site-footer__copy a {
+    color: var(--text-secondary);
+  }
+  .site-footer__copy a:hover {
+    color: var(--accent);
+  }
+  .site-footer__social {
+    list-style: none;
+    margin: 0;
+    padding: 0;
     display: flex;
-    gap: 1em;
-    margin-top: 2em;
+    gap: 16px;
+    align-items: center;
   }
-  .social-links a {
-    text-decoration: none;
-    color: var(--white-secondary);
+  .site-footer__social a {
+    display: inline-flex;
+    align-items: center;
+    color: var(--text-secondary);
   }
-  .social-links a:hover {
-    color: var(--white-primary);
+  .site-footer__social a:hover {
+    color: var(--accent);
   }
 </style>

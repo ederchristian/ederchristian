@@ -1,0 +1,50 @@
+---
+import { ArrowLeft } from "lucide-astro"
+
+interface Props {
+  href: string
+  label: string
+}
+
+const { href, label } = Astro.props
+---
+
+<div class="back-link-wrapper">
+  <a id="back-link" href={href} class="back-link" data-back-label={label}>
+    <ArrowLeft size={14} />
+    <span>{label}</span>
+  </a>
+</div>
+
+<style>
+  .back-link-wrapper {
+    margin-bottom: 24px;
+  }
+  .back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: var(--fs-meta);
+    color: var(--text-secondary);
+    padding: 4px 0;
+    transition: color 200ms ease;
+  }
+  .back-link:hover {
+    color: var(--accent);
+  }
+</style>
+
+<script>
+  function wireBackLink() {
+    const link = document.getElementById("back-link") as HTMLAnchorElement | null
+    if (!link) return
+    const base = link.getAttribute("href") ?? "/writing"
+    const params = new URLSearchParams(window.location.search)
+    const fromPage = params.get("fromPage")
+    if (fromPage && fromPage !== "1") {
+      link.setAttribute("href", `${base}/page/${fromPage}`)
+    }
+  }
+  wireBackLink()
+  document.addEventListener("astro:after-swap", wireBackLink)
+</script>

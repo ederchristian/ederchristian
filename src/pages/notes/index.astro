@@ -1,0 +1,143 @@
+---
+import NotesNav from "../../components/NotesNav.astro"
+import PageHeader from "../../components/PageHeader.astro"
+import PageLayout from "../../layouts/PageLayout.astro"
+import { getNotes } from "../../lib/content"
+import { NOTE_THEMES } from "../../lib/themes"
+
+const notes = await getNotes()
+const themeData = NOTE_THEMES.filter((t) => t.slug !== "uses").map((theme) => {
+  const themeNotes = notes.filter((n) => n.data.theme === theme.slug)
+  const lastUpdated = themeNotes
+    .map((n) => new Date(n.data.updatedDate ?? n.data.date).getTime())
+    .reduce((acc, t) => Math.max(acc, t), 0)
+  return {
+    theme,
+    notes: themeNotes,
+    lastUpdated: lastUpdated > 0 ? new Date(lastUpdated) : null,
+  }
+})
+
+const formatDate = (date: Date) =>
+  date.toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric" })
+---
+
+<PageLayout
+  title="Notes"
+  description="My public second brain. Notes that grow over time."
+>
+  <div class="container notes-page">
+    <PageHeader title="Notes" subtitle="My public second brain. Notes that grow over time." />
+
+    <NotesNav />
+
+    <div class="theme-list">
+      {
+        themeData.map(({ theme, notes: tnotes, lastUpdated }) => {
+          const Icon = theme.icon
+          const recentTitles = tnotes.slice(0, 3)
+          return (
+            <article class="theme-row">
+              <header class="theme-row__head">
+                <a href={theme.href} class="theme-row__title">
+                  <Icon size={18} />
+                  <h2>{theme.name}</h2>
+                </a>
+                <span class="theme-row__meta">
+                  {tnotes.length} {tnotes.length === 1 ? "note" : "notes"}
+                  {lastUpdated ? <> · updated {formatDate(lastUpdated)}</> : null}
+                </span>
+              </header>
+              <p class="theme-row__desc">{theme.description}</p>
+              {
+                recentTitles.length > 0 ? (
+                  <ul class="theme-row__recent">
+                    {recentTitles.map((n) => (
+                      <li>
+                        <a href={`/notes/${theme.slug}/${n.slug}`}>{n.data.title}</a>
+                      </li>
+                    ))}
+                  </ul>
+                ) : (
+                  <p class="theme-row__empty">No notes yet.</p>
+                )
+              }
+            </article>
+          )
+        })
+      }
+    </div>
+  </div>
+</PageLayout>
+
+<style>
+  .notes-page {
+    padding-top: 64px;
+    padding-bottom: 32px;
+  }
+  .theme-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .theme-row {
+    border: 1px solid var(--border-subtle);
+    border-radius: 12px;
+    padding: 20px;
+    transition: border-color 200ms ease;
+  }
+  .theme-row:hover {
+    border-color: var(--border-emphasis);
+  }
+  .theme-row__head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .theme-row__title {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .theme-row__title h2 {
+    margin: 0;
+    color: var(--text-primary);
+    font-size: var(--fs-h3);
+    font-weight: 500;
+  }
+  .theme-row__title:hover h2 {
+    color: var(--accent);
+  }
+  .theme-row__meta {
+    color: var(--text-tertiary);
+    font-size: var(--fs-eyebrow);
+    font-family: var(--font-mono);
+  }
+  .theme-row__desc {
+    color: var(--text-secondary);
+    font-size: var(--fs-meta);
+    line-height: var(--lh-base);
+    margin: 10px 0 14px;
+  }
+  .theme-row__recent {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .theme-row__recent a {
+    color: var(--text-primary);
+    font-size: var(--fs-meta);
+  }
+  .theme-row__recent a:hover {
+    color: var(--accent);
+  }
+  .theme-row__empty {
+    color: var(--text-tertiary);
+    font-size: var(--fs-meta);
+    margin: 0;
+  }
+</style>

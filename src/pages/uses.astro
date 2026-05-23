@@ -1,0 +1,147 @@
+---
+import PageHeader from "../components/PageHeader.astro"
+import PageLayout from "../layouts/PageLayout.astro"
+
+const sections: { title: string; items: { name: string; href?: string; desc: string }[] }[] = [
+  {
+    title: "Hardware",
+    items: [
+      { name: "MacBook Pro", href: "https://www.apple.com/macbook-pro/", desc: "M4 Pro personal, M1 Pro from work." },
+      { name: "Apple Magic Keyboard", href: "https://www.apple.com/shop/buy-mac/magic-keyboard", desc: "Main input." },
+      { name: "Apple Magic Trackpad", href: "https://www.apple.com/shop/buy-mac/magic-trackpad", desc: "Gestures over a mouse." },
+      { name: "EarPods and AirPods Pro", href: "https://www.apple.com/airpods-pro/", desc: "Wired for focus, Pros for everything else." },
+    ],
+  },
+  {
+    title: "Editor and terminal",
+    items: [
+      { name: "Zed", href: "https://zed.dev", desc: "Primary editor." },
+      { name: "Cursor", href: "https://cursor.com", desc: "Secondary. Almost never open it." },
+      { name: "Ghostty", href: "https://ghostty.org", desc: "Terminal." },
+      { name: "Dracula Pro", href: "https://draculatheme.com/pro", desc: "Theme across editor and terminal." },
+    ],
+  },
+  {
+    title: "Dev tools",
+    items: [
+      { name: "Claude Code", href: "https://claude.com/claude-code", desc: "Pair programming on almost everything." },
+    ],
+  },
+  {
+    title: "Apps I live in",
+    items: [
+      { name: "1Password", href: "https://1password.com", desc: "Vault for everything. Always on." },
+      { name: "Apple Notes", desc: "Main notes app. Quick capture." },
+      { name: "Notion", href: "https://notion.so", desc: "Documentation and long-form planning." },
+      { name: "Obsidian", href: "https://obsidian.md", desc: "Sometimes, for connected notes." },
+      { name: "Raycast", href: "https://raycast.com", desc: "Launcher, clipboard, snippets." },
+      { name: "Rectangle", href: "https://rectangleapp.com", desc: "Window snapping via keyboard." },
+      { name: "NordVPN", href: "https://nordvpn.com", desc: "On for public Wi-Fi." },
+    ],
+  },
+  {
+    title: "Communication",
+    items: [
+      { name: "Slack", href: "https://slack.com", desc: "Day-to-day at work." },
+      { name: "Zoom", href: "https://zoom.us", desc: "Meetings." },
+      { name: "Google Meet", href: "https://meet.google.com", desc: "Meetings." },
+    ],
+  },
+  {
+    title: "Design",
+    items: [
+      { name: "Figma", href: "https://figma.com", desc: "Mainly at work." },
+    ],
+  },
+  {
+    title: "Audio and video",
+    items: [
+      { name: "Apple Music", href: "https://www.apple.com/apple-music/", desc: "Sync across Apple wins it for me." },
+      { name: "Final Cut Pro", href: "https://www.apple.com/final-cut-pro/", desc: "Long-form video edits." },
+      { name: "CleanShot X", href: "https://cleanshot.com", desc: "Screenshots and quick recordings." },
+      { name: "Screen Studio", href: "https://screen.studio", desc: "Polished recordings and presentations." },
+      { name: "OBS", href: "https://obsproject.com", desc: "Recordings and live streams." },
+    ],
+  },
+  {
+    title: "Browser",
+    items: [
+      { name: "Brave", href: "https://brave.com", desc: "Primary." },
+      { name: "Safari", href: "https://www.apple.com/safari/", desc: "Secondary." },
+    ],
+  },
+]
+---
+
+<PageLayout title="Uses" description="Hardware, editor, terminal, CLI, apps, audio, browser. Updated as I rotate tools.">
+  <div class="container uses">
+    <PageHeader title="Uses" subtitle="What I use day to day. Updated when something changes." />
+    {
+      sections.map((section) => (
+        <section class="uses-section">
+          <h2>{section.title}</h2>
+          <ul class="uses-list">
+            {section.items.map((item) => (
+              <li>
+                <span class="uses-list__name">
+                  {item.href ? (
+                    <a href={item.href} target="_blank" rel="noopener noreferrer">
+                      {item.name}
+                    </a>
+                  ) : (
+                    item.name
+                  )}
+                </span>
+                <span class="uses-list__desc">{item.desc}</span>
+              </li>
+            ))}
+          </ul>
+        </section>
+      ))
+    }
+  </div>
+</PageLayout>
+
+<style>
+  .uses {
+    padding-top: 64px;
+    padding-bottom: 32px;
+  }
+  .uses-section {
+    margin-bottom: 40px;
+  }
+  .uses-section h2 {
+    font-size: var(--fs-h3);
+    font-weight: 500;
+    color: var(--text-primary);
+    margin: 0 0 12px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border-subtle);
+  }
+  .uses-list {
+    list-style: none;
+    padding: 0;
+  }
+  .uses-list li {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 16px;
+    padding: 8px 0;
+    align-items: baseline;
+  }
+  .uses-list__name {
+    color: var(--text-primary);
+    font-weight: 500;
+    font-size: var(--fs-body);
+  }
+  .uses-list__name a:hover {
+    color: var(--accent);
+  }
+  .uses-list__desc {
+    color: var(--text-secondary);
+    font-size: var(--fs-body);
+  }
+  @media (max-width: 560px) {
+    .uses-list li { grid-template-columns: 1fr; gap: 4px; }
+  }
+</style>

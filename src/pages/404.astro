@@ -1,0 +1,248 @@
+---
+import { ArrowRight } from "lucide-astro"
+import PageLayout from "../layouts/PageLayout.astro"
+
+const wayfinding = [
+  { href: "/", label: "Home", hint: "Start over from the top" },
+  { href: "/writing", label: "Writing", hint: "Essays and posts" },
+  { href: "/notes", label: "Notes", hint: "A public second brain" },
+  { href: "/now", label: "Now", hint: "What I'm focused on right now" },
+]
+---
+
+<PageLayout
+  title="Page not found"
+  description="This page does not exist on ederchristian.com."
+  titleTag="404 — Page not found | Eder Christian"
+  noIndex={true}
+>
+  <section class="notfound container">
+    <p class="notfound__status">
+      <span class="notfound__dot" aria-hidden="true"></span>
+      Error · 404
+    </p>
+
+    <h1 class="notfound__code" aria-hidden="true">404</h1>
+    <h2 class="notfound__title">Page not found.</h2>
+
+    <p class="notfound__body">
+      The URL might be wrong, the post might have moved, or it was never here. Below are a few places worth landing on instead.
+    </p>
+
+    <a class="notfound__home" href="/">
+      Back to home <ArrowRight size={14} />
+    </a>
+  </section>
+
+  <section class="container notfound__section">
+    <header class="notfound__head">
+      <h3>Wayfinding</h3>
+      <span class="notfound__head-sub">four good places to start</span>
+    </header>
+    <ul class="notfound__list">
+      {
+        wayfinding.map((item) => (
+          <li>
+            <a href={item.href}>
+              <span class="notfound__list-label">{item.label}</span>
+              <span class="notfound__list-hint">{item.hint}</span>
+              <ArrowRight size={14} class="notfound__list-arrow" />
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+
+  <section class="container notfound__foot">
+    <p>
+      If a link on this site sent you here, <a
+        id="notfound-email"
+        href="#"
+        data-user="me"
+        data-domain="ederchristian.com"
+        aria-label="Email address (revealed on click)"
+      ><span class="email-text">email me <span class="email-sep">[at]</span> ederchristian <span class="email-sep">[dot]</span> com</span></a> so I can fix it.
+    </p>
+  </section>
+
+  <script>
+    function wireEmail() {
+      const link = document.getElementById("notfound-email") as HTMLAnchorElement | null
+      if (!link) return
+      const user = link.dataset.user
+      const domain = link.dataset.domain
+      if (!user || !domain) return
+      const address = `${user}@${domain}`
+      link.setAttribute("href", `mailto:${address}`)
+      const reveal = () => {
+        const text = link.querySelector(".email-text")
+        if (text) text.textContent = address
+      }
+      link.addEventListener("mouseenter", reveal, { once: true })
+      link.addEventListener("focus", reveal, { once: true })
+      link.addEventListener("click", reveal, { once: true })
+    }
+    wireEmail()
+    document.addEventListener("astro:after-swap", wireEmail)
+  </script>
+</PageLayout>
+
+<style>
+  .notfound {
+    padding-top: 80px;
+    padding-bottom: 24px;
+    position: relative;
+  }
+  .notfound__status {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--font-mono);
+    font-size: var(--fs-eyebrow);
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-wide);
+    color: var(--text-tertiary);
+    margin: 0 0 32px;
+  }
+  .notfound__dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 999px;
+    background: var(--accent);
+    box-shadow: 0 0 0 4px rgba(0, 213, 159, 0.12);
+  }
+  .notfound__code {
+    font-family: var(--font-serif);
+    font-weight: 400;
+    font-size: 160px;
+    line-height: 0.95;
+    color: var(--text-primary);
+    margin: 0 0 16px;
+    letter-spacing: -0.02em;
+  }
+  .notfound__title {
+    font-family: var(--font-serif);
+    font-size: var(--fs-h1);
+    font-weight: 400;
+    color: var(--text-primary);
+    margin: 0 0 16px;
+    line-height: var(--lh-heading);
+  }
+  .notfound__body {
+    font-size: var(--fs-lede);
+    line-height: var(--lh-base);
+    color: var(--text-secondary);
+    margin: 0 0 32px;
+    max-width: 540px;
+  }
+  .notfound__home {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--accent);
+    font-size: var(--fs-meta);
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-wide);
+  }
+  .notfound__home:hover {
+    color: var(--accent);
+    transform: translateX(2px);
+  }
+
+  .notfound__section {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    border-top: 1px solid var(--border-subtle);
+    margin-top: 40px;
+  }
+  .notfound__head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 0 0 24px;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .notfound__head h3 {
+    font-size: var(--fs-h2);
+    font-weight: 500;
+    color: var(--text-primary);
+    margin: 0;
+  }
+  .notfound__head-sub {
+    color: var(--text-tertiary);
+    font-size: var(--fs-meta);
+  }
+  .notfound__list {
+    list-style: none;
+    padding: 0;
+  }
+  .notfound__list li + li {
+    border-top: 1px solid var(--border-subtle);
+  }
+  .notfound__list a {
+    display: grid;
+    grid-template-columns: 140px 1fr auto;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 0;
+    color: var(--text-primary);
+  }
+  .notfound__list-label {
+    color: var(--text-primary);
+    font-size: var(--fs-body);
+    font-weight: 500;
+    transition: color 200ms ease;
+  }
+  .notfound__list-hint {
+    color: var(--text-tertiary);
+    font-size: var(--fs-meta);
+  }
+  .notfound__list-arrow {
+    color: var(--text-tertiary);
+    transition: transform 200ms ease, color 200ms ease;
+  }
+  .notfound__list a:hover .notfound__list-label,
+  .notfound__list a:hover .notfound__list-arrow {
+    color: var(--accent);
+  }
+  .notfound__list a:hover .notfound__list-arrow {
+    transform: translateX(3px);
+  }
+
+  .notfound__foot {
+    padding-top: 24px;
+    padding-bottom: 56px;
+    border-top: 1px solid var(--border-subtle);
+    color: var(--text-tertiary);
+    font-size: var(--fs-meta);
+  }
+  .notfound__foot p {
+    margin: 0;
+  }
+  .notfound__foot a {
+    color: var(--text-secondary);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  .notfound__foot a:hover {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+  }
+  .email-sep {
+    color: var(--text-tertiary);
+  }
+
+  @media (max-width: 720px) {
+    .notfound { padding-top: 48px; }
+    .notfound__code { font-size: 104px; }
+    .notfound__list a {
+      grid-template-columns: 1fr auto;
+      row-gap: 4px;
+    }
+    .notfound__list-hint {
+      grid-column: 1 / -1;
+    }
+  }
+</style>

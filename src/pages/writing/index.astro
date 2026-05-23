@@ -1,0 +1,33 @@
+---
+import PageHeader from "../../components/PageHeader.astro"
+import Pagination from "../../components/Pagination.astro"
+import WritingList from "../../components/WritingList.astro"
+import PageLayout from "../../layouts/PageLayout.astro"
+import { getAllWriting } from "../../lib/content"
+
+const POSTS_PER_PAGE = 10
+
+const all = await getAllWriting()
+const totalPages = Math.max(1, Math.ceil(all.length / POSTS_PER_PAGE))
+const posts = all.slice(0, POSTS_PER_PAGE)
+---
+
+<PageLayout
+  title="Writing"
+  description="Essays on building a career from outside the bubble, frontend craft, and the road from Brazil to the US."
+>
+  <div class="container writing" data-pagefind-body>
+    <PageHeader title="Writing" subtitle="Essays. Honest. Sometimes long." />
+
+    <WritingList posts={posts} fromPage={1} />
+
+    <Pagination current={1} total={totalPages} />
+  </div>
+</PageLayout>
+
+<style>
+  .writing {
+    padding-top: 64px;
+    padding-bottom: 32px;
+  }
+</style>

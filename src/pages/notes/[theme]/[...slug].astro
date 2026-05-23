@@ -1,0 +1,159 @@
+---
+import { type CollectionEntry, getCollection } from "astro:content"
+import NotesNav from "../../../components/NotesNav.astro"
+import PageLayout from "../../../layouts/PageLayout.astro"
+import { getBacklinksFor } from "../../../lib/backlinks"
+import { getThemeBySlug } from "../../../lib/themes"
+
+export async function getStaticPaths() {
+  const notes = await getCollection("notes")
+  return notes.map((note) => ({
+    params: { theme: note.data.theme, slug: note.slug },
+    props: { note },
+  }))
+}
+
+type Props = { note: CollectionEntry<"notes"> }
+const { note } = Astro.props as Props
+const theme = getThemeBySlug(note.data.theme)
+const { Content } = await note.render()
+const backlinks = await getBacklinksFor(note.slug)
+
+const formatDate = (date: Date) =>
+  date.toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })
+---
+
+<PageLayout title={note.data.title} description={note.data.description}>
+  <article
+    class="container note"
+    data-pagefind-body
+    data-pagefind-filter="type:notes"
+  >
+    <NotesNav activeTheme={note.data.theme} />
+
+    <header class="note__head">
+      <p class="note__crumb">
+        <a href="/notes">Notes</a>
+        <span aria-hidden="true">/</span>
+        {theme ? <a href={`/notes/${theme.slug}`}>{theme.name}</a> : null}
+      </p>
+      <div class="note__title-row">
+        <h1>{note.data.title}</h1>
+        {theme ? <span class="note__pill">{theme.name}</span> : null}
+      </div>
+      <p class="note__meta">
+        <time>{formatDate(new Date(note.data.date))}</time>
+        {note.data.updatedDate ? <> · updated {formatDate(new Date(note.data.updatedDate))}</> : null}
+      </p>
+    </header>
+
+    <div class="prose">
+      <Content />
+    </div>
+
+    {
+      backlinks.length > 0 ? (
+        <aside class="note__backlinks">
+          <h2>Linked notes</h2>
+          <ul>
+            {backlinks.map((b) => (
+              <li>
+                <a href={b.href}>{b.fromTitle}</a>
+                <span class="note__backlinks-type">{b.collection}</span>
+              </li>
+            ))}
+          </ul>
+        </aside>
+      ) : null
+    }
+  </article>
+</PageLayout>
+
+<style>
+  .note {
+    padding-top: 56px;
+    padding-bottom: 32px;
+  }
+  .note__crumb {
+    font-family: var(--font-mono);
+    font-size: var(--fs-eyebrow);
+    color: var(--text-tertiary);
+    margin: 0 0 12px;
+    display: flex;
+    gap: 6px;
+    align-items: center;
+  }
+  .note__crumb a {
+    color: var(--text-secondary);
+  }
+  .note__crumb a:hover {
+    color: var(--accent);
+  }
+  .note__title-row {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin: 0 0 8px;
+  }
+  .note__title-row h1 {
+    font-family: var(--font-serif);
+    font-size: var(--fs-h1);
+    font-weight: 400;
+    line-height: var(--lh-heading);
+    color: var(--text-primary);
+    margin: 0;
+  }
+  .note__pill {
+    display: inline-flex;
+    align-items: center;
+    font-size: var(--fs-tiny);
+    font-family: var(--font-mono);
+    color: var(--accent);
+    border: 1px solid rgba(0, 213, 159, 0.4);
+    border-radius: 999px;
+    padding: 2px 8px;
+  }
+  .note__meta {
+    font-family: var(--font-mono);
+    font-size: var(--fs-eyebrow);
+    color: var(--text-tertiary);
+    margin: 0 0 32px;
+  }
+  .note__backlinks {
+    margin-top: 56px;
+    border-top: 1px solid var(--border-subtle);
+    padding-top: 24px;
+  }
+  .note__backlinks h2 {
+    font-size: var(--fs-eyebrow);
+    font-weight: 500;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-wide);
+    font-family: var(--font-mono);
+    margin: 0 0 12px;
+  }
+  .note__backlinks ul {
+    list-style: none;
+    padding: 0;
+  }
+  .note__backlinks li {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 8px 0;
+    gap: 16px;
+  }
+  .note__backlinks a {
+    color: var(--text-primary);
+  }
+  .note__backlinks a:hover {
+    color: var(--accent);
+  }
+  .note__backlinks-type {
+    font-family: var(--font-mono);
+    font-size: var(--fs-tiny);
+    color: var(--text-tertiary);
+  }
+</style>
