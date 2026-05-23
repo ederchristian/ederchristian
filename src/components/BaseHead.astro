@@ -1,6 +1,7 @@
 ---
 import { ViewTransitions } from "astro:transitions"
 
+import PostHogAnalytics from "./PostHogAnalytics.astro"
 import "../styles/globals.css"
 
 interface Props {
@@ -60,5 +61,7 @@ const {
   gtag("js", new Date())
   gtag("config", "G-JF93CQ8GYR")
 </script>
+
+<PostHogAnalytics />
 
 <ViewTransitions />
