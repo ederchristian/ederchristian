@@ -2,7 +2,6 @@
 title: "Hell yeah or no, by Derek Sivers"
 description: "The filter that keeps my calendar clean."
 theme: books
-state: evergreen
 date: 2025-12-04
 tags: [books, philosophy]
 ---

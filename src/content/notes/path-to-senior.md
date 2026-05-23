@@ -2,7 +2,6 @@
 title: "The path to Senior is not a checklist"
 description: "What actually moved the needle when I stopped grinding for the title."
 theme: career
-state: budding
 date: 2026-03-22
 tags: [career, growth]
 ---

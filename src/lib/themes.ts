@@ -3,7 +3,7 @@ import { BookOpen, Code2, Compass, Music, Wrench } from "lucide-astro"
 
 export type ThemeSlug = "engineering" | "career" | "books" | "music" | "uses"
 
-export type GardenTheme = {
+export type NoteTheme = {
   slug: ThemeSlug
   name: string
   description: string
@@ -12,34 +12,34 @@ export type GardenTheme = {
   external?: boolean
 }
 
-export const GARDEN_THEMES: GardenTheme[] = [
+export const NOTE_THEMES: NoteTheme[] = [
   {
     slug: "engineering",
     name: "Engineering",
     description: "Notes on frontend craft, systems, and tools.",
     icon: Code2,
-    href: "/garden/engineering",
+    href: "/notes/engineering",
   },
   {
     slug: "career",
     name: "Career",
     description: "The path from outsider to senior, in public.",
     icon: Compass,
-    href: "/garden/career",
+    href: "/notes/career",
   },
   {
     slug: "books",
     name: "Books",
     description: "What I'm reading and what stuck.",
     icon: BookOpen,
-    href: "/garden/books",
+    href: "/notes/books",
   },
   {
     slug: "music",
     name: "Music",
     description: "Listening notes and writing soundtracks.",
     icon: Music,
-    href: "/garden/music",
+    href: "/notes/music",
   },
   {
     slug: "uses",
@@ -50,5 +50,5 @@ export const GARDEN_THEMES: GardenTheme[] = [
   },
 ]
 
-export const getThemeBySlug = (slug: string): GardenTheme | undefined =>
-  GARDEN_THEMES.find((t) => t.slug === slug)
+export const getThemeBySlug = (slug: string): NoteTheme | undefined =>
+  NOTE_THEMES.find((t) => t.slug === slug)

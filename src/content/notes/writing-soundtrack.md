@@ -2,7 +2,6 @@
 title: "What I listen to while writing"
 description: "Three records that show up almost every week."
 theme: music
-state: seedling
 date: 2026-04-02
 tags: [music, focus]
 ---

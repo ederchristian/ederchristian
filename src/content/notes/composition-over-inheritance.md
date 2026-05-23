@@ -2,7 +2,6 @@
 title: "Composition over inheritance"
 description: "Why I reach for composition first when building React components."
 theme: engineering
-state: budding
 date: 2026-04-12
 tags: [react, patterns]
 ---

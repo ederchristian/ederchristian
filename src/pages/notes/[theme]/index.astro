@@ -1,11 +1,11 @@
 ---
-import GardenNav from "../../../components/GardenNav.astro"
+import NotesNav from "../../../components/NotesNav.astro"
 import PageLayout from "../../../layouts/PageLayout.astro"
-import { getGardenNotes } from "../../../lib/content"
-import { GARDEN_THEMES, getThemeBySlug } from "../../../lib/themes"
+import { getNotes } from "../../../lib/content"
+import { NOTE_THEMES, getThemeBySlug } from "../../../lib/themes"
 
 export async function getStaticPaths() {
-  return GARDEN_THEMES.filter((t) => t.slug !== "uses").map((t) => ({
+  return NOTE_THEMES.filter((t) => t.slug !== "uses").map((t) => ({
     params: { theme: t.slug },
   }))
 }
@@ -13,26 +13,26 @@ export async function getStaticPaths() {
 const { theme: themeSlug } = Astro.params
 const theme = getThemeBySlug(themeSlug ?? "")
 if (!theme) {
-  return Astro.redirect("/garden")
+  return Astro.redirect("/notes")
 }
-const notes = await getGardenNotes(theme.slug)
+const notes = await getNotes(theme.slug)
 
 const formatDate = (date: Date) =>
   date.toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric" })
 ---
 
 <PageLayout
-  title={`Garden / ${theme.name}`}
+  title={`Notes / ${theme.name}`}
   description={theme.description}
 >
-  <div class="container theme-page" data-pagefind-body data-pagefind-filter={`type:garden,theme:${theme.slug}`}>
+  <div class="container theme-page" data-pagefind-body data-pagefind-filter={`type:notes,theme:${theme.slug}`}>
     <header class="theme-page__head">
-      <p class="theme-page__crumb"><a href="/garden">Garden</a></p>
+      <p class="theme-page__crumb"><a href="/notes">Notes</a></p>
       <h1>{theme.name}</h1>
       <p class="theme-page__desc">{theme.description}</p>
     </header>
 
-    <GardenNav activeTheme={theme.slug} />
+    <NotesNav activeTheme={theme.slug} />
 
     {
       notes.length === 0 ? (
@@ -41,9 +41,8 @@ const formatDate = (date: Date) =>
         <ul class="note-list">
           {notes.map((n) => (
             <li>
-              <a href={`/garden/${theme.slug}/${n.slug}`}>
+              <a href={`/notes/${theme.slug}/${n.slug}`}>
                 <span class="note-list__row">
-                  <span class={`state state--${n.data.state}`} aria-hidden="true" />
                   <span class="note-list__title">{n.data.title}</span>
                   <span class="note-list__date">{formatDate(new Date(n.data.date))}</span>
                 </span>
@@ -129,18 +128,7 @@ const formatDate = (date: Date) =>
     color: var(--text-secondary);
     font-size: var(--fs-meta);
     margin-top: 4px;
-    padding-left: 18px;
   }
-  .state {
-    width: 8px;
-    height: 8px;
-    border-radius: 999px;
-    border: 1px solid var(--accent);
-    flex-shrink: 0;
-  }
-  .state--seedling { background: transparent; }
-  .state--budding { background: linear-gradient(to right, var(--accent) 0%, var(--accent) 50%, transparent 50%); }
-  .state--evergreen { background: var(--accent); }
   .empty {
     color: var(--text-tertiary);
   }

@@ -1,29 +1,23 @@
 ---
 import { type CollectionEntry, getCollection } from "astro:content"
-import GardenNav from "../../../components/GardenNav.astro"
+import NotesNav from "../../../components/NotesNav.astro"
 import PageLayout from "../../../layouts/PageLayout.astro"
 import { getBacklinksFor } from "../../../lib/backlinks"
 import { getThemeBySlug } from "../../../lib/themes"
 
 export async function getStaticPaths() {
-  const notes = await getCollection("garden")
+  const notes = await getCollection("notes")
   return notes.map((note) => ({
     params: { theme: note.data.theme, slug: note.slug },
     props: { note },
   }))
 }
 
-type Props = { note: CollectionEntry<"garden"> }
+type Props = { note: CollectionEntry<"notes"> }
 const { note } = Astro.props as Props
 const theme = getThemeBySlug(note.data.theme)
 const { Content } = await note.render()
 const backlinks = await getBacklinksFor(note.slug)
-
-const stateLabel: Record<string, string> = {
-  seedling: "Seedling",
-  budding: "Budding",
-  evergreen: "Evergreen",
-}
 
 const formatDate = (date: Date) =>
   date.toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })
@@ -33,22 +27,19 @@ const formatDate = (date: Date) =>
   <article
     class="container note"
     data-pagefind-body
-    data-pagefind-filter={`type:garden,theme:${note.data.theme},state:${note.data.state}`}
+    data-pagefind-filter={`type:notes,theme:${note.data.theme}`}
   >
-    <GardenNav activeTheme={note.data.theme} />
+    <NotesNav activeTheme={note.data.theme} />
 
     <header class="note__head">
       <p class="note__crumb">
-        <a href="/garden">Garden</a>
+        <a href="/notes">Notes</a>
         <span aria-hidden="true">/</span>
-        {theme ? <a href={`/garden/${theme.slug}`}>{theme.name}</a> : null}
+        {theme ? <a href={`/notes/${theme.slug}`}>{theme.name}</a> : null}
       </p>
       <div class="note__title-row">
         <h1>{note.data.title}</h1>
-        <span class={`note__pill note__pill--${note.data.state}`}>
-          <span class={`state state--${note.data.state}`} aria-hidden="true" />
-          {stateLabel[note.data.state]}
-        </span>
+        {theme ? <span class="note__pill">{theme.name}</span> : null}
       </div>
       <p class="note__meta">
         <time>{formatDate(new Date(note.data.date))}</time>
@@ -116,7 +107,6 @@ const formatDate = (date: Date) =>
   .note__pill {
     display: inline-flex;
     align-items: center;
-    gap: 6px;
     font-size: var(--fs-tiny);
     font-family: var(--font-mono);
     color: var(--accent);
@@ -166,14 +156,4 @@ const formatDate = (date: Date) =>
     font-size: var(--fs-tiny);
     color: var(--text-tertiary);
   }
-  .state {
-    width: 8px;
-    height: 8px;
-    border-radius: 999px;
-    border: 1px solid var(--accent);
-    flex-shrink: 0;
-  }
-  .state--seedling { background: transparent; }
-  .state--budding { background: linear-gradient(to right, var(--accent) 0%, var(--accent) 50%, transparent 50%); }
-  .state--evergreen { background: var(--accent); }
 </style>

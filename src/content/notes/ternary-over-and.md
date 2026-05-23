@@ -2,7 +2,6 @@
 title: "Prefer ternary over && for conditional rendering"
 description: "A small lint that pays off the first time a zero sneaks through."
 theme: engineering
-state: evergreen
 date: 2026-04-15
 tags: [react, jsx]
 ---

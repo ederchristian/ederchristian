@@ -2,7 +2,6 @@
 title: "Working remote from Brazil, four years in"
 description: "What changed when the New York office stayed five thousand kilometers away."
 theme: career
-state: seedling
 date: 2026-02-08
 tags: [remote, career]
 ---

@@ -1,21 +1,21 @@
 ---
-import { GARDEN_THEMES } from "../lib/themes"
+import { NOTE_THEMES } from "../lib/themes"
 
 interface Props {
   activeTheme?: string
 }
 
 const { activeTheme } = Astro.props
-const themes = GARDEN_THEMES.filter((t) => t.slug !== "uses")
+const themes = NOTE_THEMES.filter((t) => t.slug !== "uses")
 ---
 
-<nav class="garden-nav" aria-label="Garden themes">
-  <a href="/garden" class:list={["garden-nav__link", { "is-active": !activeTheme }]}>All</a>
+<nav class="notes-nav" aria-label="Note themes">
+  <a href="/notes" class:list={["notes-nav__link", { "is-active": !activeTheme }]}>All</a>
   {
     themes.map((theme) => (
       <a
         href={theme.href}
-        class:list={["garden-nav__link", { "is-active": activeTheme === theme.slug }]}
+        class:list={["notes-nav__link", { "is-active": activeTheme === theme.slug }]}
       >
         {theme.name}
       </a>
@@ -24,7 +24,7 @@ const themes = GARDEN_THEMES.filter((t) => t.slug !== "uses")
 </nav>
 
 <style>
-  .garden-nav {
+  .notes-nav {
     display: flex;
     gap: 4px;
     flex-wrap: wrap;
@@ -32,7 +32,7 @@ const themes = GARDEN_THEMES.filter((t) => t.slug !== "uses")
     margin: 0 0 24px;
     border-bottom: 1px solid var(--border-subtle);
   }
-  .garden-nav__link {
+  .notes-nav__link {
     font-size: var(--fs-meta);
     color: var(--text-secondary);
     padding: 6px 12px;
@@ -40,10 +40,10 @@ const themes = GARDEN_THEMES.filter((t) => t.slug !== "uses")
     border: 1px solid transparent;
     transition: color 200ms ease, border-color 200ms ease;
   }
-  .garden-nav__link:hover {
+  .notes-nav__link:hover {
     color: var(--text-primary);
   }
-  .garden-nav__link.is-active {
+  .notes-nav__link.is-active {
     color: var(--accent);
     border-color: rgba(0, 213, 159, 0.4);
     background: rgba(0, 213, 159, 0.06);

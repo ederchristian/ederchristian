@@ -64,7 +64,7 @@ export default defineConfig({
         remarkWikiLink,
         {
           aliasDivider: "|",
-          hrefTemplate: (permalink) => `/garden/${permalink}`,
+          hrefTemplate: (permalink) => `/notes/${permalink}`,
           pageResolver: (name) => [name.replace(/ /g, "-").toLowerCase()],
         },
       ],
@@ -78,5 +78,8 @@ export default defineConfig({
     "/pt": "/",
     "/pt/sobre": "/about",
     "/links": "/",
+    "/garden": "/notes",
+    "/garden/[theme]": "/notes/[theme]",
+    "/garden/[theme]/[...slug]": "/notes/[theme]/[...slug]",
   },
 })

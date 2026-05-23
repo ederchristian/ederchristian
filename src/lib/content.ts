@@ -37,8 +37,8 @@ export async function getRecentWriting(limit = 3): Promise<WritingEntry[]> {
   return all.slice(0, limit)
 }
 
-export async function getGardenNotes(themeSlug?: string) {
-  const all = await getCollection("garden", (e) => !e.data.draft)
+export async function getNotes(themeSlug?: string) {
+  const all = await getCollection("notes", (e) => !e.data.draft)
   const filtered = themeSlug
     ? all.filter((n) => n.data.theme === themeSlug)
     : all

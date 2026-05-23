@@ -3,13 +3,13 @@ import { ArrowRight, ArrowUpRight } from "lucide-astro"
 import NewsletterForm from "../components/NewsletterForm.astro"
 import { NOW_LAST_UPDATED, SITE_DESCRIPTION } from "../consts"
 import PageLayout from "../layouts/PageLayout.astro"
-import { getGardenNotes, getRecentWriting } from "../lib/content"
-import { GARDEN_THEMES } from "../lib/themes"
+import { getNotes, getRecentWriting } from "../lib/content"
+import { NOTE_THEMES } from "../lib/themes"
 
 const recent = await getRecentWriting(3)
-const gardenNotes = await getGardenNotes()
+const notes = await getNotes()
 const countByTheme = (slug: string) =>
-  gardenNotes.filter((n) => n.data.theme === slug).length
+  notes.filter((n) => n.data.theme === slug).length
 
 const formatDate = (date: Date) =>
   date.toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric", timeZone: "UTC" })
@@ -80,23 +80,19 @@ const nowBullets = [
 
   <section class="section container">
     <header class="section__head">
-      <h2>Garden</h2>
+      <h2>Notes</h2>
       <span class="section__sub">A public second brain</span>
     </header>
     <div class="theme-grid">
       {
-        GARDEN_THEMES.map((theme) => {
+        NOTE_THEMES.filter((t) => t.slug !== "uses").map((theme) => {
           const Icon = theme.icon
-          const count = theme.slug === "uses" ? null : countByTheme(theme.slug)
+          const count = countByTheme(theme.slug)
           return (
             <a class="theme-card" href={theme.href}>
               <Icon size={18} class="theme-card__icon" />
               <span class="theme-card__name">{theme.name}</span>
-              {count !== null ? (
-                <span class="theme-card__count">{count} {count === 1 ? "note" : "notes"}</span>
-              ) : (
-                <span class="theme-card__count">page</span>
-              )}
+              <span class="theme-card__count">{count} {count === 1 ? "note" : "notes"}</span>
             </a>
           )
         })

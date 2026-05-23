@@ -32,15 +32,12 @@ const writing = defineCollection({
   }),
 })
 
-const noteState = z.enum(["seedling", "budding", "evergreen"])
-
-const garden = defineCollection({
+const notes = defineCollection({
   type: "content",
   schema: z.object({
     title: z.string(),
     description: z.string(),
     theme: z.enum(["engineering", "career", "books", "music", "uses"]),
-    state: noteState.default("seedling"),
     date: z.coerce.date(),
     updatedDate: z.coerce.date().optional(),
     tags: z.array(z.string()).optional(),
@@ -48,4 +45,4 @@ const garden = defineCollection({
   }),
 })
 
-export const collections = { blog, writing, garden }
+export const collections = { blog, writing, notes }

@@ -2,7 +2,6 @@
 title: "Staff Engineer by Will Larson"
 description: "Notes from re-reading it as a mid-level."
 theme: books
-state: budding
 date: 2026-01-30
 tags: [books, leadership]
 ---

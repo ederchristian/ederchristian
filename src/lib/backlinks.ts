@@ -4,7 +4,7 @@ type Backlink = {
   fromSlug: string
   fromTitle: string
   href: string
-  collection: "writing" | "garden"
+  collection: "writing" | "notes"
   theme?: string
 }
 
@@ -18,9 +18,9 @@ let cache: Map<string, Backlink[]> | null = null
 
 async function buildIndex(): Promise<Map<string, Backlink[]>> {
   if (cache) return cache
-  const [writing, garden] = await Promise.all([
+  const [writing, notes] = await Promise.all([
     getCollection("writing"),
-    getCollection("garden"),
+    getCollection("notes"),
   ])
 
   const index = new Map<string, Backlink[]>()
@@ -35,8 +35,8 @@ async function buildIndex(): Promise<Map<string, Backlink[]>> {
   }
 
   const scan = (
-    entry: CollectionEntry<"writing"> | CollectionEntry<"garden">,
-    collection: "writing" | "garden",
+    entry: CollectionEntry<"writing"> | CollectionEntry<"notes">,
+    collection: "writing" | "notes",
   ) => {
     const body = entry.body
     if (!body) return
@@ -45,11 +45,11 @@ async function buildIndex(): Promise<Map<string, Backlink[]>> {
     while ((m = wikiLinkRegex.exec(body))) {
       const target = normalize(m[1])
       const fromSlug = entry.slug
-      const theme = collection === "garden" ? (entry as CollectionEntry<"garden">).data.theme : undefined
+      const theme = collection === "notes" ? (entry as CollectionEntry<"notes">).data.theme : undefined
       record(target, {
         fromSlug,
         fromTitle: entry.data.title,
-        href: collection === "writing" ? `/writing/${fromSlug}` : `/garden/${theme}/${fromSlug}`,
+        href: collection === "writing" ? `/writing/${fromSlug}` : `/notes/${theme}/${fromSlug}`,
         collection,
         theme,
       })
@@ -57,7 +57,7 @@ async function buildIndex(): Promise<Map<string, Backlink[]>> {
   }
 
   for (const w of writing) scan(w, "writing")
-  for (const g of garden) scan(g, "garden")
+  for (const n of notes) scan(n, "notes")
 
   cache = index
   return index

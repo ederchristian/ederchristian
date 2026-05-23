@@ -36,7 +36,7 @@ type Hit = {
 const filterChoices = [
   { value: "", label: "All" },
   { value: "writing", label: "Writing" },
-  { value: "garden", label: "Garden" },
+  { value: "notes", label: "Notes" },
 ]
 
 export default function CmdK() {
@@ -129,7 +129,7 @@ export default function CmdK() {
         <Dialog.Content className="cmdk-content">
           <VisuallyHidden>
             <Dialog.Title>Search</Dialog.Title>
-            <Dialog.Description>Search across writing and the garden.</Dialog.Description>
+            <Dialog.Description>Search across writing and notes.</Dialog.Description>
           </VisuallyHidden>
           <div className="cmdk-input-row">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
@@ -139,7 +139,7 @@ export default function CmdK() {
             <input
               ref={inputRef}
               className="cmdk-input"
-              placeholder="Search writing and garden..."
+              placeholder="Search writing and notes..."
               value={query}
               onChange={(e) => setQuery(e.target.value)}
             />

@@ -1,12 +1,12 @@
 ---
-import GardenNav from "../../components/GardenNav.astro"
+import NotesNav from "../../components/NotesNav.astro"
 import PageHeader from "../../components/PageHeader.astro"
 import PageLayout from "../../layouts/PageLayout.astro"
-import { getGardenNotes } from "../../lib/content"
-import { GARDEN_THEMES } from "../../lib/themes"
+import { getNotes } from "../../lib/content"
+import { NOTE_THEMES } from "../../lib/themes"
 
-const notes = await getGardenNotes()
-const themeData = GARDEN_THEMES.filter((t) => t.slug !== "uses").map((theme) => {
+const notes = await getNotes()
+const themeData = NOTE_THEMES.filter((t) => t.slug !== "uses").map((theme) => {
   const themeNotes = notes.filter((n) => n.data.theme === theme.slug)
   const lastUpdated = themeNotes
     .map((n) => new Date(n.data.updatedDate ?? n.data.date).getTime())
@@ -23,13 +23,13 @@ const formatDate = (date: Date) =>
 ---
 
 <PageLayout
-  title="Garden"
+  title="Notes"
   description="My public second brain. Notes that grow over time."
 >
-  <div class="container garden-page">
-    <PageHeader title="Garden" subtitle="My public second brain. Notes that grow over time." />
+  <div class="container notes-page">
+    <PageHeader title="Notes" subtitle="My public second brain. Notes that grow over time." />
 
-    <GardenNav />
+    <NotesNav />
 
     <div class="theme-list">
       {
@@ -54,10 +54,7 @@ const formatDate = (date: Date) =>
                   <ul class="theme-row__recent">
                     {recentTitles.map((n) => (
                       <li>
-                        <a href={`/garden/${theme.slug}/${n.slug}`}>
-                          <span class={`state state--${n.data.state}`} aria-hidden="true" />
-                          {n.data.title}
-                        </a>
+                        <a href={`/notes/${theme.slug}/${n.slug}`}>{n.data.title}</a>
                       </li>
                     ))}
                   </ul>
@@ -74,7 +71,7 @@ const formatDate = (date: Date) =>
 </PageLayout>
 
 <style>
-  .garden-page {
+  .notes-page {
     padding-top: 64px;
     padding-bottom: 32px;
   }
@@ -132,9 +129,6 @@ const formatDate = (date: Date) =>
     gap: 6px;
   }
   .theme-row__recent a {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
     color: var(--text-primary);
     font-size: var(--fs-meta);
   }
@@ -146,14 +140,4 @@ const formatDate = (date: Date) =>
     font-size: var(--fs-meta);
     margin: 0;
   }
-  .state {
-    width: 8px;
-    height: 8px;
-    border-radius: 999px;
-    border: 1px solid var(--accent);
-    flex-shrink: 0;
-  }
-  .state--seedling { background: transparent; }
-  .state--budding { background: linear-gradient(to right, var(--accent) 0%, var(--accent) 50%, transparent 50%); }
-  .state--evergreen { background: var(--accent); }
 </style>
