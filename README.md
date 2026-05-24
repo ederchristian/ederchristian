@@ -4,7 +4,7 @@
 
 [![License](https://img.shields.io/github/license/ederchristian/ederchristian?color=%2300d59f)](https://github.com/ederchristian/ederchristian/blob/main/LICENSE)
 
-> My learning in public blog
+> My corner of the internet. Engineering, writing, and building in public.
 
 ## Getting Started
 
