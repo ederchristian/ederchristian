@@ -37,7 +37,16 @@ const notes = defineCollection({
   schema: z.object({
     title: z.string(),
     description: z.string(),
-    theme: z.enum(["engineering", "career", "books", "uses"]),
+    theme: z.enum([
+      "engineering",
+      "career",
+      "books",
+      "uses",
+      "learning",
+      "writing",
+      "english",
+      "craft",
+    ]),
     date: z.coerce.date(),
     updatedDate: z.coerce.date().optional(),
     tags: z.array(z.string()).optional(),
