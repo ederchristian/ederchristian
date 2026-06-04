@@ -51,13 +51,20 @@ const formatDate = (date: Date) =>
               <p class="theme-row__desc">{theme.description}</p>
               {
                 recentTitles.length > 0 ? (
-                  <ul class="theme-row__recent">
-                    {recentTitles.map((n) => (
-                      <li>
-                        <a href={`/notes/${theme.slug}/${n.slug}`}>{n.data.title}</a>
-                      </li>
-                    ))}
-                  </ul>
+                  <>
+                    <ul class="theme-row__recent">
+                      {recentTitles.map((n) => (
+                        <li>
+                          <a href={`/notes/${theme.slug}/${n.slug}`}>{n.data.title}</a>
+                        </li>
+                      ))}
+                    </ul>
+                    {tnotes.length > recentTitles.length ? (
+                      <a class="theme-row__see-all" href={theme.href}>
+                        See all {tnotes.length} notes →
+                      </a>
+                    ) : null}
+                  </>
                 ) : (
                   <p class="theme-row__empty">No notes yet.</p>
                 )
@@ -133,6 +140,17 @@ const formatDate = (date: Date) =>
     font-size: var(--fs-meta);
   }
   .theme-row__recent a:hover {
+    color: var(--accent);
+  }
+  .theme-row__see-all {
+    display: inline-block;
+    margin-top: 10px;
+    color: var(--text-secondary);
+    font-family: var(--font-mono);
+    font-size: var(--fs-eyebrow);
+    transition: color 200ms ease;
+  }
+  .theme-row__see-all:hover {
     color: var(--accent);
   }
   .theme-row__empty {
