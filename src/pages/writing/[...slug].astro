@@ -1,21 +1,16 @@
 ---
 import { Image } from "astro:assets"
-import { type CollectionEntry, getCollection } from "astro:content"
+import type { CollectionEntry } from "astro:content"
 import { ArrowLeft, ArrowRight } from "lucide-astro"
 import BackLink from "../../components/BackLink.astro"
 import NewsletterForm from "../../components/NewsletterForm.astro"
 import PageLayout from "../../layouts/PageLayout.astro"
 import { getBacklinksFor } from "../../lib/backlinks"
+import { getAllWriting } from "../../lib/content"
 import { computeReadingTime } from "../../lib/readingTime"
 
 export async function getStaticPaths() {
-  const [writing, blog] = await Promise.all([
-    getCollection("writing"),
-    getCollection("blog", (e) => e.data.language === undefined || e.data.language === "en-US"),
-  ])
-  const all = [...writing, ...blog].sort(
-    (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime(),
-  )
+  const all = await getAllWriting()
   return all.map((entry, index) => ({
     params: { slug: entry.slug },
     props: {
