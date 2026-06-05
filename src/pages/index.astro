@@ -17,9 +17,9 @@ const formatDate = (date: Date) =>
 const nowBullets = [
   "Frontend engineer on the Sync team at Automatiq, heading toward Product Engineer with a focus on performance and data-heavy interfaces.",
   "Writing at Inner Commit. English-only since the pivot.",
-  "Building Perspion under WheyDev, my side project for small, focused products in my free time.",
+  "Building Perspion and Strata under WheyDev, my side project for small, focused products in my free time.",
   "Reading Word Power Made Easy and The Pragmatic Programmer.",
-  "Jiu jitsu three times a week (white belt). Gym the other three days.",
+  "Jiu jitsu three times a week (white belt), tennis twice a week (just started, first class June 3), gym twice, and walking as many days as I can.",
   "At home in Londrina, Brazil with Natalia and our new Boston Terrier, Ashley.",
 ]
 ---
@@ -54,6 +54,20 @@ const nowBullets = [
       </div>
       <a class="product__link" href="https://perspion.whey.dev" target="_blank" rel="noopener noreferrer">
         perspion.whey.dev <ArrowUpRight size={14} />
+      </a>
+    </article>
+    <article class="product">
+      <div class="product__head">
+        <h3>Strata</h3>
+        <span class="product__badge">MVP</span>
+      </div>
+      <p class="product__desc">Sends two daily questions over Telegram and turns your answers into an explorable, layered record of your life.</p>
+      <div class="product__stack">
+        <span>Next.js</span>
+        <span>TypeScript</span>
+      </div>
+      <a class="product__link" href="https://strata.whey.dev" target="_blank" rel="noopener noreferrer">
+        strata.whey.dev <ArrowUpRight size={14} />
       </a>
     </article>
   </section>
@@ -268,6 +282,9 @@ const nowBullets = [
     border-radius: 12px;
     padding: 24px;
     transition: transform 150ms ease, border-color 200ms ease;
+  }
+  .product + .product {
+    margin-top: 16px;
   }
   .product:hover {
     transform: translateY(-2px);
