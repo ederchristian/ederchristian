@@ -19,8 +19,8 @@ let cache: Map<string, Backlink[]> | null = null
 async function buildIndex(): Promise<Map<string, Backlink[]>> {
   if (cache) return cache
   const [writing, notes] = await Promise.all([
-    getCollection("writing"),
-    getCollection("notes"),
+    getCollection("writing", (e) => !e.data.draft),
+    getCollection("notes", (e) => !e.data.draft),
   ])
 
   const index = new Map<string, Backlink[]>()
