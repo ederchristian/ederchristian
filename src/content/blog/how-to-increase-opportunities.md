@@ -1,6 +1,6 @@
 ---
 title: "How to Increase Opportunities"
-description: 'Personal and direct Notes from Frontend Masters Course “Software Developer Success: Soft Skills & Testing”'
+description: 'Personal and direct Notes from Master.dev Course “Software Developer Success: Soft Skills & Testing”'
 date: "Mar 21 2025"
 heroImage: ""
 imageAlt: ""
@@ -53,4 +53,4 @@ Connection superpower: Active Listening
 
 ## Reference
 
-[Software Developer Success: Soft Skills & Testing](https://frontendmasters.com/courses/dev-soft-skills/)
+[Software Developer Success: Soft Skills & Testing](https://master.dev/courses/dev-soft-skills/)

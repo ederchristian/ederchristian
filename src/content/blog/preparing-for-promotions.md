@@ -1,6 +1,6 @@
 ---
 title: "Preparing for Promotions"
-description: 'Personal and direct Notes from Frontend Masters Course “Software Developer Success: Soft Skills & Testing”'
+description: 'Personal and direct Notes from Master.dev Course “Software Developer Success: Soft Skills & Testing”'
 date: "Mar 20 2025"
 heroImage: ""
 imageAlt: ""
@@ -57,4 +57,4 @@ Advocate for yourself.
 
 ## Reference
 
-[Software Developer Success: Soft Skills & Testing](https://frontendmasters.com/courses/dev-soft-skills/)
+[Software Developer Success: Soft Skills & Testing](https://master.dev/courses/dev-soft-skills/)

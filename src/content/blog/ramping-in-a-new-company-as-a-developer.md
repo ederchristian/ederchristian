@@ -1,6 +1,6 @@
 ---
 title: "Ramping in a new company as a Developer"
-description: 'Personal and direct Notes from Frontend Masters Course “Software Developer Success: Soft Skills & Testing”'
+description: 'Personal and direct Notes from Master.dev Course “Software Developer Success: Soft Skills & Testing”'
 date: "Mar 23 2025"
 heroImage: ""
 imageAlt: ""
@@ -69,4 +69,4 @@ Common obstacles when executing tasks:
 
 ## Reference
 
-[Software Developer Success: Soft Skills & Testing](https://frontendmasters.com/courses/dev-soft-skills/)
+[Software Developer Success: Soft Skills & Testing](https://master.dev/courses/dev-soft-skills/)
