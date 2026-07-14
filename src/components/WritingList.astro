@@ -10,10 +10,10 @@ interface Props {
 const { posts, fromPage } = Astro.props
 
 const formatDate = (date: Date) =>
-  date.toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric" })
+  date.toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric", timeZone: "UTC" })
 
 const byYear = posts.reduce<Record<string, WritingEntry[]>>((acc, post) => {
-  const year = new Date(post.data.date).getFullYear().toString()
+  const year = new Date(post.data.date).getUTCFullYear().toString()
   acc[year] = acc[year] ?? []
   acc[year].push(post)
   return acc
