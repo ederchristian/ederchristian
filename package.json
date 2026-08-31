@@ -25,7 +25,7 @@
     "@fontsource/jetbrains-mono": "^5.2.8",
     "@radix-ui/react-dialog": "^1.1.15",
     "@radix-ui/react-visually-hidden": "^1.2.4",
-    "astro": "^4.7.0",
+    "astro": "^7.1.0",
     "astro-icon": "^1.1.0",
     "lucide-astro": "^0.556.0",
     "prop-types": "^15.8.1",
