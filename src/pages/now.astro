@@ -10,7 +10,7 @@ const sections = [
   },
   {
     title: "Writing",
-    body: "Inner Commit on Substack. I started years ago in Portuguese, then pivoted to English-only. Substack is where I get close to people; the site is for essays, announcements, and documentation. The gravity is engineering: performance, data, frontend craft. Career and lessons learned show up too, but the technical work leads.",
+    body: 'Inner Commit on <a href="https://www.linkedin.com/newsletters/inner-commit-7512144218950275072/" target="_blank" rel="noopener noreferrer">LinkedIn</a> and <a href="https://innercommit.com" target="_blank" rel="noopener noreferrer">Substack</a>. I started years ago in Portuguese, then pivoted to English-only. The newsletter is where I get close to people, on both LinkedIn and Substack; the site is for essays, announcements, and documentation. The gravity is engineering: performance, data, frontend craft. Career and lessons learned show up too, but the technical work leads.',
   },
   {
     title: "Building",
@@ -18,7 +18,7 @@ const sections = [
   },
   {
     title: "Reading",
-    body: "Word Power Made Easy by Norman Lewis (a coworker recommended it). I've been teaching myself English since 2016 and still want sharper vocabulary and pronunciation. Also working through The Pragmatic Programmer.",
+    body: "A few books at once. Word Power Made Easy by Norman Lewis (a coworker recommended it): I've been teaching myself English since 2016 and still want sharper vocabulary and pronunciation. The Pragmatic Programmer for the engineering side, and The Mom Test for the product side.",
   },
   {
     title: "Studying",
@@ -50,7 +50,7 @@ const formatDate = (date: Date) =>
       sections.map((s) => (
         <section class="now-section">
           <h2>{s.title}</h2>
-          <p>{s.body}</p>
+          <p set:html={s.body} />
         </section>
       ))
     }
@@ -86,6 +86,13 @@ const formatDate = (date: Date) =>
     line-height: var(--lh-base);
     margin: 0;
     font-size: var(--fs-body);
+  }
+  .now-section p :global(a) {
+    color: var(--accent);
+    border-bottom: 1px solid rgba(0, 213, 159, 0.35);
+  }
+  .now-section p :global(a:hover) {
+    border-bottom-color: var(--accent);
   }
   .now-page__foot {
     margin-top: 48px;
